@@ -436,8 +436,8 @@ h6 {
 
 .circle svg {
     position: relative;
-  width: 24px;
-  height: 24px;
+    width: 24px;
+    height: 24px;
 }
 
 .circle svg circle {
@@ -445,7 +445,7 @@ h6 {
     height: 100%;
     fill: none;
     stroke: var(--white);
-    stroke-width: 2;
+    stroke-width: 2px;
     stroke-linecap: round;
 }
 
@@ -462,7 +462,7 @@ h6 {
 .circle svg .circle-meter {
     stroke-dasharray: 360;
     stroke-dashoffset: 100;
-    stroke: #e5e3e3;
+    stroke: #c4c4c4;
     animation: progress-1 400s ease-out;
 }
 
@@ -1690,6 +1690,10 @@ button:disabled {
     margin-top: 36px;
 }
 
+.login__form-btn .icon-right {
+    margin-left: 14px;
+}
+
 .login__card-via {
     text-align: center;
     color: var(--gray);
@@ -1729,6 +1733,17 @@ button:disabled {
 
 .login__account-link:hover {
     color: var(--primary-blue-100);
+}
+
+.login__terms {
+    padding-top: 16px;
+    padding-bottom: 8px;
+}
+
+.login__terms p {
+    text-align: center;
+    font-size: 12px;
+    line-height: 15px;
 }
 
 @media only screen and (max-width: 575.98px) {

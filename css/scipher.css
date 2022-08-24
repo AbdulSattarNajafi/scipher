@@ -290,15 +290,11 @@
 }
 
 .boards__start-start {
+    position: relative;
     display: none;
-    justify-content: center;
-    align-items: center;
     height: 64px;
     width: 64px;
-    background: linear-gradient(95.62deg, #FF6699 0%, #FFDB4A 32.08%, #67FF50 68.02%, #2ADAFF 100%);
-    border-radius: 50%;
-    transform: rotate(90deg) translateX(-10px);
-    z-index: 1;
+    transform:translateY(-10px);
     margin-bottom: 8px;
 }
 
@@ -306,14 +302,26 @@
     display: flex;
 }
 
-.boards__start-start::before {
-    content: '';
-    position: absolute;
-    width: 54px;
-    height: 54px;
-    background-color: #27272b;
-    border-radius: 50%;
-    z-index: 2;
+.boards__start-start svg {
+    position: relative;
+    width: 64px;
+    height: 64px;
+}
+
+.boards__start-start svg circle {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke-width: 6px;
+    stroke-linecap: round;
+}
+
+.boards__start-start svg .taboo-start-bg {
+    stroke-dasharray: 360;
+    stroke-dashoffset: 10;
+    stroke: #4B4E61;
+    stroke-width: 6.5px;
+    animation: progress-1 126s ease-out;
 }
 
 .taboo-start-bg {
@@ -325,12 +333,14 @@
 }
 
 .boards__start-start span {
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-51%, -51%);
     font-size: 24px;
     color: var(--white);
     font-weight: 600;
     line-height: 29px;
-    transform: rotate(-90deg);
     z-index: 4;
 }
 
@@ -339,7 +349,7 @@
 }
 
 .boards__start.game-start .boards__start-start{
-    display: flex;
+    display: block;
 }
 
 .boards__start-round-boder.team-2 {
@@ -595,7 +605,6 @@
 }
 
 .flip-card {
-    position: relative;
     background-color: transparent;
     width: 100%;
     perspective: 1000px;
@@ -609,6 +618,8 @@
     height: 35%;
     z-index: 2;
     cursor: pointer;
+    /* background: rgba(0, 0, 0, 0.25); */
+    clip-path: polygon(0 0, 0% 0, 100% 100%, 100% 100%, 100% 100%, 0 100%, 0 100%, 0 0);
 }
 
 .flip-card.flip .scipher-triangle {
@@ -691,11 +702,11 @@
     border-radius: 0 0 0 4px;
 }
 
-.scipher-card-border:hover .triangle {
+.schipher-card__front:hover .triangle{
     display: block;
 }
 
-.scipher-card-border:hover {
+.schipher-card__front:hover .scipher-card-border{
     clip-path: polygon(0 0, 80% 0, 100% 36%, 100% 100%, 100% 100%, 0 100%, 0 100%, 0 0);
 }
 
@@ -720,8 +731,9 @@
     width: 100%;
     height: 100%;
     border-radius:  4px;
-    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.001) 50%, var(--card-bg) 50%);
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0) 50%, var(--card-bg) 50%);
     z-index: 1;
+    clip-path: polygon(0 0, 0% 100%, 100% 100%);
 }
 
 .triangle .shadow {

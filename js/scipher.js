@@ -130,7 +130,7 @@ secondTeamTimer();
 
 (function tabooPlayerTimer() {
     const valueContainer = document.getElementById('player-timer-value');
-    const bg = document.querySelector('.taboo-player-bg');
+    const bg = document.querySelector('.taboo-start-bg');
 
     if(!valueContainer || !bg) return;
     
@@ -160,6 +160,8 @@ secondTeamTimer();
 function tabooStartTimer() {
     const valueContainer = document.getElementById('taboo-start-value');
     const bg = document.querySelector('.taboo-start-bg');
+
+    if(!valueContainer || !bg) return;
     
 
     let progressValue = 0;
@@ -212,7 +214,8 @@ function tabooStartTimer() {
 (function scipherCardsFlip() {
     const trinagle = document.querySelectorAll('.scipher-triangle')
     const cards = document.querySelectorAll('.flip-card');
-    if(!cards || !trinagle) return;
+    const cardsFrot = document.querySelectorAll('.schipher-card__front')
+    if(!cards || !trinagle || !cardsFrot) return;
 
     trinagle.forEach((angle, i) => {
         angle.addEventListener('click', (e) => {
@@ -221,7 +224,7 @@ function tabooStartTimer() {
                     card.classList.add('flip');
                 }
             })
-        })
+        });
     })
 
 })();

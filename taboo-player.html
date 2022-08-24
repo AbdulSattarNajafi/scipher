@@ -196,9 +196,21 @@
                             <div class="boards__start">
 
                                 <div class="boards__start-start player">
-                                    <div class="taboo-start-bg taboo-player-bg"></div>
-                                    <span id="player-timer-value">60</span>
+                                    <svg>
+                                        <defs>
+                                            <linearGradient id="linear" x1="0%" y1="0%" x2="100%" y2="0%">
+                                            <stop offset="0%" stop-color="#FF6699"/>
+                                            <stop offset="32.8%" stop-color="#FFDB4A"/>
+                                            <stop offset="68.02%" stop-color="#67FF50"/>
+                                            <stop offset="100%" stop-color="#2ADAFF"/>
+                                            </linearGradient>
+                                            </defs>
+                                        <circle class="taboo-start-color-bg" cx="31" cy="31" r="28" stroke="url(#linear)"/>
+                                        <circle class="taboo-start-bg" cx="31" cy="31" r="28" />
+                                      </svg>
+                                      <span id="player-timer-value">60</span>
                                 </div>
+
                             </div>
                         </div>
 
