@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/app.css">
+    <link rel="stylesheet" href="./css/scipher.css">
+    <title>Taboo End</title>
+</head>
+<body>
+    <div class="main-bg">
+        <!-- Lights and Background Images -->
+        <div class="main-bg__lights">
+            <div class="main-bg__light main-bg__light-1"></div>
+            <div class="main-bg__light main-bg__light-2"></div>
+            <div class="main-bg__light main-bg__light-3"></div>
+            <div class="main-bg__light main-bg__light-4"></div>
+        </div>
+        <div class="dots-top"></div>
+        <div class="dots-bottom">
+            <img src="./assets/images/bg-dots-bottom.png" alt="">
+        </div>
+        <div class="main-bg__right-ligh"></div>
+
+        <!-- ====== Header ====== -->
+        <header class="header">
+            <div class="header__logo">
+                <img src="./assets/images/logo.png" alt="Logo" class="header__logo-img">
+            </div>
+            <div class="header__profile">
+                <button class="header__profile-btn" onclick="profileToggle()">
+                    <div class="header__profile-image">
+                        <img src="./assets/images/main-select.png" alt="image">
+                    </div>
+                    <div class="header__profile-info">
+                        <div class="header__profile-name">
+                            <img src="./assets/images/cup_icon.svg" alt="cup icon">
+                            <h6>Pink_bob</h6>
+                        </div>
+                        <div class="header__profile-counter">
+                            <img src="./assets/images/cup-orange.svg" alt="">
+                            <p>514</p>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="./assets/images/drop_icon.svg" alt="icon">
+                    </div>
+                </button>
+
+                <!-- Profile Dropdown -->
+                <ul class="profile__dropdown" id="profile-dropdown">
+                    <li class="profile__dropdown-item">
+                        <a href="./user-profile.html" class="profile__dropdown-link">
+                            <img src="./assets/images/profile-icon.svg" alt="profile icon">
+                            <span>Profile</span>
+                        </a>
+                    </li>
+                    <li class="profile__dropdown-item">
+                        <a href="javascript:void(0)" class="profile__dropdown-link" onclick="toggleUserSettings()">
+                            <img src="./assets/images/settings-icon.svg" alt="settings icon">
+                            <span>User settings</span>
+                        </a>
+                    </li>
+                    <li class="profile__dropdown-item">
+                        <a href="./login.html" class="profile__dropdown-link">
+                            <img src="./assets/images/logout-icon.svg" alt="logout icon">
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <main class="scipher">
+            <div class="scipher-container">
+                <!-- ==== Boards ==== -->
+                <div class="scipher__boards">
+                    <div class="scipher__boards-header">
+                        <!-- Score  -->
+                        <div class="boards__score">
+                            <div class="boards__score-header">
+                                <button type="button" onclick="toggleScoreDropdown()">
+                                    <img src="./assets/images/bars.svg" alt="bars icon">
+                                </button>
+                                <div class="d-flex align-items-center">
+                                    <div class="boards__score-score">
+                                        <span>0</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="boards__score-dropdown" id="score-dropdown">
+                                <div class="card">
+                                    <div class="card-header pink">
+                                        <div class="card-header-heading">
+                                            <img src="./assets/images/list-icon.svg" alt="match icon">
+                                            <h6>Mirzobedilx team</h6>
+                                        </div>
+                                        <button type="button" class="btn btn-sm">
+                                            <img src="./assets/images/edit-icon.svg" alt="edit icon">
+                                        </button>
+                                    </div>
+
+                                    <div class="card-body">
+                                        <div class="boards__score-buttons">
+                                            <button type="button" class="btn btn-pink">
+                                                JOIN
+                                            </button>
+                                        </div>
+
+                                        <ul class="boards__list">
+                                            <!-- Item 1 -->
+                                            <li class="boards__list-item">
+                                                <div class="boards__list-star">
+                                                    <img src="./assets/images/star-icon.svg" alt="star icon">
+                                                </div>
+                                                <div class="boards__list-cup">
+                                                    <img src="./assets/images/cup_icon.svg" alt="">
+                                                </div>
+                                                <div class="boards__list-avatar">
+                                                    <img src="./assets/images/card-avatar.png" alt="">
+                                                </div>
+                                                <p class="fw-medium color-cyan">
+                                                    Club_lommy
+                                                </p>
+                                                <div class="boards__list-scores">
+                                                    <img src="./assets/images/trophy.svg" alt="cup icon">
+                                                    <span>512</span>
+                                                </div>
+                                            </li>
+
+                                            <!-- Item 2 -->
+                                            <li class="boards__list-item">
+                                                <div class="boards__list-star">
+                                                </div>
+                                                <div class="boards__list-cup">
+                                                    <img src="./assets/images/cup_icon.svg" alt="">
+                                                </div>
+                                                <div class="boards__list-avatar">
+                                                    <img src="./assets/images/card-avatar.png" alt="">
+                                                </div>
+                                                <p class="fw-medium color-cyan">
+                                                    Mirzo bedil
+                                                </p>
+                                                <div class="boards__list-scores">
+                                                    <img src="./assets/images/trophy.svg" alt="cup icon">
+                                                    <span>229</span>
+                                                </div>
+                                            </li>
+
+                                            <!-- Item 3 -->
+                                            <li class="boards__list-item">
+                                                <div class="boards__list-star">
+                                                </div>
+                                                <div class="boards__list-cup">
+                                                </div>
+                                                <div class="boards__list-avatar">
+                                                    <img src="./assets/images/card-avatar.png" alt="">
+                                                </div>
+                                                <p class="fw-medium color-cyan">
+                                                    Hayyat_agency
+                                                </p>
+                                                <div class="boards__list-scores">
+                                                    <img src="./assets/images/trophy.svg" alt="cup icon">
+                                                    <span>44</span>
+                                                </div>
+                                            </li>
+
+                                            <!-- Item 4 -->
+                                            <li class="boards__list-item">
+                                                <div class="boards__list-star">
+                                                </div>
+                                                <div class="boards__list-cup">
+                                                    <img src="./assets/images/cup_icon.svg" alt="">
+                                                </div>
+                                                <div class="boards__list-avatar">
+                                                    <img src="./assets/images/card-avatar.png" alt="">
+                                                </div>
+                                                <p class="fw-medium color-cyan">
+                                                    James_bond_007
+                                                </p>
+                                                <div class="boards__list-scores">
+                                                    <img src="./assets/images/trophy.svg" alt="cup icon">
+                                                    <span>143</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Clue -->
+                        <div class="boards__clue">
+                            <div class="boards__start">
+
+                                <div class="boards__match">
+                                    <div class="boards__match-message">
+                                        <p>Match completed</p>
+                                    </div>
+                                    <button type="button" class="btn boards__match-btn" onclick="startGame()">
+                                        New match
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="boards__turn">
+                            <div class="turn__tabs">
+                                <span class="turn__tabs-btn clipt active">
+                                    Team 0’s turn
+                                </span>
+                            </div>
+
+                            <div class="boards__turn-header">
+                                <div class="d-flex align-items-center">
+                                    <div class="boards__score-score">
+                                        <span>0</span>
+                                    </div>
+                                    <div class="boards__score-time">
+                                        <span class="d-sm-none">mirzobedilx is describing</span>
+                                    </div>
+                                </div>
+                                <button type="button" onclick="toggleTurnDropdown()">
+                                    <img src="./assets/images/bars-right.svg" alt="bars icon">
+                                </button>
+                            </div>
+
+                            <div class="boards__score-dropdown" id="turn-dropdown">
+                                <div class="card">
+                                    <div class="card-header orange">
+                                        <div class="card-header-heading">
+                                            <img src="./assets/images/list-icon.svg" alt="match icon">
+                                            <h6>Mirzobedilx team</h6>
+                                        </div>
+                                        <button type="button" class="btn btn-sm">
+                                            <img src="./assets/images/edit-icon.svg" alt="edit icon">
+                                        </button>
+                                    </div>
+
+                                    <div class="card-body">
+                                        <div class="boards__score-buttons">
+                                            <button type="button" class="btn btn-orange">
+                                                JOIN
+                                            </button>
+                                        </div>
+
+                                        <ul class="boards__list">
+                                            <!-- Item 1 -->
+                                            <li class="boards__list-item">
+                                                <div class="boards__list-star">
+                                                    <img src="./assets/images/star-icon.svg" alt="star icon">
+                                                </div>
+                                                <div class="boards__list-cup">
+                                                    <img src="./assets/images/cup_icon.svg" alt="">
+                                                </div>
+                                                <div class="boards__list-avatar">
+                                                    <img src="./assets/images/card-avatar.png" alt="">
+                                                </div>
+                                                <p class="fw-medium color-cyan">
+                                                    Club_lommy
+                                                </p>
+                                                <div class="boards__list-scores">
+                                                    <img src="./assets/images/trophy.svg" alt="cup icon">
+                                                    <span>512</span>
+                                                </div>
+                                            </li>
+
+                                            <!-- Item 2 -->
+                                            <li class="boards__list-item">
+                                                <div class="boards__list-star">
+                                                </div>
+                                                <div class="boards__list-cup">
+                                                    <img src="./assets/images/cup_icon.svg" alt="">
+                                                </div>
+                                                <div class="boards__list-avatar">
+                                                    <img src="./assets/images/card-avatar.png" alt="">
+                                                </div>
+                                                <p class="fw-medium color-cyan">
+                                                    Mirzo bedil
+                                                </p>
+                                                <div class="boards__list-scores">
+                                                    <img src="./assets/images/trophy.svg" alt="cup icon">
+                                                    <span>229</span>
+                                                </div>
+                                            </li>
+
+                                            <!-- Item 3 -->
+                                            <li class="boards__list-item">
+                                                <div class="boards__list-star">
+                                                </div>
+                                                <div class="boards__list-cup">
+                                                </div>
+                                                <div class="boards__list-avatar">
+                                                    <img src="./assets/images/card-avatar.png" alt="">
+                                                </div>
+                                                <p class="fw-medium color-cyan">
+                                                    Hayyat_agency
+                                                </p>
+                                                <div class="boards__list-scores">
+                                                    <img src="./assets/images/trophy.svg" alt="cup icon">
+                                                    <span>44</span>
+                                                </div>
+                                            </li>
+
+                                            <!-- Item 4 -->
+                                            <li class="boards__list-item">
+                                                <div class="boards__list-star">
+                                                </div>
+                                                <div class="boards__list-cup">
+                                                    <img src="./assets/images/cup_icon.svg" alt="">
+                                                </div>
+                                                <div class="boards__list-avatar">
+                                                    <img src="./assets/images/card-avatar.png" alt="">
+                                                </div>
+                                                <p class="fw-medium color-cyan">
+                                                    James_bond_007
+                                                </p>
+                                                <div class="boards__list-scores">
+                                                    <img src="./assets/images/trophy.svg" alt="cup icon">
+                                                    <span>143</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Scipher Cards -->
+                    <div class="taboo__content" id="taboo-content">
+                        
+                        <!-- ==== Final Individual Scoring Card ==== -->
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-header-heading">
+                                    <img src="./assets/images/profile-icon.svg" alt="List icon">
+                                    <h6>Final individual scoring</h6>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <ul class="card__list">
+                                    <!-- Item 1 -->
+                                    <li class="card__list-item justify-content-between">
+                                        <div class="card__info">
+                                            <div class="card__info-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="card__info-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="">
+                                            </div>
+                                            <div class="card__info-text">
+                                                <p class="color-cyan">James_bond_007</p>
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon" class="mr-3 ml-8">
+                                                <p class="color-yellow fw-medium">0</p>
+                                            </div>
+                                        </div>
+                                        <p class="color-yellow">15 points</p>
+                                    </li>
+
+                                    <!-- Item 2 -->
+                                    <li class="card__list-item justify-content-between">
+                                        <div class="card__info">
+                                            <div class="card__info-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="card__info-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="">
+                                            </div>
+                                            <div class="card__info-text">
+                                                <p class="color-cyan">Max_bro_94</p>
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon" class="mr-3 ml-8">
+                                                <p class="color-yellow fw-medium">0</p>
+                                            </div>
+                                        </div>
+                                        <p class="color-yellow">60 points</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- ==== Word Difficulty Card ==== -->
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-header-heading">
+                                    <img src="./assets/images/t-icon.svg" alt="T icon">
+                                    <h6>Word difficulty breakdown</h6>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div id="world-difficulty-chart"></div>
+                            </div>
+                        </div>
+
+                        <!-- ==== Value Card ==== -->
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-header-heading">
+                                    <img src="./assets/images/t-icon.svg" alt="T icon">
+                                    <h6>Highest value words</h6>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <ul class="card__list">
+                                    <!-- Item 1 -->
+                                    <li class="card__list-item">
+                                        <div class="card__info highest-info">
+                                            <div class="card__info-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="card__info-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="">
+                                            </div>
+                                            <div class="card__info-text">
+                                                <p class="color-cyan">James_bond_007</p>
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon" class="mr-3 ml-8">
+                                                <p class="color-yellow fw-medium">0</p>
+                                            </div>
+                                        </div>
+                                        <div class="card__list-solution">
+                                            <p class="text-uppercase">Solutions</p>
+                                        </div>
+                                        <div class="card__list-points">
+                                            <p class="text-italic">Insufficient data</p>
+                                            <p class="color-yellow">15 points</p>
+                                        </div>
+                                    </li>
+
+                                    <!-- Item 1 -->
+                                    <li class="card__list-item">
+                                        <div class="card__info highest-info">
+                                            <div class="card__info-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="card__info-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="">
+                                            </div>
+                                            <div class="card__info-text">
+                                                <p class="color-cyan">Name</p>
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon" class="mr-3 ml-8">
+                                                <p class="color-yellow fw-medium">0</p>
+                                            </div>
+                                        </div>
+                                        <div class="card__list-solution">
+                                            <p class="text-uppercase">Yemen</p>
+                                        </div>
+                                        <div class="card__list-points">
+                                            <p class="text-italic">Correct in 19% of appearances</p>
+                                            <p class="color-yellow">15 points</p>
+                                        </div>
+                                    </li>
+
+                                    <!-- Item 3 -->
+                                    <li class="card__list-item">
+                                        <div class="card__info highest-info">
+                                            <div class="card__info-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="card__info-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="">
+                                            </div>
+                                            <div class="card__info-text">
+                                                <p class="color-cyan">Name</p>
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon" class="mr-3 ml-8">
+                                                <p class="color-yellow fw-medium">0</p>
+                                            </div>
+                                        </div>
+                                        <div class="card__list-solution">
+                                            <p class="text-uppercase">Glowing</p>
+                                        </div>
+                                        <div class="card__list-points">
+                                            <p class="text-italic">Correct in 36% of appearances</p>
+                                            <p class="color-yellow">15 points</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ==== Log Cards ==== -->
+                <div class="scipher__log log__taboo" id="scipher__log">
+                    <div class="log__header">
+                        <div class="log__header-buttons">
+                            <button type="button" onclick="chatLog()"  class="log__header-btn log-btn">
+                                <img src="./assets/images/door-icon.svg" alt="icon">
+                            </button>
+                            <div class="log__header-btns">
+                                <button type="button" onclick="toggleChangeName()" class="log__header-btn">
+                                    <img src="./assets/images/t-icon.svg" alt="icon">
+                                </button>
+                                <button type="button" onclick="toggleRoomSettings()" class="log__header-btn">
+                                    <img src="./assets/images/settings-icon.svg" alt="icon">
+                                </button>
+                                <button type="button" onclick="toggleResetGame()" class="log__header-btn">
+                                    <img src="./assets/images/spinn-icon.svg" alt="icon">
+                                </button>
+                                <button type="button" onclick="toggleRoomLobby()" class="log__header-btn">
+                                    <img src="./assets/images/user-group-icon.svg" alt="icon">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ==== Game Log Card ==== -->
+                    <div class="card game-log-card" id="log-card">
+                        <div class="card-header">
+                            <div class="card-header-heading">
+                                <img src="./assets/images/clock.svg" alt="Clock">
+                                <h6 class="text-uppercase">Game log</h6>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="taboo__gamelog custom-scrollbar">
+                                <div class="taboo__gamelog-content">
+                                    <p class="taboo__gamelog-text">
+                                        <strong>TABOO Pack - Hard</strong> (3,263 words) - 12% correct, 20 pts
+                                    </p>
+                                    <p class="taboo__gamelog-text"><strong>TABOO Pack - Insane</strong> (2,139 words) - 3% correct, 30 pts</p>
+                                    <p class="taboo__gamelog-text">
+                                        Welcome to <strong>TABOO: Standard mode (Normal)</strong>. Each turn there will be one person on your team who is the Describer, they will be shown 7 words that they will describe to you. You will have 60 seconds to correctly guess your words, you receive half points for incorrect spelling. More difficult words are worth more points. Bonus words will appear if you complete most of your list.
+                                    </p>
+                                    <p class="taboo__gamelog-text">
+                                        <strong>TABOO Pack - Hard</strong> (3,263 words) - 12% correct, 20 pts
+                                    </p>
+                                    <p class="taboo__gamelog-text"><strong>TABOO Pack - Insane</strong> (2,139 words) - 3% correct, 30 pts</p>
+                                    <p class="taboo__gamelog-text">
+                                        Welcome to <strong>TABOO: Standard mode (Normal)</strong>. Each turn there will be one person on your team who is the Describer, they will be shown 7 words that they will describe to you. You will have 60 seconds to correctly guess your words, you receive half points for incorrect spelling. More difficult words are worth more points. Bonus words will appear if you complete most of your list.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+
+                    <!-- ==== Chat Card ==== -->
+                    <div class="card chat" id="chat-card">
+                        <div class="card-header chat__header">
+                            <div class="card-header-heading">
+                                <img src="./assets/images/chat-icon.svg" alt="Chat icon">
+                                <h6 class="text-uppercase">Chats</h6>
+                            </div>
+                            <div class="chat__tabs">
+                                <button type="button" class="chat__tabs-btn team-1" data-id="tab-content-team-1">Team1</button>
+                                <button type="button" class="chat__tabs-btn team-2 active" data-id="tab-content-team-2">Team2</button>
+                            </div>
+                        </div>
+
+                        <div class="card-body chat__body">
+                            <!-- Content Team 1 -->
+                            <div class="chat__tab-content" data-id="tab-content-team-1">
+                                <p>Team 1 content</p>
+                            </div>
+
+                            <!-- Content Team 2 -->
+                            <div class="chat__tab-content show" data-id="tab-content-team-2">
+                                <div>
+                                    <!-- Row 1 -->
+                                    <div class="chat__tab-row">
+                                        <div class="chat__tabs-text">
+                                            <div class="chat__tab-user">
+                                                <div class="chat__tab-avatar">
+                                                    <img src="./assets/images/game-avatar-1.png" alt="">
+                                                </div>
+                                                <img src="./assets/images/cup_icon.svg" alt="" class="chat__tab-icon">
+                                                <p class="fw-bold color-orange">User</p>
+                                            </div>
+                                            <p class="chat__tab-message">Message sfesfse  sfsfsf sfse fsef sef se fseef sef sef sef sef sefs</p>
+                                        </div>
+                                        <div class="chat__tab-time">
+                                            <span class="color-gray">5m ago</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Row 1 -->
+                                    <div class="chat__tab-row">
+                                        <div class="chat__tabs-text">
+                                            <div class="chat__tab-user">
+                                                <div class="chat__tab-avatar">
+                                                    <img src="./assets/images/game-avatar-2.png" alt="">
+                                                </div>
+                                                <img src="./assets/images/cup_icon.svg" alt="" class="chat__tab-icon">
+                                                <p class="fw-bold color-orange">User</p>
+                                            </div>
+                                            <p class="chat__tab-message">Message</p>
+                                        </div>
+                                        <div class="chat__tab-time">
+                                            <span class="color-gray">5m ago</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <form action="#" class="chat__form">
+                                    <div class="chat__form-row">
+                                        <input type="text" placeholder="Post message..." class="chat__form-input">
+                                        <button type="submit" class="chat__form-btn">
+                                            <img src="./assets/images/send-icon.svg" alt="Send icon">
+                                        </button>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- ====== Suggest A Word Modal ====== -->
+    <div class="backdrop" id="change-team-name">
+        <div class="modal-content">
+            <div class="card change-name-card">
+                <div class="card-header">
+                    <div class="card-header-heading">
+                        <img src="./assets/images/t-icon.svg" alt="Edit Icon">
+                        <h6>SUGGEST A WORD</h6>
+                    </div>
+                    <button type="button" class="btn btn-sm" onclick="toggleChangeName()">
+                        <img src="./assets/images/close-icon.svg" alt="close icon">
+                    </button>
+                </div>
+                <div class="card-body">
+                    <form action="#" class="scipher__form">
+                        <label for="name">Suggest word</label>
+                        <div class="scipher__form-row">
+                            <input type="text" name="name" id="name">
+                            <button type="submit" class="btn btn-dark ">
+                                Submit
+                            </button>
+                        </div>
+                        <p class="form-row-text">Suggest a word to be added to the existing 9,747.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ====== Room Settings Modal ====== -->
+    <div class="backdrop" id="room-settings">
+        <div class="modal-content">
+            <div class="card room-settings-card">
+                <div class="card-header">
+                    <div class="card-header-heading">
+                        <img src="./assets/images/settings-icon.svg" alt="Edit Icon">
+                        <h6>Room settings</h6>
+                    </div>
+                    <button type="button" class="btn btn-sm" onclick="toggleRoomSettings()">
+                        <img src="./assets/images/close-icon.svg" alt="close icon">
+                    </button>
+                </div>
+                <div class="card-body">
+                    <form action="#" class="scipher__form">
+                        <div class="login__form-row">
+                            <label for="room-grid-size" class="mb-8">Words per turn</label>
+                            <select name="room-grid-size" id="room-grid-size">
+                                <option value="7">7</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+
+                        <div class="login__form-row pt-8">
+                            <label for="cards-per-team" class="mb-8">Seconds per team</label>
+                            <select name="cards-per-team" id="cards-per-team">
+                                <option value="60">60</option>
+                                <option value="80">80</option>
+                            </select>
+                        </div>
+
+                        <div class="login__form-row pt-8">
+                            <label for="black-cards" class="mb-8">Game Mode</label>
+                            <select name="black-cards" id="black-cards">
+                                <option value="standard">Standard - Normal</option>
+                            </select>
+                        </div>
+
+                        <div class="pt-8 pb-16">
+                            <p class="checkbox-row-title">Rules / Settings</p>
+
+                            <!-- Row 1 -->
+                            <div class="checkbox-row">
+                                <input type="checkbox" id="allow-numbers" class="checkbox-input">
+                                <label for="allow-numbers" class="checkbox-label">
+                                    Disable chatroom
+                                </label>
+                                <span class="checkbox-checkmark"></span>
+                            </div>
+
+                            <!-- Row 2 -->
+                            <div class="checkbox-row">
+                                <input type="checkbox" id="higher-numbers" class="checkbox-input">
+                                <label for="higher-numbers" class="checkbox-label">
+                                    Randomize teams after each game
+                                </label>
+                                <span class="checkbox-checkmark"></span>
+                            </div>
+                            
+                        </div>
+
+                        <div class="scipher__form-row justify-content-end">
+                            <button type="submit" class="btn btn-dark ">
+                                Save room settings for next match
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ====== Room Lobby Modal ====== -->
+    <div class="backdrop" id="room-lobby">
+        <div class="modal-content">
+            <div class="card room-lobby-card">
+                <div class="card-header">
+                    <div class="card-header-heading">
+                        <img src="./assets/images/people.svg" alt="Icon">
+                        <h6>Room lobby</h6>
+                    </div>
+                    <button type="button" class="btn btn-sm" onclick="toggleRoomLobby()">
+                        <img src="./assets/images/close-icon.svg" alt="close icon">
+                    </button>
+                </div>
+                <div class="card-body">
+                    <ul class="card__list">
+                        <!-- Item 1 -->
+                        <li class="card__list-item justify-content-between p-8">
+                            <div class="card__info">
+                                <div class="card__info-icon">
+                                    <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                </div>
+                                <div class="card__info-avatar">
+                                    <img src="./assets/images/card-avatar.png" alt="">
+                                </div>
+                                <div class="card__info-text">
+                                    <p class="color-cyan">Name</p>
+                                    <p class="text-italic ml-8">(spymaster)</p>
+                                    <img src="./assets/images/cup-yellow.svg" alt="Cup icon" class="mr-3 ml-8">
+                                    <p class="color-yellow fw-medium">0</p>
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-items-center room-lobby-btns">
+                                <button type="button" class="btn btn-primary btn-xs mr-8 text-uppercase">Make host</button>
+                                <button type="button" class="btn btn-secondary btn-xs text-uppercase">Ban</button>
+                            </div>
+                        </li>
+
+                        <!-- Item 2 -->
+                        <li class="card__list-item justify-content-between p-8">
+                            <div class="card__info">
+                                <div class="card__info-icon">
+                                    <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                </div>
+                                <div class="card__info-avatar">
+                                    <img src="./assets/images/card-avatar.png" alt="">
+                                </div>
+                                <div class="card__info-text">
+                                    <p class="color-cyan">Name</p>
+                                    <p class="text-italic ml-8">(spymaster)</p>
+                                    <img src="./assets/images/cup-yellow.svg" alt="Cup icon" class="mr-3 ml-8">
+                                    <p class="color-yellow fw-medium">0</p>
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-items-center room-lobby-btns">
+                                <button type="button" class="btn btn-primary btn-xs mr-8 text-uppercase">Make host</button>
+                                <button type="button" class="btn btn-secondary btn-xs text-uppercase">Ban</button>
+                            </div>
+                        </li>
+
+                        <!-- Item 3 -->
+                        <li class="card__list-item justify-content-between p-8">
+                            <div class="card__info">
+                                <div class="card__info-icon">
+                                    <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                </div>
+                                <div class="card__info-avatar">
+                                    <img src="./assets/images/card-avatar.png" alt="">
+                                </div>
+                                <div class="card__info-text">
+                                    <p class="color-cyan">Name</p>
+                                    <p class="text-italic ml-8">(spymaster)</p>
+                                    <img src="./assets/images/cup-yellow.svg" alt="Cup icon" class="mr-3 ml-8">
+                                    <p class="color-yellow fw-medium">0</p>
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-items-center room-lobby-btns">
+                                <button type="button" class="btn btn-primary btn-xs mr-8 text-uppercase">Make host</button>
+                                <button type="button" class="btn btn-secondary btn-xs text-uppercase">Ban</button>
+                            </div>
+                        </li>
+
+                        <!-- Item 4 -->
+                        <li class="card__list-item justify-content-between p-8">
+                            <div class="card__info">
+                                <div class="card__info-icon">
+                                    <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                </div>
+                                <div class="card__info-avatar">
+                                    <img src="./assets/images/card-avatar.png" alt="">
+                                </div>
+                                <div class="card__info-text">
+                                    <p class="color-cyan">Name</p>
+                                    <p class="text-italic ml-8">(spymaster)</p>
+                                    <img src="./assets/images/cup-yellow.svg" alt="Cup icon" class="mr-3 ml-8">
+                                    <p class="color-yellow fw-medium">0</p>
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-items-center room-lobby-btns">
+                                <button type="button" class="btn btn-primary btn-xs mr-8 text-uppercase">Make host</button>
+                                <button type="button" class="btn btn-secondary btn-xs text-uppercase">Ban</button>
+                            </div>
+                        </li>
+
+                        <!-- Item 5 -->
+                        <li class="card__list-item justify-content-between p-8">
+                            <div class="card__info">
+                                <div class="card__info-icon">
+                                    <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                </div>
+                                <div class="card__info-avatar">
+                                    <img src="./assets/images/card-avatar.png" alt="">
+                                </div>
+                                <div class="card__info-text">
+                                    <p class="color-cyan">Name</p>
+                                    <p class="text-italic ml-8">(spymaster)</p>
+                                    <img src="./assets/images/cup-yellow.svg" alt="Cup icon" class="mr-3 ml-8">
+                                    <p class="color-yellow fw-medium">0</p>
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-items-center room-lobby-btns">
+                                <button type="button" class="btn btn-primary btn-xs mr-8 text-uppercase">Make host</button>
+                                <button type="button" class="btn btn-secondary btn-xs text-uppercase">Ban</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ====== Reset Game Modal ====== -->
+    <div class="backdrop" id="reset-game-modal">
+        <div class="modal-content">
+            <div class="card change-name-card">
+                <div class="card-header">
+                    <div class="card-header-heading">
+                        <img src="./assets/images/reset-icon.svg" alt="Reset Icon">
+                        <h6>Restart game</h6>
+                    </div>
+                    <button type="button" class="btn btn-sm" onclick="toggleResetGame()">
+                        <img src="./assets/images/close-icon.svg" alt="close icon">
+                    </button>
+                </div>
+                <div class="card-body">
+                    <form action="#" class="scipher__form">
+                        <div class="scipher__form-texts">
+                            <p class="fw-medium">Do you confirm restarting the game?</p>
+                            <p class="color-yellow text-uppercase fw-medium mt-12">Warning! This will reset the
+                                currently running game!</p>
+                        </div>
+                        <div class="scipher__form-row justify-content-center">
+                            <button type="button" class="scipher__form-cancel">Cancel</button>
+                            <button type="button" class="btn btn-dark ">
+                                Confirm
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ====== Uset Settings Modal ====== -->
+    <div class="backdrop" id="user-settings">
+        <div class="modal-content">
+            <div class="card user-settings-card">
+                <div class="card-header">
+                    <div class="card-header-heading">
+                        <img src="./assets/images/settings-icon.svg" alt="Gear icon">
+                        <h6 class="card-title">User Settings</h6>
+                    </div>
+                    <button type="button" class="btn btn-sm" onclick="toggleUserSettings()">
+                        <img src="./assets/images/close-icon.svg" alt="close icon">
+                    </button>
+                </div>
+                <div class="card-body">
+                    <form action="#" class="form">
+                        <!-- Row 1 -->
+                        <div class="form-row">
+                            <label for="user-name">Change Username</label>
+                            <input type="text" id="user-name" class="form-row-input">
+                            <p class="form-row-text">Username can only be changed once a week.</p>
+                        </div>
+    
+                        <!-- Row 2 -->
+                        <div class="form-row">
+                            <label for="win-rate">Hide win rate on profile page</label>
+                            <select name="" id="win-rate">
+                                <option value="no">No</option>
+                            </select>
+                            <p class="form-row-text">This covers anything related to your total wins/losses.</p>
+                        </div>
+    
+                        <!-- Row 3 -->
+                        <div class="form-row">
+                            <label for="detailed-statistics">Hide detailed statistics on profile page</label>
+                            <select name="" id="detailed-statistics">
+                                <option value="no">No</option>
+                            </select>
+                            <div class="form-row-text">This does not cover win/losses, this covers detailed numbers such as total clues given, average clue size, etc.</div>
+                        </div>
+    
+                        <!-- Row 4 -->
+                        <div class="form-row">
+                            <label for="trophy-number">Hide trophy number next to username</label>
+                            <select name="" id="trophy-number">
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+    
+                        <!-- Row 5 -->
+                        <div class="form-row">
+                            <label for="allowing-friends">Opt out of allowing friends to compare their stats with yours</label>
+                            <select name="" id="allowing-friends">
+                                <option value="no">No</option>
+                                <option value="allow">Allow</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-button">
+                            <button type="submit" class="btn form-button-btn">Save user settings</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.3.3/echarts.min.js" integrity="sha512-2L0h0GhoIHQEjti/1KwfjcbyaTHy+hPPhE1o5wTCmviYcPO/TD9oZvUxFQtWvBkCSTIpt+fjsx1CCx6ekb51gw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/scipher.js"></script>
+</body>
+</html>

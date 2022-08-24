@@ -1,0 +1,361 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 64px 20px;
+    padding-bottom: 36px;
+}
+
+.main__logo {
+    margin-bottom: 44px;
+}
+
+.main__select {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 110px;
+}
+
+.main__select-img {
+    max-width: 64px;
+    width: 100%;
+    height: auto;
+}
+
+.main__select-counter {
+    margin-top: -13px;
+}
+
+.main-menu-container {
+    position: relative;
+    max-width: 752px;
+    width: 100%;
+    margin-top: 53px;
+    z-index: 2;
+}
+
+.main-menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 16px;
+    padding-bottom: 16px;
+}
+
+.main-menu-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    width: 100%;
+    height: 86px;
+    padding: 24px;
+    cursor: pointer;
+}
+
+.main-menu-item:hover {
+    background-color: var(--dark-300);
+}
+
+.main-menu-item h6 {
+    max-width: 88px;
+    text-align: center;
+}
+/* ------------ Player Style ----------- */
+.main-content {
+    display: flex;
+}
+
+.main__player {
+    width: 450px;
+    margin-right: 16px;
+}
+
+.main__player-header-bg {
+    background-image: url('./../assets/images/player-header-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main__player-header {
+    display: flex;
+    align-items: center;
+}
+
+.main__player-header img {
+    margin-right: 9px;
+}
+
+.main__player .card-body {
+    padding: 14px 12px;
+}
+
+.main__player-row {
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    padding: 10px 12px;
+    transition: all .3s ease;
+}
+
+.main__player-row:hover {
+    background-color: #404253;
+}
+
+.main__player-row:not(:last-child) {
+    margin-bottom: 6px;
+}
+
+.main__player-profile {
+    display: flex;
+    align-items: center;
+    width: 144px;
+    height: 32px;
+    padding-right: 16px;
+}
+
+.main__player-img {
+    width: 32px;
+    height: auto;
+    border-radius: 4px;
+}
+
+.main__player-info {
+    margin-left: 8px;
+}
+
+.main__player-trophy {
+    margin-right: 4px;
+}
+
+.main__player-name {
+    text-transform: capitalize;
+    font-size: 12px;
+    color: var(--cyan);
+    font-weight: 500;
+    line-height: 15px;
+    margin-bottom: 3px;
+}
+
+.main__player-score {
+    font-size: 10px;
+    color: var(--yellow);
+    font-weight: 600;
+    line-height: 12px;
+}
+
+/* ------------ Announcement Style ----------- */
+.main__announcement {
+    width: 286px;
+}
+
+.main__announcement-header-bg {
+    background-image: url('./../assets/images/card-header-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main__announcement-header {
+    display: flex;
+    align-items: center;
+}
+
+.main__announcement-header img {
+    margin-right: 9px;
+}
+
+.main__announcement-image {
+    width: 186px;
+    height: 165px;
+    margin-top: -34px;
+
+    margin-left: 20px;
+}
+
+.main__announcement-title {
+    font-weight: 600;
+    margin-top: -15px;
+}
+
+.main__announcement-links {
+    font-size: 12px;
+    line-height: 15px;
+    margin: 8px 0;
+}
+
+.main__announcement-links a {
+    display: inline;
+}
+
+.main__announcement-starts {
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+    line-height: 12px;
+    opacity: 0.5;
+}
+
+.main__announcement-starts img {
+    margin-right: 4px;
+}
+
+/* ------------ Game Modal style ----------- */
+.game-card {
+    position: relative;
+    max-width: 938px;
+    width: 100%;
+    z-index: 99;
+}
+
+.game__form {
+    width: 100%;
+}
+
+.game__form-content {
+    display: flex;
+}
+
+/* Selects */
+.game__selects {
+    flex: 1;
+    padding-right: 56px;
+}
+
+/* User Settings modal */
+.user-settings-card {
+    position: relative;
+    max-width: 450px;
+    width: 100%;
+    z-index: 99;
+}
+
+/* Checkboxes */
+.game__checkboxes {
+    width: 434px;
+}
+
+.game__checkboxes-title {
+    margin-bottom: 16px;
+}
+
+/* .game__checkboxes-row {
+    margin-bottom: 12px;
+} */
+
+.game__form-button {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.game__form-btn {
+    background-color: var( --dark);
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--white);
+    padding: 10px 16px;
+}
+/* ------------ Call To Action style ----------- */
+.main-cta-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 62px;
+    z-index: 2;
+}
+
+/* ------------ Break Point < 992px ----------- */
+@media only screen and (max-width: 991.98px) {
+    .main__logo {
+        margin-bottom: 36px;
+    }
+
+    .main-menu-container {
+        margin-top: 36px;
+    }
+
+    .main__player {
+        flex: 1;
+    }
+
+    .game__selects {
+        padding-right: 20px;
+    }
+}
+
+/* ------------ Break Point < 768px ----------- */
+@media only screen and (max-width: 767.98px) {
+    .main__player-profile {
+        width: 120px;
+    }
+
+    .main__announcement {
+        width: 230px;
+    }
+
+    .main__announcement-image {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    .game__form-content {
+        flex-direction: column;
+    }
+
+    .game__selects {
+        padding-right: 0;
+    }
+
+    .game__checkboxes {
+        width: 100%;
+        padding-top: 24px;
+    }
+}
+
+/* ------------ Break Point < 576px ----------- */
+@media only screen and (max-width: 575.98px) {
+    .main-menu {
+        grid-template-columns: 1fr;
+        grid-column-gap: 0;
+        padding-bottom: 8px;
+    }
+    
+    .main-menu-item {
+        height: 82px;
+        padding: 22px;
+        margin-bottom: 8px;
+    }
+
+    .main-content {
+        flex-direction: column;
+    }
+
+    .main__player {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 16px;
+    }
+
+    .main__player-profile {
+        width: 109px;
+    }
+
+    .main__announcement {
+        width: 100%;
+    }
+
+    .main-cta-container {
+        margin-top: 32px;
+    }
+
+    .main-menu-item h6 {
+        font-size: 14px;
+        line-height: 17px;
+    }
+}

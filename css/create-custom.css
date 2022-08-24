@@ -1,0 +1,77 @@
+/* ============ Start Create Custom Pages Style =========== */
+.create-custom {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+    z-index: 2;
+}
+
+.create-custom-container {
+    max-width: 1004px;
+    width: 100%;
+    padding-bottom: 24px;
+}
+
+.create-custom-container .card {
+    margin-bottom: 16px;
+}
+
+.create-room {
+    width: 100%;
+    display: flex;
+}
+
+.create-room__selects {
+    width: 50%;
+    padding-right: 18px;
+}
+
+.create-room__checkbox {
+    width: 50%;
+    padding-left: 18px;
+}
+
+.custom-setting-checkboxes {
+    padding-top: 35px;
+}
+
+.create-room-additional {
+    padding-top: 30px;
+}
+
+.create-custom-creating {
+    padding-right: 20px;
+}
+
+@media only screen and (max-width: 991.98px) {
+    .create-room__selects {
+        padding-right: 12px;
+    }
+    
+    .create-room__checkbox {
+        padding-left: 12px;
+    }
+}
+
+@media only screen and (max-width: 767.98px) {
+    .create-custom-container {
+        padding-bottom: 36px;
+    }
+
+    .create-room {
+        flex-direction: column;
+    }
+
+    .create-room__selects {
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 12px;
+    }
+    
+    .create-room__checkbox {
+        width: 100%;
+        padding-left: 0;
+    }
+}
+/* ============ End Create Custom Pages Style =========== */

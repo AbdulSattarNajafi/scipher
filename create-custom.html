@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.27.1/slimselect.min.css" rel="stylesheet"></link> -->
+
+    <link rel="stylesheet" href="./css/app.css">
+    <link rel="stylesheet" href="./css/create-custom.css">
+    <title>Create Custom</title>
+</head>
+<body>
+    <div class="main-bg">
+        <!-- Lights and Background Images -->
+        <div class="main-bg__lights">
+            <div class="main-bg__light main-bg__light-1"></div>
+            <div class="main-bg__light main-bg__light-2"></div>
+            <div class="main-bg__light main-bg__light-3"></div>
+            <div class="main-bg__light main-bg__light-4"></div>
+        </div>
+        <div class="dots-top"></div>
+        <div class="dots-bottom">
+            <img src="./assets/images/bg-dots-bottom.png" alt="">
+        </div>
+
+        <!-- ====== Header ====== -->
+        <header class="header">
+            <div class="header__logo">
+                <img src="./assets/images/logo.png" alt="Logo" class="header__logo-img">
+            </div>
+            <div class="header__profile">
+                <button class="header__profile-btn" onclick="profileToggle()">
+                    <div class="header__profile-image">
+                        <img src="./assets/images/main-select.png" alt="image">
+                    </div>
+                    <div class="header__profile-info">
+                        <div class="header__profile-name">
+                            <img src="./assets/images/cup_icon.svg" alt="cup icon">
+                            <h6>Pink_bob</h6>
+                        </div>
+                        <div class="header__profile-counter">
+                            <img src="./assets/images/cup-orange.svg" alt="">
+                            <p>514</p>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="./assets/images/drop_icon.svg" alt="icon">
+                    </div>
+                </button>
+
+                <!-- Profile Dropdown -->
+                <ul class="profile__dropdown" id="profile-dropdown">
+                    <li class="profile__dropdown-item">
+                        <a href="./user-profile.html" class="profile__dropdown-link">
+                            <img src="./assets/images/profile-icon.svg" alt="profile icon">
+                            <span>Profile</span>
+                        </a>
+                    </li>
+                    <li class="profile__dropdown-item">
+                        <a href="javascript:void(0)" class="profile__dropdown-link" onclick="toggleUserSettings()">
+                            <img src="./assets/images/settings-icon.svg" alt="settings icon">
+                            <span>User settings</span>
+                        </a>
+                    </li>
+                    <li class="profile__dropdown-item">
+                        <a href="./login.html" class="profile__dropdown-link">
+                            <img src="./assets/images/logout-icon.svg" alt="logout icon">
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <main class="create-custom">
+            <div class="create-custom-container">
+
+                <!-- ====== Create Room ====== -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-header-heading">
+                            <img src="./assets/images/user-checked-icon.svg" alt="user icon">
+                            <h6 class="card-title">Create custom room</h6>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="create-room">
+
+                            <!-- ==== Selects ==== -->
+                            <div class="create-room__selects">
+                                <!-- Row 1 -->
+                                <div class="form-row">
+                                    <label for="room-name">Room Name</label>
+                                    <input type="text" id="room-name" class="form-row-input mb-8">
+                                </div>
+
+                                <!-- Row 2 -->
+                                <div class="form-row">
+                                    <label for="grid-size">Grid size and number of teams</label>
+                                    <select id="grid-size" name="grid-size">
+                                        <option value="4x4">4x4</option>
+                                        <option value="5x4">5x4</option>
+                                        <option value="5x5">5x5</option>
+                                        <option value="5x6">5x6 (recommended for two teams)</option>
+                                        <option value="6x6">6x6</option>
+                                        <option value="6x6">6x8</option>
+                                    </select>
+                                    <p class="form-row-text mb-8">A standard game is two teams on a 5x5 grid</p>
+                                </div>
+
+                                <!-- Row 3 -->
+                                <div class="form-row">
+                                    <label for="outer-space-theme">Theme</label>
+                                    <select id="outer-space-theme" name="outer-space-theme">
+                                        <option value="outer-space-theme">
+                                            Outer-Space / Relaunch
+                                        </option>
+                                        <option value="outer-space">
+                                            Outer-Space
+                                        </option>
+                                    </select>
+                                    <p class="form-row-text mb-8">Select the boards theme</p>
+                                </div>
+
+                                <!-- Row 4 -->
+                                <div class="form-row">
+                                    <label for="privacy">Room Privacy</label>
+                                    <select id="privacy" name="privacy">
+                                        <option value="private-utl">
+                                            Private URL (default)
+                                        </option>
+                                    </select>
+                                </div>
+
+                                <!-- Row 5 -->
+                                <div class="form-row pt-8 mb-0">
+                                    <label for="settings">Settings</label>
+                                    <select id="settings" name="settings">
+                                        <option value="standard">
+                                            Standard
+                                        </option>
+                                    </select>
+                                    <p class="form-row-text mb-8">Choose from one of the presets or configure custom settings</p>
+                                </div>
+                            </div>
+
+                            <!-- ==== Checkboxes ==== -->
+                            <div class="create-room__checkbox">
+                                <p class="checkbox-row-title">Select word pack(s)</p>
+
+                                <!-- Row 1 -->
+                                <div class="checkbox-row">
+                                    <input type="checkbox" id="default" class="checkbox-input create-room-checkbox" checked>
+                                    <label for="default" class="checkbox-label">
+                                        Default Word List (400 words, recommended)
+                                    </label>
+                                    <span class="checkbox-checkmark"></span>
+                                </div>
+
+                                <!-- Row 2 -->
+                                <div class="checkbox-row">
+                                    <input type="checkbox" id="expanded" class="checkbox-input create-room-checkbox" checked>
+                                    <label for="expanded" class="checkbox-label">
+                                        Default expanded: Duet (400 words, recommended)
+                                    </label>
+                                    <span class="checkbox-checkmark"></span>
+                                </div>
+
+                                <!-- Row 3 -->
+                                <div class="checkbox-row">
+                                    <input type="checkbox" id="tournament" class="checkbox-input create-room-checkbox" checked>
+                                    <label for="tournament" class="checkbox-label">
+                                        Cool Cats Tournament Word Pack: Standard & Duet (800 words)
+                                    </label>
+                                    <span class="checkbox-checkmark"></span>
+                                </div>
+
+                                <!-- Row 4 -->
+                                <div class="checkbox-row">
+                                    <input type="checkbox" id="social-media" class="checkbox-input create-room-checkbox" checked>
+                                    <label for="social-media" class="checkbox-label">
+                                        Tech and Social Media Pack V.2 (130 words)
+                                    </label>
+                                    <span class="checkbox-checkmark"></span>
+                                </div>
+
+                                <!-- Row 5 -->
+                                <div class="checkbox-row">
+                                    <input type="checkbox" id="disney" class="checkbox-input create-room-checkbox">
+                                    <label for="disney" class="checkbox-label">
+                                        DISNEY (225 words)
+                                    </label>
+                                    <span class="checkbox-checkmark"></span>
+                                </div>
+
+                                <!-- Row 6 -->
+                                <div class="checkbox-row">
+                                    <input type="checkbox" id="states" class="checkbox-input create-room-checkbox">
+                                    <label for="states" class="checkbox-label">
+                                        US States and Territories (55 words)
+                                    </label>
+                                    <span class="checkbox-checkmark"></span>
+                                </div>
+
+                                <!-- Row 7 -->
+                                <div class="checkbox-row disabled">
+                                    <input type="checkbox" id="extra-expanded" disabled class="checkbox-input create-room-checkbox">
+                                    <label for="extra-expanded" class="checkbox-label">
+                                        Default extra expanded: Undercover (390 words)
+                                    </label>
+                                    <span class="checkbox-checkmark"></span>
+                                </div>
+
+                                <!-- Row 8 -->
+                                <div class="checkbox-row">
+                                    <input type="checkbox" id="video-game" class="checkbox-input create-room-checkbox">
+                                    <label for="video-game" class="checkbox-label">
+                                        Video Games (155 words)
+                                    </label>
+                                    <span class="checkbox-checkmark"></span>
+                                </div>
+
+                                <!-- Row 10 -->
+                                <div class="checkbox-row">
+                                    <input type="checkbox" id="simpsons" class="checkbox-input create-room-checkbox">
+                                    <label for="simpsons" class="checkbox-label">
+                                        Simpsons Pack First Edition (105 words)
+                                    </label>
+                                    <span class="checkbox-checkmark"></span>
+                                </div>
+
+                                <!-- Row 10 -->
+                                <div class="checkbox-row">
+                                    <input type="checkbox" id="ultimate" class="checkbox-input create-room-checkbox">
+                                    <label for="ultimate" class="checkbox-label">
+                                        Ultimate Animal Crossing Pack (45 words)
+                                    </label>
+                                    <span class="checkbox-checkmark"></span>
+                                </div>
+
+                                <!-- Row 11 -->
+                                <div class="checkbox-row">
+                                    <input type="checkbox" id="geography" class="checkbox-input create-room-checkbox">
+                                    <label for="geography" class="checkbox-label">
+                                        Loyal's Giant Geography Pack (570 words)
+                                    </label>
+                                    <span class="checkbox-checkmark"></span>
+                                </div>
+
+                                <!-- Row 12 -->
+                                <div class="checkbox-row">
+                                    <input type="checkbox" id="theatre" class="checkbox-input create-room-checkbox">
+                                    <label for="theatre" class="checkbox-label">
+                                        Musical Theatre Word Pack (310 words)
+                                    </label>
+                                    <span class="checkbox-checkmark"></span>
+                                </div>
+
+                                <!-- Row 13 -->
+                                <div class="checkbox-row">
+                                    <input type="checkbox" id="british-culture" class="checkbox-input create-room-checkbox">
+                                    <label for="british-culture" class="checkbox-label">
+                                        British Culture Pack (220 words)
+                                    </label>
+                                    <span class="checkbox-checkmark"></span>
+                                </div>
+
+                                <!-- Row 14 -->
+                                <div class="checkbox-row">
+                                    <input type="checkbox" id="hobbit" class="checkbox-input create-room-checkbox">
+                                    <label for="hobbit" class="checkbox-label">
+                                        Hobbit/LOTR Pack (135 words)
+                                    </label>
+                                    <span class="checkbox-checkmark"></span>
+                                </div>
+
+                                <!-- Row 15 -->
+                                <div class="checkbox-row">
+                                    <input type="checkbox" id="french" class="checkbox-input create-room-checkbox">
+                                    <label for="french" class="checkbox-label">
+                                        French Standard & Duet (800 words)
+                                    </label>
+                                    <span class="checkbox-checkmark"></span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- ====== Custom Settings ====== -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-header-heading">
+                            <img src="./assets/images/settings-icon.svg" alt="settings icon">
+                            <h6>Custom settings</h6>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="create-room">
+
+                            <!-- ==== Selects ==== -->
+                            <div class="create-room__selects">
+                                <!-- Select -->
+                                <div class="form-row">
+                                    <label for="black-cards">Black Cards</label>
+                                    <select id="black-cards" name="black-cards">
+                                        <option value="default 1">1 (default)</option>
+                                        <option value="default 2">2 (default)</option>
+                                        <option value="default 3">3 (default)</option>
+                                    </select>
+                                    <p class="form-row-text mb-8">Add additional black cards</p>
+                                </div>
+
+                                <!-- Checkboxes -->
+                                <div class="custom-setting-checkboxes">
+                                    <p class="checkbox-row-title">Custom Rules</p>
+
+                                    <!-- Row 1 -->
+                                    <div class="checkbox-row">
+                                        <input type="checkbox" id="allow-numbers" class="checkbox-input" checked>
+                                        <label for="allow-numbers" class="checkbox-label">
+                                            Allow numbers higher than 9
+                                        </label>
+                                        <span class="checkbox-checkmark"></span>
+                                    </div>
+
+                                    <!-- Row 2 -->
+                                    <div class="checkbox-row">
+                                        <input type="checkbox" id="higher-numbers" class="checkbox-input">
+                                        <label for="higher-numbers" class="checkbox-label">
+                                            Allow numbers higher than the current number of cards
+                                        </label>
+                                        <span class="checkbox-checkmark"></span>
+                                    </div>
+
+                                    <!-- Row 3 -->
+                                    <div class="checkbox-row">
+                                        <input type="checkbox" id="infinite" class="checkbox-input" checked>
+                                        <label for="infinite" class="checkbox-label">
+                                            Always allow infinite guesses
+                                        </label>
+                                        <span class="checkbox-checkmark"></span>
+                                    </div>
+
+                                    <!-- Row 4 -->
+                                    <div class="checkbox-row">
+                                        <input type="checkbox" id="negative-numbers" class="checkbox-input">
+                                        <label for="negative-numbers" class="checkbox-label">
+                                            Allow negative numbers
+                                        </label>
+                                        <span class="checkbox-checkmark"></span>
+                                    </div>
+
+                                    <!-- Row 5 -->
+                                    <div class="checkbox-row">
+                                        <input type="checkbox" id="googling" class="checkbox-input" checked>
+                                        <label for="googling" class="checkbox-label">
+                                            Allow googling
+                                        </label>
+                                        <span class="checkbox-checkmark"></span>
+                                    </div>
+
+                                    <!-- Row 6 -->
+                                    <div class="checkbox-row">
+                                        <input type="checkbox" id="chatroom" class="checkbox-input">
+                                        <label for="chatroom" class="checkbox-label">
+                                            Disable chatroom
+                                        </label>
+                                        <span class="checkbox-checkmark"></span>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <!-- ==== Checkboxes ==== -->
+                            <div class="create-room__checkbox">
+
+                                <!-- TextArea -->
+                                <div class="form-row">
+                                    <label for="custom-rules">Info / Custom Rules</label>
+                                    <textarea name="custom-rules" id="custom-rules" class="form-row-textarea"></textarea>
+                                    <p class="form-row-text mb-8">Leave blank if not needed</p>
+                                </div>
+
+                                <div>
+                                    <p class="checkbox-row-title">Game Mods</p>
+                                    <!-- Row 1 -->
+                                    <div class="checkbox-row">
+                                        <input type="checkbox" id="game-consists" class="checkbox-input">
+                                        <label for="game-consists" class="checkbox-label">
+                                            Game consists of rounds (allows draws)
+                                        </label>
+                                        <span class="checkbox-checkmark"></span>
+                                    </div>
+
+                                    <!-- Row 2 -->
+                                    <div class="checkbox-row">
+                                        <input type="checkbox" id="hide-black" class="checkbox-input">
+                                        <label for="hide-black" class="checkbox-label">
+                                            Hide black card(s)
+                                        </label>
+                                        <span class="checkbox-checkmark"></span>
+                                    </div>
+
+                                    <!-- Row 3 -->
+                                    <div class="checkbox-row">
+                                        <input type="checkbox" id="hide-opposing" class="checkbox-input">
+                                        <label for="hide-opposing" class="checkbox-label">
+                                            Hide opposing teams cards
+                                        </label>
+                                        <span class="checkbox-checkmark"></span>
+                                    </div>
+
+                                    <!-- Row 4 -->
+                                    <div class="checkbox-row">
+                                        <input type="checkbox" id="disable-button" class="checkbox-input">
+                                        <label for="disable-button" class="checkbox-label">
+                                            Disable end turn button
+                                        </label>
+                                        <span class="checkbox-checkmark"></span>
+                                    </div>
+
+                                    <!-- Row 5 -->
+                                    <div class="checkbox-row">
+                                        <input type="checkbox" id="sabotage-mode" class="checkbox-input">
+                                        <label for="sabotage-mode" class="checkbox-label">
+                                            Sabotage mode
+                                        </label>
+                                        <span class="checkbox-checkmark"></span>
+                                    </div>
+
+                                    <!-- Row 6 -->
+                                    <div class="checkbox-row">
+                                        <input type="checkbox" id="randomize" class="checkbox-input">
+                                        <label for="randomize" class="checkbox-label">
+                                            Randomize teams after each game
+                                        </label>
+                                        <span class="checkbox-checkmark"></span>
+                                    </div>
+
+                                    <!-- Row 7 -->
+                                    <div class="checkbox-row">
+                                        <input type="checkbox" id="disallow-popular" class="checkbox-input">
+                                        <label for="disallow-popular" class="checkbox-label">
+                                            Disallow top 10 most popular clues
+                                        </label>
+                                        <span class="checkbox-checkmark"></span>
+                                    </div>
+
+                                    <!-- Row 8 -->
+                                    <div class="checkbox-row mb-8">
+                                        <input type="checkbox" id="practice-mode" class="checkbox-input">
+                                        <label for="practice-mode" class="checkbox-label">
+                                            One team practice mode
+                                        </label>
+                                        <span class="checkbox-checkmark"></span>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- ====== Game Clock ====== -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-header-heading">
+                            <img src="./assets/images/timer.png" alt="timer icon">
+                            <h6>Game clock</h6>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-row">
+                            <label for="game-clock">Use Game Clock</label>
+                            <select id="game-clock" name="game-clock">
+                                <option value="default clock">
+                                    Default Clock
+                                </option>
+                            </select>
+                            <p class="form-row-text mb-8">Speed up your games by adding a time control</p>
+                        </div>
+
+                        <div class="create-room">
+                            <div class="create-room__selects">
+                                <!-- Row 1 -->
+                                <div class="form-row">
+                                    <label for="team-starting">Team starting timebank</label>
+                                    <select id="team-starting" name="team-starting">
+                                        <option value="7 minutes">
+                                            7 minutes
+                                        </option>
+                                    </select>
+                                    <p class="form-row-text mb-8">Team timebanks activate once their per turn/action timer expires</p>
+                                </div>
+
+                                <!-- Row 2 -->
+                                <div class="form-row mb-8 create-room-additional">
+                                    <label for="first-team">First turn additional time (first team)</label>
+                                    <select id="first-team" name="first-team">
+                                        <option value="5 minutes">
+                                            5 minutes
+                                        </option>
+                                    </select>
+                                    <p class="form-row-text">Optional bonus time for the first turn for team 1. The triple timer per action is added ontop as well</p>
+                                </div>
+                            </div>
+                            <div class="create-room__checkbox">
+                                <!-- Row 1 -->
+                                <div class="form-row">
+                                    <label for="time-action">Time per action</label>
+                                    <select id="time-action" name="time-action">
+                                        <option value="45 seconds">
+                                            45 seconds
+                                        </option>
+                                    </select>
+                                    <p class="form-row-text mb-8">Guessers have this many seconds per action before their timebank activates. Captains have triple this time per turn. A portion of any unused seconds is added to the timebank</p>
+                                </div>
+
+                                <!-- Row 2 -->
+                                <div class="form-row mb-8">
+                                    <label for="first-run">First turn additional time (second team)</label>
+                                    <select id="first-run" name="first-run">
+                                        <option value="2 minutes">
+                                            2 minutes
+                                        </option>
+                                    </select>
+                                    <p class="form-row-text">Optional bonus time for the first turn for team 2. The triple timer per action is added ontop as well</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-button">
+                    <button type="button" id="create-custom-btn" class="btn form-button-btn next-btn btn-sm-block">
+                        <i class="fa-solid fa-check"></i>
+                        <span>Next</span>
+                    </button>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- ====== Uset Settings Modal ====== -->
+    <div class="backdrop" id="user-settings">
+        <div class="modal-content">
+            <div class="card user-settings-card">
+                <div class="card-header">
+                    <div class="card-header-heading">
+                        <img src="./assets/images/settings-icon.svg" alt="Gear icon">
+                        <h6 class="card-title">User Settings</h6>
+                    </div>
+                    <button type="button" class="btn btn-sm" onclick="toggleUserSettings()">
+                        <img src="./assets/images/close-icon.svg" alt="close icon">
+                    </button>
+                </div>
+                <div class="card-body">
+                    <form action="#" class="form">
+                        <!-- Row 1 -->
+                        <div class="form-row">
+                            <label for="user-name">Change Username</label>
+                            <input type="text" id="user-name" class="form-row-input">
+                            <p class="form-row-text">Username can only be changed once a week.</p>
+                        </div>
+    
+                        <!-- Row 2 -->
+                        <div class="form-row">
+                            <label for="win-rate">Hide win rate on profile page</label>
+                            <select name="" id="win-rate">
+                                <option value="no">No</option>
+                            </select>
+                            <p class="form-row-text">This covers anything related to your total wins/losses.</p>
+                        </div>
+    
+                        <!-- Row 3 -->
+                        <div class="form-row">
+                            <label for="detailed-statistics">Hide detailed statistics on profile page</label>
+                            <select name="" id="detailed-statistics">
+                                <option value="no">No</option>
+                            </select>
+                            <div class="form-row-text">This does not cover win/losses, this covers detailed numbers such as total clues given, average clue size, etc.</div>
+                        </div>
+    
+                        <!-- Row 4 -->
+                        <div class="form-row">
+                            <label for="trophy-number">Hide trophy number next to username</label>
+                            <select name="" id="trophy-number">
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+    
+                        <!-- Row 5 -->
+                        <div class="form-row">
+                            <label for="allowing-friends">Opt out of allowing friends to compare their stats with yours</label>
+                            <select name="" id="allowing-friends">
+                                <option value="no">No</option>
+                                <option value="allow">Allow</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-button">
+                            <button type="submit" class="btn form-button-btn">Save user settings</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.27.1/slimselect.min.js"></script> -->
+
+    <script src="./js/create-custom.js"></script>
+</body>
+</html>

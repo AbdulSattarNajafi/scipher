@@ -1,0 +1,334 @@
+.stats {
+    position: relative;
+    padding: 0 12px;
+    padding-bottom: 20px;
+    z-index: 2;
+}
+
+.stats-container {
+    display: flex;
+    max-width: 1544px;
+    margin: 0 auto;
+}
+
+.stats-cards-container {
+    width: 50%;
+    padding: 0 8px;
+}
+
+.stats-cards-container .card {
+    margin-bottom: 16px;
+}
+
+.stats__list-item {
+    display: flex;
+    align-items: center;
+    background-color: #2E2F3A;
+    border-radius: 4px;
+    padding: 10px 12px;
+    margin-bottom: 4px;
+    transition: all .3s ease;
+}
+
+.stats__list-item:last-child {
+    margin-bottom: 0;
+}
+
+.stats__list-item:hover {
+    background-color: #404253;
+}
+
+.stats__list-text {
+    flex: 1;
+    margin-right: 24px;
+}
+
+.success__list-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: #2E2F3A;
+    border-radius: 4px;
+    padding: 10px 12px;
+    margin-bottom: 4px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.success__list-item:hover {
+    background-color: #404253;
+}
+
+.success__list:last-child {
+    margin-bottom: 0;
+}
+
+.success__list-info {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    height: 16px;
+}
+
+.success__list-icon {
+    width: 16px;
+    margin-right: 8px;
+    padding-top: 2px;
+}
+
+.success__list-avatar {
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    margin-right: 8px;
+    overflow: hidden;
+}
+
+.success__list-avatar img {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+    object-fit: cover;
+}
+
+.success__list-score {
+    display: flex;
+    align-items: center;
+    margin-left: 8px;
+}
+
+.success__list-score img{
+    margin-right: 2px;
+}
+
+.success__list-text {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    padding-left: 16px;
+}
+
+.duo__list-item {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    background-color: #2E2F3A;
+    border-radius: 4px;
+    padding: 10px 12px;
+    margin-bottom: 4px;
+    transition: all .3s ease;
+}
+
+.duo__list-item:hover {
+    background-color: #404253;
+}
+
+.duo__list-item:last-child {
+    margin-bottom: 0;
+}
+
+.duo__list-players {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.duo__list-info {
+    display: flex;
+    align-items: center;
+    height: 16px;
+}
+
+.duo__list-icon {
+    width: 16px;
+    margin-right: 8px;
+    padding-top: 2px;
+}
+
+.duo__list-avatar {
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    margin-right: 8px;
+    overflow: hidden;
+}
+
+.duo__list-avatar img {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+    object-fit: cover;
+}
+
+.duo__list-score {
+    display: flex;
+    align-items: center;
+    margin-left: 8px;
+}
+
+.duo__list-score img {
+    margin-right: 2px;
+}
+
+.duo__list-games {
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 500;
+    margin-left: 8px;
+}
+
+.duo__progress-value {
+    width: 80px;
+    text-align: right;
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 500;
+}
+
+.duo__progress {
+   width: 100%;
+   margin-top: 8px;
+}
+
+.duo-description {
+    font-style: italic;
+    font-size: 10px;
+    color: var(--gray);
+    line-height: 12px;
+    margin-top: 12px;
+}
+
+#first-turn-chart,
+#all-turns-chart {
+    max-width: 665px;
+    width: 100%;
+    height: 286px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1099.98px) {
+    .success__list-item {
+        justify-content: space-between;
+    }
+
+    .success__list-info {
+        width: auto;
+        flex: 1;
+    }
+
+    .success__list-text {
+        width: auto;
+        flex-direction: column;
+        justify-content: flex-end;
+        text-align: right;
+    }
+
+    .duo__list-players {
+        width: 100%;
+    }
+
+    .duo__progress-value {
+        order: 3;
+        transform: translateY(4px);
+    }
+
+    .duo__progress {
+        order: 2;
+        width: calc(100% - 88px);
+        margin-right: 8px;
+    }
+}
+
+@media only screen and (max-width: 991.98px) {
+    .stats-container {
+        flex-direction: column;
+    }
+
+    .stats-cards-container {
+        width: 100%;
+    }
+
+    .success__list-item {
+        justify-content: flex-start;
+    }
+
+    .success__list-info {
+        width: 40%;
+        flex: 40%;
+    }
+
+    .success__list-text {
+        width: 60%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .duo__list-players {
+        width: auto;
+        flex: 1;
+    }
+
+    .duo__progress-value {
+        order: 2;
+        transform: translateY(0);
+    }
+
+    .duo__progress {
+        order: 3;
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+@media only screen and (max-width: 575.98px) {
+    .success__list-item {
+        justify-content: space-between;
+    }
+
+    .success__list-info {
+        width: auto;
+        flex: 1;
+    }
+
+    .success__list-text {
+        width: auto;
+        flex-direction: column;
+        justify-content: flex-end;
+        text-align: right;
+    }
+
+    .duo__list-players {
+        width: 100%;
+    }
+
+    .duo__list-score {
+        margin-left: 0;
+    }
+
+    .duo__list-score > img,
+    .duo__list-score > span {
+        display: none;
+    }
+
+    .duo__list-score .duo__list-games {
+        display: block;
+    }
+
+    .duo__progress-value {
+        order: 3;
+        transform: translateY(3px);
+    }
+
+    .duo__progress {
+        order: 2;
+        width: calc(100% - 88px);
+        margin-right: 8px;
+    }
+
+    #first-turn-chart,
+    #all-turns-chart{
+        height: 463px;
+    }
+}

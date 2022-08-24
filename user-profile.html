@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/app.css">
+    <link rel="stylesheet" href="./css/profile.css">
+    <title>User Profile</title>
+</head>
+<body>
+    <div class="main-bg">
+        <!-- Lights and Background Images -->
+        <div class="main-bg__lights">
+            <div class="main-bg__light main-bg__light-1"></div>
+            <div class="main-bg__light main-bg__light-2"></div>
+            <div class="main-bg__light main-bg__light-3"></div>
+            <div class="main-bg__light main-bg__light-4"></div>
+        </div>
+        <div class="dots-top"></div>
+        <div class="dots-bottom">
+            <img src="./assets/images/bg-dots-bottom.png" alt="">
+        </div>
+
+        <!-- ====== Header ====== -->
+        <header class="header">
+            <div class="header__logo">
+                <img src="./assets/images/logo.png" alt="Logo" class="header__logo-img">
+            </div>
+            <div class="header__profile">
+                <button class="header__profile-btn" onclick="profileToggle()">
+                    <div class="header__profile-image">
+                        <img src="./assets/images/main-select.png" alt="image">
+                    </div>
+                    <div class="header__profile-info">
+                        <div class="header__profile-name">
+                            <img src="./assets/images/cup_icon.svg" alt="cup icon">
+                            <h6>Pink_bob</h6>
+                        </div>
+                        <div class="header__profile-counter">
+                            <img src="./assets/images/cup-orange.svg" alt="">
+                            <p>514</p>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="./assets/images/drop_icon.svg" alt="icon">
+                    </div>
+                </button>
+
+                <!-- Profile Dropdown -->
+                <ul class="profile__dropdown" id="profile-dropdown">
+                    <li class="profile__dropdown-item">
+                        <a href="#" class="profile__dropdown-link">
+                            <img src="./assets/images/profile-icon.svg" alt="profile icon">
+                            <span>Profile</span>
+                        </a>
+                    </li>
+                    <li class="profile__dropdown-item">
+                        <a href="javascript:void(0)" class="profile__dropdown-link" onclick="toggleUserSettings()">
+                            <img src="./assets/images/settings-icon.svg" alt="settings icon">
+                            <span>User settings</span>
+                        </a>
+                    </li>
+                    <li class="profile__dropdown-item">
+                        <a href="./login.html" class="profile__dropdown-link">
+                            <img src="./assets/images/logout-icon.svg" alt="logout icon">
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <main class="profile">
+            <div class="profile-container">
+                <!-- ==== Left Cards ==== -->
+                <div class="profile__card-wrapper">
+
+                    <!-- ==== Overview Card ==== -->
+                    <div class="card profile__card">
+                        <div class="card-header">
+                            <div class="card-header-heading">
+                                <img src="./assets/images/profile-icon.svg" alt="icon">
+                                <h6 class="text-uppercase">mirzobedilx's overview</h6>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <ul class="profile__list">
+    
+                                <!-- Item 1 -->
+                                <li class="profile__list-item">
+                                    <div class="profile__list-text">
+                                        <img src="./assets/images/user-checked-icon.svg" alt="icon" class="profile__list-icon">
+                                        <p>Registered</p>
+                                    </div>
+                                    <p>4 month ago</p>
+                                </li>
+
+                                <!-- Item 2 -->
+                                <li class="profile__list-item">
+                                    <div class="profile__list-text">
+                                        <img src="./assets/images/status-icon.svg" alt="icon" class="profile__list-icon">
+                                        <p>Status</p>
+                                    </div>
+                                    <p class="color-green">Online now</p>
+                                </li>
+
+                                <!-- Item 3 -->
+                                <li class="profile__list-item">
+                                    <div class="profile__list-text">
+                                        <img src="./assets/images/cup-yellow.svg" alt="icon" class="profile__list-icon">
+                                        <p class="color-yellow">Trophies</p>
+                                    </div>
+                                    <p class="color-yellow">328</p>
+                                </li>
+
+                                <!-- Item 4 -->
+                                <li class="profile__list-item">
+                                    <div class="profile__list-text">
+                                        <img src="./assets/images/match-icon.svg" alt="icon" class="profile__list-icon">
+                                        <p>Total matches</p>
+                                    </div>
+                                    <p>503</p>
+                                </li>
+
+                                <!-- Item 5 -->
+                                <li class="profile__list-item">
+                                    <div class="profile__list-text">
+                                        <img src="./assets/images/match-icon.svg" alt="icon" class="profile__list-icon">
+                                        <p>Total matches (30d)</p>
+                                    </div>
+                                    <p>141</p>
+                                </li>
+
+                                <!-- Item 6 -->
+                                <li class="profile__list-item">
+                                    <div class="profile__list-text">
+                                        <img src="./assets/images/crown-white.svg" alt="icon" class="profile__list-icon">
+                                        <p>Total wins</p>
+                                    </div>
+                                    <p>224</p>
+                                </li>
+
+                                <!-- Item 7 -->
+                                <li class="profile__list-item">
+                                    <div class="profile__list-text">
+                                        <img src="./assets/images/crown-white.svg" alt="icon" class="profile__list-icon">
+                                        <p>Total wins (30d)</p>
+                                    </div>
+                                    <p>87</p>
+                                </li>
+
+                                <!-- Item 8 -->
+                                <li class="profile__list-item">
+                                    <div class="profile__list-text">
+                                        <img src="./assets/images/graph-icon.svg" alt="icon" class="profile__list-icon">
+                                        <p>Win rate</p>
+                                    </div>
+                                    <p>44.5%</p>
+                                </li>
+
+                                <!-- Item 9 -->
+                                <li class="profile__list-item">
+                                    <div class="profile__list-text">
+                                        <img src="./assets/images/graph-icon.svg" alt="icon" class="profile__list-icon">
+                                        <p>Win rate (30d)</p>
+                                    </div>
+                                    <p>48.9%</p>
+                                </li>
+    
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ==== Captain Card ==== -->
+                    <div class="card profile__card">
+                        <div class="card-header">
+                            <div class="card-header-heading">
+                                <img src="./assets/images/star-lg.svg" alt="icon">
+                                <h6 class="text-uppercase">mirzobedilx's stats as captain</h6>
+                            </div>
+                        </div>
+                        <div class="card-body pb-12">
+                            <div class="chart-container">
+                                <!-- <div class="chart__texts">
+                                    <p class="chart__texts-title">
+                                        Clue size frequency (All turns)
+                                    </p>
+                                    <p class="chart__texts-subtitle">
+                                        Data from the last 60 days (55 matches)
+                                    </p>
+                                </div> -->
+                                <div id="user_chart">
+                                </div>
+                            </div>
+
+                            <ul class="profile__list">
+                                <!-- Item 1 -->
+                                <li class="profile__list-item">
+                                    <div class="profile__list-text">
+                                        <p>Total matches as captain (from the last 60d)</p>
+                                    </div>
+                                    <p>57</p>
+                                </li>
+
+                                <!-- Item 2 -->
+                                <li class="profile__list-item">
+                                    <div class="profile__list-text">
+                                        <p>Total Wins</p>
+                                    </div>
+                                    <p>29 (50.88%)</p>
+                                </li>
+
+                                <!-- Item 3 -->
+                                <li class="profile__list-item">
+                                    <div class="profile__list-text">
+                                        <p>Total Losses</p>
+                                    </div>
+                                    <p>28 (49.12%)</p>
+                                </li>
+
+                                <!-- Item 4 -->
+                                <li class="profile__list-item">
+                                    <div class="profile__list-text">
+                                        <p>Average correct cards revealed by the end of the first turn</p>
+                                    </div>
+                                    <p>1.79</p>
+                                </li>
+
+                                <!-- Item 5 -->
+                                <li class="profile__list-item">
+                                    <div class="profile__list-text">
+                                        <p>Average correct cards revealed by the end of the second turn</p>
+                                    </div>
+                                    <p>3.61</p>
+                                </li>
+
+                                <!-- Item 6 -->
+                                <li class="profile__list-item">
+                                    <div class="profile__list-text">
+                                        <p>Average correct cards revealed per clue</p>
+                                    </div>
+                                    <p>2.08</p>
+                                </li>
+
+                                <li class="profile__list-button">
+                                    <button type="button" class="show-more-btn">
+                                        <span>Show more</span> 
+                                        <img src="./assets/images/chevron-down.svg" alt="icon">
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ==== Trophy Shelf Card ==== -->
+                    <div class="card profile__card">
+                        <div class="card-header">
+                            <div class="card-header-heading">
+                                <img src="./assets/images/crown.svg" alt="icon">
+                                <h6 class="text-uppercase">Trophy shelf</h6>
+                            </div>
+                        </div>
+                        <div class="card-body pb-12">
+                            <div class="shelf__content">
+
+                                <!-- Row 1 -->
+                                <div class="shelf__content-row">
+                                    <div class="shelf__content-item">
+                                        <div class="shelf__content-avatar">
+                                            <img src="./assets/images/shelf-img.png" alt="image">
+                                        </div>
+                                        <div class="shelf__content-text">
+                                            <p class="fw-semibold gradient-text text-uppercase">Scipher saturday Enthusiast</p>
+                                            <p class="shelf__content-date">attend three times <span class="color-gray">/ 2022.05.29</span></p>
+                                        </div>
+                                    </div>
+
+                                    <div class="shelf__content-item">
+                                        <div class="shelf__content-avatar">
+                                            <img src="./assets/images/shelf-img.png" alt="image">
+                                        </div>
+                                        <div class="shelf__content-text">
+                                            <p class="fw-semibold gradient-text text-uppercase">Invitational finalist</p>
+                                            <p class="shelf__content-date">expla <span class="color-gray">/ 2022.05.29</span></p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <!-- Row 2 -->
+                                <div class="shelf__content-row">
+                                    <div class="shelf__content-item">
+                                        <div class="shelf__content-avatar">
+                                            <img src="./assets/images/shelf-img.png" alt="image">
+                                        </div>
+                                        <div class="shelf__content-text">
+                                            <p class="fw-semibold gradient-text text-uppercase">Veteran</p>
+                                            <p class="shelf__content-date">1yr+ acc <span class="color-gray">/ 2022.05.29</span></p>
+                                        </div>
+                                    </div>
+
+                                    <div class="shelf__content-item">
+                                        <div class="shelf__content-avatar">
+                                            <img src="./assets/images/shelf-img.png" alt="image">
+                                        </div>
+                                        <div class="shelf__content-text">
+                                            <p class="fw-semibold gradient-text text-uppercase">Scipher saturday Enthusiast</p>
+                                            <p class="shelf__content-date">attend three times <span class="color-gray">/ 2022.05.29</span></p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <!-- Row 3 -->
+                                <div class="shelf__content-row">
+                                    <div class="shelf__content-item">
+                                        <div class="shelf__content-avatar">
+                                            <img src="./assets/images/shelf-img.png" alt="image">
+                                        </div>
+                                        <div class="shelf__content-text">
+                                            <p class="fw-semibold gradient-text text-uppercase">Super supporter</p>
+                                            <p class="shelf__content-date">subscribed on kofi <span class="color-gray">/ 2022.05.29</span></p>
+                                        </div>
+                                    </div>
+
+                                    <div class="shelf__content-item">
+                                        <div class="shelf__content-avatar">
+                                            <img src="./assets/images/shelf-img.png" alt="image">
+                                        </div>
+                                        <div class="shelf__content-text">
+                                            <p class="fw-semibold gradient-text text-uppercase">Scipher saturday rookie</p>
+                                            <p class="shelf__content-date">attended once <span class="color-gray">/ 2022.05.29</span></p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="profile__list-button">
+                                    <button type="button" class="show-more-btn">
+                                        <span>Show more</span> 
+                                        <img src="./assets/images/chevron-down.svg" alt="icon">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ==== Revealed Card ==== -->
+                    <div class="card profile__card">
+                        <div class="card-header">
+                            <div class="card-header-heading">
+                                <img src="./assets/images/eye-icon.svg" alt="icon">
+                                <h6 class="text-uppercase">
+                                    Most cards revealed by end of 2nd turn
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="card-body pb-12">
+
+                            <ul class="profile__list">
+                                <!-- Item 1 -->
+                                <li class="profile__list-item">
+                                    <div class="profile__list-text">
+                                        <p>SEMI-SUBMERSIBLE 7 > NAVY 3</p>
+                                    </div>
+                                    <p class="color-cyan">8 revealed</p>
+                                </li>
+
+                                <!-- Item 2 -->
+                                <li class="profile__list-item">
+                                    <div class="profile__list-text">
+                                        <p>SEMI-SUBMERSIBLE 7 > NAVY 3</p>
+                                    </div>
+                                    <p class="color-cyan">7 revealed</p>
+                                </li>
+
+                                <!-- Item 3 -->
+                                <li class="profile__list-item">
+                                    <div class="profile__list-text">
+                                        <p>ENGLISHMEN 4 > FUR 1</p>
+                                    </div>
+                                    <p class="color-cyan">7 revealed</p>
+                                </li>
+
+                                <!-- Item 4 -->
+                                <li class="profile__list-item">
+                                    <div class="profile__list-text">
+                                        <p>PORNSTAR 7 > KARATE 3</p>
+                                    </div>
+                                    <p class="color-cyan">7 revealed</p>
+                                </li>
+
+                                <!-- Item 5 -->
+                                <li class="profile__list-item">
+                                    <div class="profile__list-text">
+                                        <p>AVIATOR 0 > WOOD 4</p>
+                                    </div>
+                                    <p class="color-cyan">7 revealed</p>
+                                </li>
+
+                                <!-- Item 6 -->
+                                <li class="profile__list-item">
+                                    <div class="profile__list-text">
+                                        <p>ICECREAM 6 > OTOLARYNGOLOGIST 3</p>
+                                    </div>
+                                    <p class="color-cyan">7 revealed</p>
+                                </li>
+
+                                <!-- Item 7 -->
+                                <li class="profile__list-item">
+                                    <div class="profile__list-text">
+                                        
+                                    </div>
+                                    <p class="color-cyan">7 revealed</p>
+                                </li>
+
+                                <!-- Item 8 -->
+                                <li class="profile__list-item">
+                                    <div class="profile__list-text">
+                                        <p>TANK 5 > PUPPIES 5</p>
+                                    </div>
+                                    <p class="color-cyan">7 revealed</p>
+                                </li>
+
+                                <!-- Item 9 -->
+                                <li class="profile__list-item">
+                                    <div class="profile__list-text">
+                                        <p>NUTCRACKER 6 > CHIPMUNK 0</p>
+                                    </div>
+                                    <p class="color-cyan">6 revealed</p>
+                                </li>
+
+                                <!-- Item 10 -->
+                                <li class="profile__list-item">
+                                    <div class="profile__list-text">
+                                        <p>DOROTHY 6 > LULLABY 6</p>
+                                    </div>
+                                    <p class="color-cyan">6 revealed</p>
+                                </li>
+
+                                <li class="profile__list-button">
+                                    <button type="button" class="show-more-btn">
+                                        <span>Show more</span> 
+                                        <img src="./assets/images/chevron-down.svg" alt="icon">
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- ==== Right Cards ==== -->
+                <div class="profile__card-wrapper">
+                    <div class="card profile__card">
+                        <div class="card-header">
+                            <div class="card-header-heading">
+                                <img src="./assets/images/clock.svg" alt="icon">
+                                <h6 class="text-uppercase">mirzobedilx's recent matches</h6>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <ul class="matches__list">
+                                <!-- Item 1 -->
+                                <li class="matches__list-item">
+                                    <div class="matched__list-icon color-green">
+                                        <img src="./assets/images/match-lg-green-icon.svg" alt="icon">
+                                        <div class="matches__list-name">
+                                            <h6 class="fw-bold">Victory</h6>
+                                            <p class="text-sm">captain</p>
+                                        </div>
+                                    </div>
+                                    <div class="matches__list-text">
+                                        <p class="fw-semibold">Match 122482 (Suzi's formidabled droom)</p>
+                                        <p class="text-sm">1st - Iionpox's team</p>
+                                    </div>
+                                    <h5 class="matches__list-match color-green">0/2</h5>
+                                </li>
+
+                                <!-- Item 2 -->
+                                <li class="matches__list-item">
+                                    <div class="matched__list-icon color-orange">
+                                        <img src="./assets/images/match-lg-orange-icon.svg" alt="icon">
+                                        <div class="matches__list-name">
+                                            <h6 class="fw-bold">Defeat</h6>
+                                            <p class="text-sm">captain</p>
+                                        </div>
+                                    </div>
+                                    <div class="matches__list-text">
+                                        <p class="fw-semibold">Match 122751 (Suzi's peculiar room)</p>
+                                        <p class="text-sm">2nd - Suzi's team</p>
+                                    </div>
+                                    <h5 class="matches__list-match color-orange">2/1</h5>
+                                </li>
+
+                                <!-- Item 3 -->
+                                <li class="matches__list-item">
+                                    <div class="matched__list-icon color-orange">
+                                        <img src="./assets/images/match-lg-orange-icon.svg" alt="icon">
+                                        <div class="matches__list-name">
+                                            <h6 class="fw-bold">Defeat</h6>
+                                            <p class="text-sm">captain</p>
+                                        </div>
+                                    </div>
+                                    <div class="matches__list-text">
+                                        <p class="fw-semibold">Match 122751 (Suzi's peculiar room)</p>
+                                        <p class="text-sm">2nd - Suzi's team</p>
+                                    </div>
+                                    <h5 class="matches__list-match color-orange">3/1</h5>
+                                </li>
+
+                                <!-- Item 4 -->
+                                <li class="matches__list-item">
+                                    <div class="matched__list-icon color-green">
+                                        <img src="./assets/images/match-lg-green-icon.svg" alt="icon">
+                                        <div class="matches__list-name">
+                                            <h6 class="fw-bold">Victory</h6>
+                                            <p class="text-sm">captain</p>
+                                        </div>
+                                    </div>
+                                    <div class="matches__list-text">
+                                        <p class="fw-semibold">Match 122482 (Suzi's formidabled droom)</p>
+                                        <p class="text-sm">1st - Iionpox's team</p>
+                                    </div>
+                                    <h5 class="matches__list-match color-green">2/4</h5>
+                                </li>
+
+                                <!-- Item 5 -->
+                                <li class="matches__list-item">
+                                    <div class="matched__list-icon color-green">
+                                        <img src="./assets/images/match-lg-green-icon.svg" alt="icon">
+                                        <div class="matches__list-name">
+                                            <h6 class="fw-bold">Victory</h6>
+                                            <p class="text-sm">captain</p>
+                                        </div>
+                                    </div>
+                                    <div class="matches__list-text">
+                                        <p class="fw-semibold">Match 122482 (Suzi's formidabled droom)</p>
+                                        <p class="text-sm">1st - Iionpox's team</p>
+                                    </div>
+                                    <h5 class="matches__list-match color-green">0/3</h5>
+                                </li>
+
+                                <li class="profile__list-button">
+                                    <button type="button" class="show-more-btn">
+                                        <span>Show more</span> 
+                                        <img src="./assets/images/chevron-down.svg" alt="icon">
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ==== Frequently Card ==== -->
+                    <div class="card profile__card">
+                        <div class="card-header">
+                            <div class="card-header-heading">
+                                <img src="./assets/images/users-icon.svg" alt="icon">
+                                <h6 class="text-uppercase">Frequently plays with</h6>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <!-- Row 1 -->
+                            <div class="frequently-play">
+                                <div class="frequently-play__header">
+                                    <div class="frequently-play__header-info">
+                                        <div class="frequently-play__header-icon">
+                                        </div>
+                                        <div class="frequently-play__header-avatar">
+                                            <img src="./assets/images/avatar-2.png" alt="">
+                                        </div>
+                                        <p class="color-cyan fw-medium frequently-play__header-name">Airez ✨</p>
+                                        <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                        <p class="color-yellow fw-medium frequently-play__header-count">0</p>
+                                    </div>
+
+                                    <div class="frequently-play__header-progress">
+                                        <div class="progress mr-8" id="win-rate-1">
+                                            <div class="progress-value" style="width: 42%"></div>
+                                        </div>
+                                        <label class="progress-label" for="win-rate-1"><span>41.9%</span> win rate</label>
+                                    </div>
+
+                                    <div class="frequently-play__header-button">
+                                        <button type="button" class="show-more-btn">
+                                            <span>Show More</span>
+                                            <img src="./assets/images/chevron-down.svg" alt="">
+                                        </button>
+                                    </div>
+
+                                </div>
+                                <!-- <div class="frequently-play__content"></div> -->
+                            </div>
+
+                            <!-- Row 2 -->
+                            <div class="frequently-play">
+                                <div class="frequently-play__header">
+                                    <div class="frequently-play__header-info">
+                                        <div class="frequently-play__header-icon">
+                                            <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                        </div>
+                                        <div class="frequently-play__header-avatar">
+                                            <img src="./assets/images/avatar-2.png" alt="">
+                                        </div>
+                                        <p class="color-cyan fw-medium frequently-play__header-name">darnold</p>
+                                        <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                        <p class="color-yellow fw-medium frequently-play__header-count">0</p>
+                                    </div>
+
+                                    <div class="frequently-play__header-progress">
+                                        <div class="progress mr-8" id="win-rate-1">
+                                            <div class="progress-value" style="width: 42%"></div>
+                                        </div>
+                                        <label class="progress-label" for="win-rate-1"><span>41.9%</span> win rate</label>
+                                    </div>
+
+                                    <div class="frequently-play__header-button">
+                                        <button type="button" class="show-more-btn">
+                                            <span>Show More</span>
+                                            <img src="./assets/images/chevron-down.svg" alt="">
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- Row 3 -->
+                            <div class="frequently-play">
+                                <div class="frequently-play__header">
+                                    <div class="frequently-play__header-info">
+                                        <div class="frequently-play__header-icon">
+                                            <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                        </div>
+                                        <div class="frequently-play__header-avatar">
+                                            <img src="./assets/images/avatar-2.png" alt="">
+                                        </div>
+                                        <p class="color-cyan fw-medium frequently-play__header-name">SnagStyx</p>
+                                        <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                        <p class="color-yellow fw-medium frequently-play__header-count">0</p>
+                                    </div>
+
+                                    <div class="frequently-play__header-progress">
+                                        <div class="progress mr-8" id="win-rate-1">
+                                            <div class="progress-value" style="width: 42%"></div>
+                                        </div>
+                                        <label class="progress-label" for="win-rate-1"><span>41.9%</span> win rate</label>
+                                    </div>
+
+                                    <div class="frequently-play__header-button">
+                                        <p class="text-uppercase color-gray">Compare</p>
+                                        <button type="button" class="show-more-btn">
+                                            <span>Show More</span>
+                                            <img src="./assets/images/chevron-down.svg" alt="">
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- Row 4 -->
+                            <div class="frequently-play">
+                                <div class="frequently-play__header">
+                                    <div class="frequently-play__header-info">
+                                        <div class="frequently-play__header-icon">
+                                        </div>
+                                        <div class="frequently-play__header-avatar">
+                                            <img src="./assets/images/avatar-2.png" alt="">
+                                        </div>
+                                        <p class="color-cyan fw-medium frequently-play__header-name">Jammy</p>
+                                        <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                        <p class="color-yellow fw-medium frequently-play__header-count">0</p>
+                                    </div>
+
+                                    <div class="frequently-play__header-progress">
+                                        <div class="progress mr-8" id="win-rate-1">
+                                            <div class="progress-value" style="width: 42%"></div>
+                                        </div>
+                                        <label class="progress-label" for="win-rate-1"><span>41.9%</span> win rate</label>
+                                    </div>
+
+                                    <div class="frequently-play__header-button">
+                                        <p class="text-uppercase color-gray">Compare</p>
+                                        <button type="button" class="show-more-btn">
+                                            <span>Show More</span>
+                                            <img src="./assets/images/chevron-down.svg" alt="">
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- Row 5 -->
+                            <div class="frequently-play">
+                                <div class="frequently-play__header">
+                                    <div class="frequently-play__header-info">
+                                        <div class="frequently-play__header-icon">
+                                        </div>
+                                        <div class="frequently-play__header-avatar">
+                                            <img src="./assets/images/avatar-2.png" alt="">
+                                        </div>
+                                        <p class="color-cyan fw-medium frequently-play__header-name">Abyss</p>
+                                        <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                        <p class="color-yellow fw-medium frequently-play__header-count">0</p>
+                                    </div>
+
+                                    <div class="frequently-play__header-progress">
+                                        <div class="progress mr-8" id="win-rate-1">
+                                            <div class="progress-value" style="width: 42%"></div>
+                                        </div>
+                                        <label class="progress-label" for="win-rate-1"><span>41.9%</span> win rate</label>
+                                    </div>
+
+                                    <div class="frequently-play__header-button">
+                                        <p class="text-uppercase color-gray">Compare</p>
+                                        <button type="button" class="show-more-btn">
+                                            <span>Show More</span>
+                                            <img src="./assets/images/chevron-down.svg" alt="">
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- Row 6 -->
+                            <div class="frequently-play">
+                                <div class="frequently-play__header">
+                                    <div class="frequently-play__header-info">
+                                        <div class="frequently-play__header-icon">
+                                        </div>
+                                        <div class="frequently-play__header-avatar">
+                                            <img src="./assets/images/avatar-2.png" alt="">
+                                        </div>
+                                        <p class="color-cyan fw-medium frequently-play__header-name">ImAim</p>
+                                        <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                        <p class="color-yellow fw-medium frequently-play__header-count">0</p>
+                                    </div>
+
+                                    <div class="frequently-play__header-progress">
+                                        <div class="progress mr-8" id="win-rate-1">
+                                            <div class="progress-value" style="width: 42%"></div>
+                                        </div>
+                                        <label class="progress-label" for="win-rate-1"><span>41.9%</span> win rate</label>
+                                    </div>
+
+                                    <div class="frequently-play__header-button">
+                                        <button type="button" class="show-more-btn">
+                                            <span>Show More</span>
+                                            <img src="./assets/images/chevron-down.svg" alt="">
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- Row 7 -->
+                            <div class="frequently-play">
+                                <div class="frequently-play__header">
+                                    <div class="frequently-play__header-info">
+                                        <div class="frequently-play__header-icon">
+                                        </div>
+                                        <div class="frequently-play__header-avatar">
+                                            <img src="./assets/images/avatar-2.png" alt="">
+                                        </div>
+                                        <p class="color-cyan fw-medium frequently-play__header-name">Roots</p>
+                                        <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                        <p class="color-yellow fw-medium frequently-play__header-count">0</p>
+                                    </div>
+
+                                    <div class="frequently-play__header-progress">
+                                        <div class="progress mr-8" id="win-rate-1">
+                                            <div class="progress-value" style="width: 42%"></div>
+                                        </div>
+                                        <label class="progress-label" for="win-rate-1"><span>41.9%</span> win rate</label>
+                                    </div>
+
+                                    <div class="frequently-play__header-button">
+                                        <p class="text-uppercase color-gray">Compare</p>
+                                        <button type="button" class="show-more-btn">
+                                            <span>Show More</span>
+                                            <img src="./assets/images/chevron-down.svg" alt="">
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- Row 8 -->
+                            <div class="frequently-play">
+                                <div class="frequently-play__header">
+                                    <div class="frequently-play__header-info">
+                                        <div class="frequently-play__header-icon">
+                                        </div>
+                                        <div class="frequently-play__header-avatar">
+                                            <img src="./assets/images/avatar-2.png" alt="">
+                                        </div>
+                                        <p class="color-cyan fw-medium frequently-play__header-name">Tiritenaar</p>
+                                        <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                        <p class="color-yellow fw-medium frequently-play__header-count">0</p>
+                                    </div>
+
+                                    <div class="frequently-play__header-progress">
+                                        <div class="progress mr-8" id="win-rate-1">
+                                            <div class="progress-value" style="width: 42%"></div>
+                                        </div>
+                                        <label class="progress-label" for="win-rate-1"><span>41.9%</span> win rate</label>
+                                    </div>
+
+                                    <div class="frequently-play__header-button">
+                                        <button type="button" class="show-more-btn">
+                                            <span>Show More</span>
+                                            <img src="./assets/images/chevron-down.svg" alt="">
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- Row 9 -->
+                            <div class="frequently-play">
+                                <div class="frequently-play__header">
+                                    <div class="frequently-play__header-info">
+                                        <div class="frequently-play__header-icon">
+                                        </div>
+                                        <div class="frequently-play__header-avatar">
+                                            <img src="./assets/images/avatar-2.png" alt="">
+                                        </div>
+                                        <p class="color-cyan fw-medium frequently-play__header-name">Blue</p>
+                                        <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                        <p class="color-yellow fw-medium frequently-play__header-count">0</p>
+                                    </div>
+
+                                    <div class="frequently-play__header-progress">
+                                        <div class="progress mr-8" id="win-rate-1">
+                                            <div class="progress-value" style="width: 42%"></div>
+                                        </div>
+                                        <label class="progress-label" for="win-rate-1"><span>41.9%</span> win rate</label>
+                                    </div>
+
+                                    <div class="frequently-play__header-button">
+                                        <p class="text-uppercase color-gray">Compare</p>
+                                        <button type="button" class="show-more-btn">
+                                            <span>Show More</span>
+                                            <img src="./assets/images/chevron-down.svg" alt="">
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- Row 10 -->
+                            <div class="frequently-play">
+                                <div class="frequently-play__header">
+                                    <div class="frequently-play__header-info">
+                                        <div class="frequently-play__header-icon">
+                                        </div>
+                                        <div class="frequently-play__header-avatar">
+                                            <img src="./assets/images/avatar-2.png" alt="">
+                                        </div>
+                                        <p class="color-cyan fw-medium frequently-play__header-name">Miskowsas</p>
+                                        <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                        <p class="color-yellow fw-medium frequently-play__header-count">0</p>
+                                    </div>
+
+                                    <div class="frequently-play__header-progress">
+                                        <div class="progress mr-8" id="win-rate-1">
+                                            <div class="progress-value" style="width: 42%"></div>
+                                        </div>
+                                        <label class="progress-label" for="win-rate-1"><span>41.9%</span> win rate</label>
+                                    </div>
+
+                                    <div class="frequently-play__header-button">
+                                        <p class="text-uppercase color-gray">Compare</p>
+                                        <button type="button" class="show-more-btn">
+                                            <span>Show More</span>
+                                            <img src="./assets/images/chevron-down.svg" alt="">
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="profile__list-button">
+                                <button type="button" class="show-more-btn">
+                                    <span>Show more</span> 
+                                    <img src="./assets/images/chevron-down.svg" alt="icon">
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- ==== Success Card ==== -->
+                    <div class="card profile__card">
+                        <div class="card-header">
+                            <div class="card-header-heading">
+                                <img src="./assets/images/t-icon.svg" alt="icon">
+                                <h6 class="text-uppercase">Most successful first turn clues</h6>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <ul class="profile__list">
+                                <!-- Item 1 -->
+                                <li class="profile__list-item">
+                                    <div class="profile__list-text">
+                                        <p>SEMI-SUBMERSIBLE 7</p>
+                                    </div>
+                                    <p class="color-cyan">6 revealed</p>
+                                </li>
+
+                                <!-- Item 2 -->
+                                <li class="profile__list-item">
+                                    <div class="profile__list-text">
+                                        <p>PORNSTAR 7</p>
+                                    </div>
+                                    <p class="color-cyan">5 revealed</p>
+                                </li>
+
+                                <!-- Item 3 -->
+                                <li class="profile__list-item">
+                                    <div class="profile__list-text">
+                                        <p>ZEUS 5</p>
+                                    </div>
+                                    <p class="color-cyan">4 revealed</p>
+                                </li>
+
+                                <!-- Item 4 -->
+                                <li class="profile__list-item">
+                                    <div class="profile__list-text">
+                                        <p>BUSKING 9</p>
+                                    </div>
+                                    <p class="color-cyan">4 revealed</p>
+                                </li>
+
+                                <!-- Item 5 -->
+                                <li class="profile__list-item">
+                                    <div class="profile__list-text">
+                                        <p>COCONUT 5</p>
+                                    </div>
+                                    <p class="color-cyan">4 revealed</p>
+                                </li>
+
+                                <!-- Item 6 -->
+                                <li class="profile__list-item">
+                                    <div class="profile__list-text">
+                                        <p>MAKUNGA 6</p>
+                                    </div>
+                                    <p class="color-cyan">4 revealed</p>
+                                </li>
+
+                                <!-- Item 7 -->
+                                <li class="profile__list-item">
+                                    <div class="profile__list-text">
+                                        <p>PHASMOPHOBIA 6</p>
+                                    </div>
+                                    <p class="color-cyan">4 revealed</p>
+                                </li>
+
+                                <!-- Item 8 -->
+                                <li class="profile__list-item">
+                                    <div class="profile__list-text">
+                                        <p>HUNNENSCHLACHT 8</p>
+                                    </div>
+                                    <p class="color-cyan">4 revealed</p>
+                                </li>
+
+                                <!-- Item 9 -->
+                                <li class="profile__list-item">
+                                    <div class="profile__list-text">
+                                        <p>TANK 5</p>
+                                    </div>
+                                    <p class="color-cyan">4 revealed</p>
+                                </li>
+
+                                <!-- Item 10 -->
+                                <li class="profile__list-item">
+                                    <div class="profile__list-text">
+                                        <p>ROLLS-ROYCE 6</p>
+                                    </div>
+                                    <p class="color-cyan">4 revealed</p>
+                                </li>
+
+                                <li class="profile__list-button">
+                                    <button type="button" class="show-more-btn">
+                                        <span>Show more</span> 
+                                        <img src="./assets/images/chevron-down.svg" alt="icon">
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ==== Most Frequently Card ==== -->
+                    <div class="card profile__card">
+                        <div class="card-header">
+                            <div class="card-header-heading">
+                                <img src="./assets/images/t-icon.svg" alt="icon">
+                                <h6 class="text-uppercase">Most frequent clues</h6>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <ul class="profile__list">
+                                <!-- Item 1 -->
+                                <li class="profile__list-item">
+                                    <div class="profile__list-text">
+                                        <p>METAL</p>
+                                    </div>
+                                    <p>4 times</p>
+                                </li>
+
+                                <!-- Item 2 -->
+                                <li class="profile__list-item">
+                                    <div class="profile__list-text">
+                                        <p>WOOD</p>
+                                    </div>
+                                    <p>2 times</p>
+                                </li>
+
+                                <!-- Item 3 -->
+                                <li class="profile__list-item">
+                                    <div class="profile__list-text">
+                                        <p>CHIPMUNK5</p>
+                                    </div>
+                                    <p>2 times</p>
+                                </li>
+
+                                <!-- Item 4 -->
+                                <li class="profile__list-item">
+                                    <div class="profile__list-text">
+                                        <p>CHAMPAGNE</p>
+                                    </div>
+                                    <p>2 times</p>
+                                </li>
+
+                                <!-- Item 5 -->
+                                <li class="profile__list-item">
+                                    <div class="profile__list-text">
+                                        <p>ANIMAL</p>
+                                    </div>
+                                    <p>2 times</p>
+                                </li>
+
+                                <!-- Item 6 -->
+                                <li class="profile__list-item">
+                                    <div class="profile__list-text">
+                                        <p>OYSTER</p>
+                                    </div>
+                                    <p>2 times</p>
+                                </li>
+
+                                <!-- Item 7 -->
+                                <li class="profile__list-item">
+                                    <div class="profile__list-text">
+                                        <p>GOGGLES</p>
+                                    </div>
+                                    <p>2 times</p>
+                                </li>
+
+                                <!-- Item 8 -->
+                                <li class="profile__list-item">
+                                    <div class="profile__list-text">
+                                        <p>SARCOPHAGUS</p>
+                                    </div>
+                                    <p>2 times</p>
+                                </li>
+
+                                <!-- Item 9 -->
+                                <li class="profile__list-item">
+                                    <div class="profile__list-text">
+                                        <p>NEKROMANTEION</p>
+                                    </div>
+                                    <p>2 times</p>
+                                </li>
+
+                                <!-- Item 10 -->
+                                <li class="profile__list-item">
+                                    <div class="profile__list-text">
+                                        <p>BUCKINGHAM</p>
+                                    </div>
+                                    <p>2 times</p>
+                                </li>
+
+                                <li class="profile__list-button">
+                                    <button type="button" class="show-more-btn">
+                                        <span>Show more</span> 
+                                        <img src="./assets/images/chevron-down.svg" alt="icon">
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- ====== Uset Settings Modal ====== -->
+    <div class="backdrop" id="user-settings">
+        <div class="modal-content">
+            <div class="card user-settings-card">
+                <div class="card-header">
+                    <div class="card-header-heading">
+                        <img src="./assets/images/settings-icon.svg" alt="Gear icon">
+                        <h6 class="card-title">User Settings</h6>
+                    </div>
+                    <button type="button" class="btn btn-sm" onclick="toggleUserSettings()">
+                        <img src="./assets/images/close-icon.svg" alt="close icon">
+                    </button>
+                </div>
+                <div class="card-body">
+                    <form action="#" class="form">
+                        <!-- Row 1 -->
+                        <div class="form-row">
+                            <label for="user-name">Change Username</label>
+                            <input type="text" id="user-name" class="form-row-input">
+                            <p class="form-row-text">Username can only be changed once a week.</p>
+                        </div>
+    
+                        <!-- Row 2 -->
+                        <div class="form-row">
+                            <label for="win-rate">Hide win rate on profile page</label>
+                            <select name="" id="win-rate">
+                                <option value="no">No</option>
+                            </select>
+                            <p class="form-row-text">This covers anything related to your total wins/losses.</p>
+                        </div>
+    
+                        <!-- Row 3 -->
+                        <div class="form-row">
+                            <label for="detailed-statistics">Hide detailed statistics on profile page</label>
+                            <select name="" id="detailed-statistics">
+                                <option value="no">No</option>
+                            </select>
+                            <div class="form-row-text">This does not cover win/losses, this covers detailed numbers such as total clues given, average clue size, etc.</div>
+                        </div>
+    
+                        <!-- Row 4 -->
+                        <div class="form-row">
+                            <label for="trophy-number">Hide trophy number next to username</label>
+                            <select name="" id="trophy-number">
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+    
+                        <!-- Row 5 -->
+                        <div class="form-row">
+                            <label for="allowing-friends">Opt out of allowing friends to compare their stats with yours</label>
+                            <select name="" id="allowing-friends">
+                                <option value="no">No</option>
+                                <option value="allow">Allow</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-button">
+                            <button type="submit" class="btn form-button-btn">Save user settings</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.3.3/echarts.min.js" integrity="sha512-2L0h0GhoIHQEjti/1KwfjcbyaTHy+hPPhE1o5wTCmviYcPO/TD9oZvUxFQtWvBkCSTIpt+fjsx1CCx6ekb51gw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/create-custom.js"></script>
+</body>
+</html>

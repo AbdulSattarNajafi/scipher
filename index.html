@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/app.css">
+    <link rel="stylesheet" href="./css/main-page.css">
+    <title>Main Page</title>
+</head>
+<body>
+    <main class="main main-bg">
+        <!-- Lights and Background Images -->
+        <div class="main-bg__lights">
+            <div class="main-bg__light main-bg__light-1"></div>
+            <div class="main-bg__light main-bg__light-2"></div>
+            <div class="main-bg__light main-bg__light-3"></div>
+            <div class="main-bg__light main-bg__light-4"></div>
+        </div>
+        <div class="dots-top"></div>
+        <div class="dots-bottom">
+            <img src="./assets/images/bg-dots-bottom.png" alt="">
+        </div>
+
+        <!-- ====== Logo ====== -->
+        <div class="center__logo-container main__logo">
+            <h6>
+                Welcome to
+            </h6>
+            <div class="center__logo-image">
+                <img src="./assets/images/logo.png" alt="Scripher Logo" class="center__logo-img">
+            </div>
+        </div>
+
+        <!-- ====== Dropdown ====== -->
+        <div class="main__select">
+            <img src="./assets/images/main-select.png" alt="icon" class="main__select-img">
+            <div class="header__profile-counter main-profile-counter">
+                <img src="./assets/images/cup-orange.svg" alt="">
+                <p>514</p>
+            </div>
+            <div class="profile">
+                <button type="button" class="profile__button" id="profile-dropdown-btn">
+                    <img src="./assets/images/cup_icon.svg" alt="Cup icon" class="profile__button-cup">
+                    <h6 class="profile__button-name">Pink_bob</h6>
+                    <img src="./assets/images/drop_icon.svg" alt="dropdown icon" class="profile__button-icon">
+                </button>
+
+                <!-- Profile Dropdown -->
+                <ul class="profile__dropdown" id="profile-dropdown">
+                    <li class="profile__dropdown-item">
+                        <a href="./user-profile.html" class="profile__dropdown-link">
+                            <img src="./assets/images/profile-icon.svg" alt="profile icon">
+                            <span>Profile</span>
+                        </a>
+                    </li>
+                    <li class="profile__dropdown-item">
+                        <a href="javascript:void(0)" class="profile__dropdown-link" onclick="toggleUserSettings()">
+                            <img src="./assets/images/settings-icon.svg" alt="settings icon">
+                            <span>User settings</span>
+                        </a>
+                    </li>
+                    <li class="profile__dropdown-item">
+                        <a href="./login.html" class="profile__dropdown-link">
+                            <img src="./assets/images/logout-icon.svg" alt="logout icon">
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main-menu-container">
+            <!-- ====== Menu ====== -->
+            <div class="main-menu">
+                <button type="button" class="card main-menu-item" onclick="toggleCreateCustom()">
+                    <h6>Create Custom</h6>
+                </button>
+                <a href="./create-custom.html" class="card main-menu-item">
+                    <h6>Create Standard</h6>
+                </a>
+                <button type="button" onclick="toggleCreateTaboo()" class="card main-menu-item">
+                    <h6>Create Taboo</h6>
+                </button>
+            </div>
+
+            <div class="main-content">
+                <!-- ====== Player ====== -->
+                <div class="card main__player">
+                    <div class="card-header main__player-header-bg">
+                        <div class="main__player-header">
+                            <img src="./assets/images/crown.svg" alt="crown icon">
+                            <h6>Top 5 players of the week</h6>
+                        </div>
+                        <button type="button" class="btn btn-sm">
+                            <img src="./assets/images/quarter.svg" alt="quarter icon">
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <!-- Row 1 -->
+                        <div class="main__player-row">
+                            <div class="main__player-profile">
+                                <img src="./assets/images/avatar-2.png" alt="avatar" class="main__player-img">
+                                <div class="main__player-info">
+                                    <p class="main__player-name">Roots</p>
+                                    <div class="d-flex align-items-center">
+                                        <img src="./assets/images/trophy.svg" alt="Cup icon" class="main__player-trophy">
+                                        <span class="main__player-score">0</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-uppercase fw-semibold">DOMINATRIX 9</p>
+                            <p class="gradient-text text-right ml-auto fw-medium">
+                                <span>7</span> revealed</p>
+                        </div>
+
+                        <!-- Row 2 -->
+                        <div class="main__player-row">
+                            <div class="main__player-profile">
+                                <img src="./assets/images/avatar-3.png" alt="avatar" class="main__player-img">
+                                <div class="main__player-info">
+                                    <p class="main__player-name">Suzi</p>
+                                    <div class="d-flex align-items-center">
+                                        <img src="./assets/images/trophy.svg" alt="Cup icon" class="main__player-trophy">
+                                        <span class="main__player-score">0</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-uppercase fw-semibold">SEMI-SUBMERSIBLE 7</p>
+                            <p class="gradient-text text-right ml-auto fw-medium">
+                                <span>6</span> revealed</p>
+                        </div>
+
+                        <!-- Row 3 -->
+                        <div class="main__player-row">
+                            <div class="main__player-profile">
+                                <img src="./assets/images/avatar-4.png" alt="avatar" class="main__player-img">
+                                <div class="main__player-info">
+                                    <p class="main__player-name">Suzi</p>
+                                    <div class="d-flex align-items-center">
+                                        <img src="./assets/images/trophy.svg" alt="Cup icon" class="main__player-trophy">
+                                        <span class="main__player-score">0</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-uppercase fw-semibold">rainbow 7</p>
+                            <p class="gradient-text text-right ml-auto fw-medium">
+                                <span>12</span> revealed</p>
+                        </div>
+
+                        <!-- Row 4 -->
+                        <div class="main__player-row">
+                            <div class="main__player-profile">
+                                <img src="./assets/images/avatar-3.png" alt="avatar" class="main__player-img">
+                                <div class="main__player-info">
+                                    <p class="main__player-name">roots</p>
+                                    <div class="d-flex align-items-center">
+                                        <img src="./assets/images/trophy.svg" alt="Cup icon" class="main__player-trophy">
+                                        <span class="main__player-score">0</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-uppercase fw-semibold">warhorn 6</p>
+                            <p class="gradient-text text-right ml-auto fw-medium">
+                                <span>6</span> revealed</p>
+                        </div>
+
+                        <!-- Row 5 -->
+                        <div class="main__player-row">
+                            <div class="main__player-profile">
+                                <img src="./assets/images/avatar-4.png" alt="avatar" class="main__player-img">
+                                <div class="main__player-info">
+                                    <p class="main__player-name">darnold</p>
+                                    <div class="d-flex align-items-center">
+                                        <img src="./assets/images/trophy.svg" alt="Cup icon" class="main__player-trophy">
+                                        <span class="main__player-score">0</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-uppercase fw-semibold">roll 7</p>
+                            <p class="gradient-text text-right ml-auto fw-medium">
+                                <span>5</span> revealed</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ====== Announcement ====== -->
+                <div class="card main__announcement">
+                    <div class="card-header main__announcement-header-bg">
+                        <div class="main__announcement-header">
+                            <img src="./assets/images/news.svg" alt="news icon">
+                            <h6>Announcement</h6>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="main__announcement-image">
+                            <img src="./assets/images/ann_logo.png" alt="Announcement">
+                        </div>
+                        <p class="gradient-text main__announcement-title">Upcoming Tournament - 9 days from now</p>
+
+                        <p class="main__announcement-links">
+                            Join as a solo or with a partner. 
+                            <a href="#" class="color-cyan">View tournament</a> 
+                            for full information or
+                            <a href="#" class="color-cyan">signup</a> or 
+                            <a href="#" class="color-cyan"> join discord</a>.
+                        </p>
+                        <div class="main__announcement-starts">
+                            <img src="./assets/images/start-icon.png" alt="start icon">
+                            <p>Starts 9 days from now</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ====== Call To Action Button ====== -->
+        <div class="main-cta-container">
+            <button type="button" class="cta-btn">
+                <img src="./assets/images/cup_icon.svg" alt="Cup icon" class="main-select-cup">
+                <h5>Buy me a coffee</h5>
+            </button>
+        </div>
+
+    </main>
+    
+    <!-- ====== Create Custom Modal ====== -->
+    <div class="backdrop" id="create-custom-modal">
+        <div class="modal-content">
+            <div class="card game-card">
+                <div class="card-header">
+                    <div class="card-header-heading">
+                        <img src="./assets/images/user-checked-icon.svg" alt="user icon">
+                        <h6 class="card-title">Create custom room</h6>
+                    </div>
+                    <button type="button" class="btn btn-sm" onclick="toggleCreateCustom()">
+                        <img src="./assets/images/close-icon.svg" alt="Times icon">
+                    </button>
+                </div>
+                <div class="card-body">
+                    <form action="#" class="form">
+                        <div class="game__form-content">
+    
+                            <!-- ==== Selects ==== -->
+                            <div class="game__selects">
+                                <!-- Row 1 -->
+                                <div class="form-row">
+                                    <label for="room-name">Room Name</label>
+                                    <input type="text" id="room-name" class="form-row-input">
+                                </div>
+    
+                                <!-- Row 2 -->
+                                <div class="form-row">
+                                    <label for="grid-size">Grid size and number of teams</label>
+                                    <select id="grid-size" name="grid-size">
+                                        <option value="4x4">4x4</option>
+                                        <option value="5x4">5x4</option>
+                                        <option value="5x5">5x5</option>
+                                        <option value="5x6">5x6 (recommended for two teams)</option>
+                                        <option value="6x6">6x6</option>
+                                        <option value="6x6">6x8</option>
+                                    </select>
+                                    <p class="form-row-text">A standard game is two teams on a 5x5 grid</p>
+                                </div>
+    
+                                <!-- Row 3 -->
+                                <div class="form-row">
+                                    <label for="theme">Theme</label>
+                                    <select id="theme" name="theme">
+                                        <option value="outer-space">
+                                            <div>
+                                                <span class="theme-box"></span>
+                                                <span class="theme-box"></span>
+                                            </div>
+                                            Outer-Space / Relaunch
+                                        </option>
+                                      </select>
+                                      <p class="form-row-text">Select the boards theme</p>
+                                </div>
+    
+                                <!-- Row 4 -->
+                                <div class="form-row">
+                                    <label for="privacy">Room Privacy</label>
+                                    <select id="privacy" name="privacy">
+                                        <option value="private-utl">
+                                            Private URL (default)
+                                        </option>
+                                    </select>
+                                </div>
+    
+                                <!-- Row 5 -->
+                                <div class="form-row">
+                                    <label for="settings">Settings</label>
+                                    <select id="settings" name="settings">
+                                        <option value="standard">
+                                            Standard
+                                        </option>
+                                    </select>
+                                    <p class="form-row-text">Choose from one of the presets or configure custom settings</p>
+                                </div>
+    
+                            </div>
+        
+                            <!-- ==== Checkboxes ==== -->
+                            <div class="game__checkboxes">
+                                <p class="game__checkboxes-title">Select word pack(s)</p>
+    
+                                <!-- Row 1 -->
+                                <div class="checkbox-row">
+                                    <input type="checkbox" id="expanded" class="checkbox-input" checked>
+                                    <label for="expanded" class="checkbox-label">
+                                        Default expanded: Duet (400 words, recommended)
+                                    </label>
+                                    <span class="checkbox-checkmark"></span>
+                                </div>
+    
+                                <!-- Row 2 -->
+                                <div class="checkbox-row">
+                                    <input type="checkbox" id="word-list" class="checkbox-input" checked>
+                                    <label for="word-list" class="checkbox-label">
+                                        Default Word List (400 words, recommended)
+                                    </label>
+                                    <span class="checkbox-checkmark"></span>
+                                </div>
+    
+                                <!-- Row 3 -->
+                                <div class="checkbox-row">
+                                    <input type="checkbox" id="cool-cats" class="checkbox-input">
+                                    <label for="cool-cats" class="checkbox-label">
+                                        Cool Cats Tournament Word Pack: Standard & Duet (800 words)
+                                    </label>
+                                    <span class="checkbox-checkmark"></span>
+                                </div>
+    
+                                <!-- Row 4 -->
+                                <div class="checkbox-row">
+                                    <input type="checkbox" id="social-media" class="checkbox-input">
+                                    <label for="social-media" class="checkbox-label">
+                                        Tech and Social Media Pack V.2 (130 words)
+                                    </label>
+                                    <span class="checkbox-checkmark"></span>
+                                </div>
+    
+                                <!-- Row 5 -->
+                                <div class="checkbox-row">
+                                    <input type="checkbox" id="disney" class="checkbox-input">
+                                    <label for="disney" class="checkbox-label">
+                                        DISNEY (225 words)
+                                    </label>
+                                    <span class="checkbox-checkmark"></span>
+                                </div>
+    
+                                <!-- Row 6 -->
+                                <div class="checkbox-row">
+                                    <input type="checkbox" id="states" class="checkbox-input">
+                                    <label for="states" class="checkbox-label">
+                                        US States and Territories (55 words)
+                                    </label>
+                                    <span class="checkbox-checkmark"></span>
+                                </div>
+    
+                                <!-- Row 7 -->
+                                <div class="checkbox-row">
+                                    <input type="checkbox" id="extra" class="checkbox-input">
+                                    <label for="extra" class="checkbox-label">
+                                        Default extra expanded: Undercover (390 words)
+                                    </label>
+                                    <span class="checkbox-checkmark"></span>
+                                </div>
+    
+                                <!-- Row 8 -->
+                                <div class="checkbox-row">
+                                    <input type="checkbox" id="view-game" class="checkbox-input">
+                                    <label for="view-game" class="checkbox-label">
+                                        Video Games (155 words)
+                                    </label>
+                                    <span class="checkbox-checkmark"></span>
+                                </div>
+    
+                                <!-- Row 9 -->
+                                <div class="checkbox-row">
+                                    <input type="checkbox" id="simpsons" class="checkbox-input">
+                                    <label for="simpsons" class="checkbox-label">
+                                        Simpsons Pack First Edition (105 words)
+                                    </label>
+                                    <span class="checkbox-checkmark"></span>
+                                </div>
+    
+                                <!-- Row 10 -->
+                                <div class="checkbox-row">
+                                    <input type="checkbox" id="animals" class="checkbox-input">
+                                    <label for="animals" class="checkbox-label">
+                                        Ultimate Animal Crossing Pack (45 words)
+                                    </label>
+                                    <span class="checkbox-checkmark"></span>
+                                </div>
+    
+                                <!-- Row 11 -->
+                                <div class="checkbox-row">
+                                    <input type="checkbox" id="geography" class="checkbox-input">
+                                    <label for="geography" class="checkbox-label">
+                                        Loyal's Giant Geography Pack (570 words)
+                                    </label>
+                                    <span class="checkbox-checkmark"></span>
+                                </div>
+    
+                                <!-- Row 12 -->
+                                <div class="checkbox-row">
+                                    <input type="checkbox" id="theatre" class="checkbox-input">
+                                    <label for="theatre" class="checkbox-label">
+                                        Musical Theatre Word Pack (310 words)
+                                    </label>
+                                    <span class="checkbox-checkmark"></span>
+                                </div>
+    
+                                <!-- Row 13 -->
+                                <div class="checkbox-row">
+                                    <input type="checkbox" id="british-culture" class="checkbox-input">
+                                    <label for="british-culture" class="checkbox-label">
+                                        British Culture Pack (220 words)
+                                    </label>
+                                    <span class="checkbox-checkmark"></span>
+                                </div>
+    
+                                <!-- Row 14 -->
+                                <div class="checkbox-row">
+                                    <input type="checkbox" id="hobbit" class="checkbox-input">
+                                    <label for="hobbit" class="checkbox-label">
+                                        Hobbit/LOTR Pack (135 words)
+                                    </label>
+                                    <span class="checkbox-checkmark"></span>
+                                </div>
+    
+                                <!-- Row 15 -->
+                                <div class="checkbox-row">
+                                    <input type="checkbox" id="french" class="checkbox-input">
+                                    <label for="french" class="checkbox-label">
+                                        French Standard & Duet (800 words)
+                                    </label>
+                                    <span class="checkbox-checkmark"></span>
+                                </div>
+    
+                            </div>
+    
+                        </div>
+    
+                        <!-- Submit Button -->
+                        <div class="form-button">
+                            <button type="submit" class="btn form-button-btn">Create room</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ====== Create Taboo Modal ====== -->
+    <div class="backdrop" id="create-taboo-modal">
+        <div class="modal-content">
+            <div class="create-taboo-container">
+    
+                <!-- ====== Creating ====== -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-header-heading">
+                            <img src="./assets/images/settings-icon.svg" alt="setting icon">
+                            <h6 class="text-uppercase">Create Room - TABOO</h6>
+                        </div>
+                        <button type="button" class="btn btn-sm" onclick="toggleCreateTaboo()">
+                            <img src="./assets/images/close-icon.svg" alt="Times icon">
+                        </button>
+                    </div>
+                    <div class="card-body">
+    
+                        <!-- Row 1 -->
+                        <div class="create-taboo__selects">
+                            <div class="create-taboo__selects-row">
+                                <div class="form-row">
+                                    <label for="room-name">Room Name</label>
+                                    <input type="text" name="room-name" id="room-name" class="form-row-input">
+                                </div>
+                            </div>
+                            <div class="create-taboo__selects-row">
+                                <div class="form-row">
+                                    <label for="room-privacy">Room Privacy</label>
+                                    <select name="room-privacy" id="room-privacy">
+                                        <option value="private-url">Private URL (default)</option>
+                                        <option value="custom-url">Custom URL</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Row 2 -->
+                        <div class="create-taboo__selects">
+                            <div class="create-taboo__selects-row">
+                                <div class="form-row">
+                                    <label for="total-team">Total teams</label>
+                                    <select name="total-team" id="total-team">
+                                        <option value="tow-teams">Tow team</option>
+                                        <option value="one-team">One team</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="create-taboo__selects-row">
+                                <div class="form-row">
+                                    <label for="game-mode">Game Mode</label>
+                                    <select name="game-mode" id="game-mode">
+                                        <option value="standard-mode">Standard Mode</option>
+                                        <option value="default-mode">Default Mode</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Row 3 -->
+                        <div class="form-row">
+                            <label for="standard-mode-difficulty">Standard mode difficulty</label>
+                            <select name="standard-mode-difficulty" id="standard-mode-difficulty">
+                                <option value="normal">Normal</option>
+                                <option value="difficult">Difficult</option>
+                            </select>
+                            <p class="form-row-text mb-8">Changes the weighting of easy/medium/hard/insane words</p>
+                        </div>
+    
+                        <!-- Row 4 -->
+                        <div class="create-taboo__selects">
+                            <div class="create-taboo__selects-row">
+                                <div class="form-row">
+                                    <label for="time-bank">Starting timebank each turn</label>
+                                    <select name="time-bank" id="time-bank">
+                                        <option value="60 seconds">60 seconds</option>
+                                        <option value="100 seconds">100 seconds</option>
+                                    </select>
+                                    <p class="form-row-text">Default is 60 seconds</p>
+                                </div>
+                            </div>
+                            <div class="create-taboo__selects-row">
+                                <div class="form-row">
+                                    <label for="words-per-turn">Words per turn</label>
+                                    <select name="words-per-turn" id="words-per-turn">
+                                        <option value="7">7</option>
+                                        <option value="12">12</option>
+                                    </select>
+                                    <p class="form-row-text">6-8 is recommended. For word challenge it should be set to 2 or 3</p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="create-taboo__checkbox">
+                            <div class="create-taboo__checkbox-row">
+                                <p>Select word pack(s)</p>
+                                <div class="checkbox-row">
+                                    <input type="checkbox" class="checkbox-input" id="official-scipher">
+                                    <label for="official-scipher" class="checkbox-label">Official Scipher TABOO Pack (9750 words)</label>
+                                    <span class="checkbox-checkmark"></span>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+                </div>
+    
+                <div class="form-button">
+                    <button type="button" class="btn form-button-btn next-btn btn-sm-block">
+                        <img src="./assets/images/checked-icon.svg" alt="icon">
+                        <span>Create room</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ====== Uset Settings Modal ====== -->
+    <div class="backdrop" id="user-settings">
+        <div class="modal-content">
+            <div class="card user-settings-card">
+                <div class="card-header">
+                    <div class="card-header-heading">
+                        <img src="./assets/images/settings-icon.svg" alt="Gear icon">
+                        <h6 class="card-title">User Settings</h6>
+                    </div>
+                    <button type="button" class="btn btn-sm" onclick="toggleUserSettings()">
+                        <img src="./assets/images/close-icon.svg" alt="close icon">
+                    </button>
+                </div>
+                <div class="card-body">
+                    <form action="#" class="form">
+                        <!-- Row 1 -->
+                        <div class="form-row">
+                            <label for="user-name">Change Username</label>
+                            <input type="text" id="user-name" class="form-row-input">
+                            <p class="form-row-text">Username can only be changed once a week.</p>
+                        </div>
+    
+                        <!-- Row 2 -->
+                        <div class="form-row">
+                            <label for="win-rate">Hide win rate on profile page</label>
+                            <select name="" id="win-rate">
+                                <option value="no">No</option>
+                            </select>
+                            <p class="form-row-text">This covers anything related to your total wins/losses.</p>
+                        </div>
+    
+                        <!-- Row 3 -->
+                        <div class="form-row">
+                            <label for="detailed-statistics">Hide detailed statistics on profile page</label>
+                            <select name="" id="detailed-statistics">
+                                <option value="no">No</option>
+                            </select>
+                            <div class="form-row-text">This does not cover win/losses, this covers detailed numbers such as total clues given, average clue size, etc.</div>
+                        </div>
+    
+                        <!-- Row 4 -->
+                        <div class="form-row">
+                            <label for="trophy-number">Hide trophy number next to username</label>
+                            <select name="" id="trophy-number">
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+    
+                        <!-- Row 5 -->
+                        <div class="form-row">
+                            <label for="allowing-friends">Opt out of allowing friends to compare their stats with yours</label>
+                            <select name="" id="allowing-friends">
+                                <option value="no">No</option>
+                                <option value="allow">Allow</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-button">
+                            <button type="submit" class="btn form-button-btn">Save user settings</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="./js/index.js"></script>
+    
+</body>
+</html>

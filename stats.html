@@ -1,0 +1,1730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/app.css">
+    <link rel="stylesheet" href="./css/stats.css">
+    <title>Stats</title>
+</head>
+<body>
+    <div class="main-bg">
+        <!-- Lights and Background Images -->
+        <div class="main-bg__lights">
+            <div class="main-bg__light main-bg__light-1"></div>
+            <div class="main-bg__light main-bg__light-2"></div>
+            <div class="main-bg__light main-bg__light-3"></div>
+            <div class="main-bg__light main-bg__light-4"></div>
+        </div>
+        <div class="dots-top"></div>
+        <div class="dots-bottom">
+            <img src="./assets/images/bg-dots-bottom.png" alt="">
+        </div>
+
+        <!-- ====== Header ====== -->
+        <header class="header">
+            <div class="header__logo">
+                <img src="./assets/images/logo.png" alt="Logo" class="header__logo-img">
+            </div>
+            <div class="header__profile">
+                <button class="header__profile-btn" onclick="profileToggle()">
+                    <div class="header__profile-image">
+                        <img src="./assets/images/main-select.png" alt="image">
+                    </div>
+                    <div class="header__profile-info">
+                        <div class="header__profile-name">
+                            <img src="./assets/images/cup_icon.svg" alt="cup icon">
+                            <h6>Pink_bob</h6>
+                        </div>
+                        <div class="header__profile-counter">
+                            <img src="./assets/images/cup-orange.svg" alt="">
+                            <p>514</p>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="./assets/images/drop_icon.svg" alt="icon">
+                    </div>
+                </button>
+
+                <!-- Profile Dropdown -->
+                <ul class="profile__dropdown" id="profile-dropdown">
+                    <li class="profile__dropdown-item">
+                        <a href="./user-profile.html" class="profile__dropdown-link">
+                            <img src="./assets/images/profile-icon.svg" alt="profile icon">
+                            <span>Profile</span>
+                        </a>
+                    </li>
+                    <li class="profile__dropdown-item">
+                        <a href="javascript:void(0)" class="profile__dropdown-link" onclick="toggleUserSettings()">
+                            <img src="./assets/images/settings-icon.svg" alt="settings icon">
+                            <span>User settings</span>
+                        </a>
+                    </li>
+                    <li class="profile__dropdown-item">
+                        <a href="./login.html" class="profile__dropdown-link">
+                            <img src="./assets/images/logout-icon.svg" alt="logout icon">
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <main class="stats">
+            <div class="stats-container">
+                <div class="stats-cards-container">
+
+                    <!-- ==== Most Successful Card ==== -->
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-header-heading">
+                                <img src="./assets/images/t-icon.svg" alt="icon">
+                                <h6>Most successful turn 1 clues from the last week</h6>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <ul class="success__list">
+                                <!-- Item 1 -->
+                                <li class="success__list-item">
+                                    <div class="success__list-info">
+                                        <div class="success__list-icon">
+                                        </div>
+                                        <div class="success__list-avatar">
+                                            <img src="./assets/images/card-avatar.png" alt="Image">
+                                        </div>
+                                        <p class="color-cyan">Suzi</p>
+                                        <div class="success__list-score">
+                                            <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                            <span class="color-yellow">0</span>
+                                        </div>
+                                    </div>
+                                    <div class="success__list-text">
+                                        <p class="text-uppercase fw-medium">SEMI-SUBMERSIBLE 7</p>
+                                        <p class="color-cyan">6 revealed</p>
+                                    </div>
+                                </li>
+
+                                <!-- Item 2 -->
+                                <li class="success__list-item">
+                                    <div class="success__list-info">
+                                        <div class="success__list-icon">
+                                        </div>
+                                        <div class="success__list-avatar">
+                                            <img src="./assets/images/card-avatar.png" alt="Image">
+                                        </div>
+                                        <p class="color-cyan">Roots</p>
+                                        <div class="success__list-score">
+                                            <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                            <span class="color-yellow">0</span>
+                                        </div>
+                                    </div>
+                                    <div class="success__list-text">
+                                        <p class="text-uppercase fw-medium">RAINBOW 7</p>
+                                        <p class="color-cyan">6 revealed</p>
+                                    </div>
+                                </li>
+
+                                <!-- Item 3 -->
+                                <li class="success__list-item">
+                                    <div class="success__list-info">
+                                        <div class="success__list-icon">
+                                        </div>
+                                        <div class="success__list-avatar">
+                                            <img src="./assets/images/card-avatar.png" alt="Image">
+                                        </div>
+                                        <p class="color-cyan">Roots</p>
+                                        <div class="success__list-score">
+                                            <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                            <span class="color-yellow">0</span>
+                                        </div>
+                                    </div>
+                                    <div class="success__list-text">
+                                        <p class="text-uppercase fw-medium">SAIMIN 0</p>
+                                        <p class="color-cyan">6 revealed</p>
+                                    </div>
+                                </li>
+
+                                <!-- Item 4 -->
+                                <li class="success__list-item">
+                                    <div class="success__list-info">
+                                        <div class="success__list-icon">
+                                        </div>
+                                        <div class="success__list-avatar">
+                                            <img src="./assets/images/card-avatar.png" alt="Image">
+                                        </div>
+                                        <p class="color-cyan">Roots</p>
+                                        <div class="success__list-score">
+                                            <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                            <span class="color-yellow">0</span>
+                                        </div>
+                                    </div>
+                                    <div class="success__list-text">
+                                        <p class="text-uppercase fw-medium">WARHORN 6</p>
+                                        <p class="color-cyan">6 revealed</p>
+                                    </div>
+                                </li>
+
+                                <!-- Item 5 -->
+                                <li class="success__list-item">
+                                    <div class="success__list-info">
+                                        <div class="success__list-icon">
+                                            <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                        </div>
+                                        <div class="success__list-avatar">
+                                            <img src="./assets/images/card-avatar.png" alt="Image">
+                                        </div>
+                                        <p class="color-cyan">darnold</p>
+                                        <div class="success__list-score">
+                                            <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                            <span class="color-yellow">0</span>
+                                        </div>
+                                    </div>
+                                    <div class="success__list-text">
+                                        <p class="text-uppercase fw-medium">Roll 7</p>
+                                        <p class="color-cyan">6 revealed</p>
+                                    </div>
+                                </li>
+
+                                <!-- Item 6 -->
+                                <li class="success__list-item">
+                                    <div class="success__list-info">
+                                        <div class="success__list-icon">
+                                            <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                        </div>
+                                        <div class="success__list-avatar">
+                                            <img src="./assets/images/card-avatar.png" alt="Image">
+                                        </div>
+                                        <p class="color-cyan">Mar</p>
+                                        <div class="success__list-score">
+                                            <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                            <span class="color-yellow">0</span>
+                                        </div>
+                                    </div>
+                                    <div class="success__list-text">
+                                        <p class="text-uppercase fw-medium">Fire 5</p>
+                                        <p class="color-cyan">6 revealed</p>
+                                    </div>
+                                </li>
+
+                                <!-- Item 7 -->
+                                <li class="success__list-item">
+                                    <div class="success__list-info">
+                                        <div class="success__list-icon">
+                                        </div>
+                                        <div class="success__list-avatar">
+                                            <img src="./assets/images/card-avatar.png" alt="Image">
+                                        </div>
+                                        <p class="color-cyan">JabamiChan</p>
+                                        <div class="success__list-score">
+                                            <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                            <span class="color-yellow">0</span>
+                                        </div>
+                                    </div>
+                                    <div class="success__list-text">
+                                        <p class="text-uppercase fw-medium">SALAZAR 7</p>
+                                        <p class="color-cyan">6 revealed</p>
+                                    </div>
+                                </li>
+
+                                <!-- Item 8 -->
+                                <li class="success__list-item">
+                                    <div class="success__list-info">
+                                        <div class="success__list-icon">
+                                        </div>
+                                        <div class="success__list-avatar">
+                                            <img src="./assets/images/card-avatar.png" alt="Image">
+                                        </div>
+                                        <p class="color-cyan">Florence </p>
+                                        <div class="success__list-score">
+                                            <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                            <span class="color-yellow">0</span>
+                                        </div>
+                                    </div>
+                                    <div class="success__list-text">
+                                        <p class="text-uppercase fw-medium">DRIVING 5</p>
+                                        <p class="color-cyan">6 revealed</p>
+                                    </div>
+                                </li>
+
+                                <!-- Item 9 -->
+                                <li class="success__list-item">
+                                    <div class="success__list-info">
+                                        <div class="success__list-icon">
+                                            <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                        </div>
+                                        <div class="success__list-avatar">
+                                            <img src="./assets/images/card-avatar.png" alt="Image">
+                                        </div>
+                                        <p class="color-cyan">Kashi</p>
+                                        <div class="success__list-score">
+                                            <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                            <span class="color-yellow">0</span>
+                                        </div>
+                                    </div>
+                                    <div class="success__list-text">
+                                        <p class="text-uppercase fw-medium">MAIL 6</p>
+                                        <p class="color-cyan">6 revealed</p>
+                                    </div>
+                                </li>
+
+                                <!-- Item 10 -->
+                                <li class="success__list-item">
+                                    <div class="success__list-info">
+                                        <div class="success__list-icon">
+                                            <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                        </div>
+                                        <div class="success__list-avatar">
+                                            <img src="./assets/images/card-avatar.png" alt="Image">
+                                        </div>
+                                        <p class="color-cyan">Jammy</p>
+                                        <div class="success__list-score">
+                                            <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                            <span class="color-yellow">0</span>
+                                        </div>
+                                    </div>
+                                    <div class="success__list-text">
+                                        <p class="text-uppercase fw-medium">CHAIGNOT 5</p>
+                                        <p class="color-cyan">6 revealed</p>
+                                    </div>
+                                </li>
+
+                                <!-- Item 11 -->
+                                <li class="success__list-item">
+                                    <div class="success__list-info">
+                                        <div class="success__list-icon">
+                                        </div>
+                                        <div class="success__list-avatar">
+                                            <img src="./assets/images/card-avatar.png" alt="Image">
+                                        </div>
+                                        <p class="color-cyan">Roots</p>
+                                        <div class="success__list-score">
+                                            <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                            <span class="color-yellow">0</span>
+                                        </div>
+                                    </div>
+                                    <div class="success__list-text">
+                                        <p class="text-uppercase fw-medium">BISHOUJOS 7</p>
+                                        <p class="color-cyan">5 revealed</p>
+                                    </div>
+                                </li>
+
+                                <!-- Item 12 -->
+                                <li class="success__list-item">
+                                    <div class="success__list-info">
+                                        <div class="success__list-icon">
+                                        </div>
+                                        <div class="success__list-avatar">
+                                            <img src="./assets/images/card-avatar.png" alt="Image">
+                                        </div>
+                                        <p class="color-cyan">reignxreign</p>
+                                        <div class="success__list-score">
+                                            <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                            <span class="color-yellow">0</span>
+                                        </div>
+                                    </div>
+                                    <div class="success__list-text">
+                                        <p class="text-uppercase fw-medium">NATIONALISTS 5</p>
+                                        <p class="color-cyan">5 revealed</p>
+                                    </div>
+                                </li>
+
+                                <!-- Item 13 -->
+                                <li class="success__list-item">
+                                    <div class="success__list-info">
+                                        <div class="success__list-icon">
+                                        </div>
+                                        <div class="success__list-avatar">
+                                            <img src="./assets/images/card-avatar.png" alt="Image">
+                                        </div>
+                                        <p class="color-cyan">GinJay</p>
+                                        <div class="success__list-score">
+                                            <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                            <span class="color-yellow">0</span>
+                                        </div>
+                                    </div>
+                                    <div class="success__list-text">
+                                        <p class="text-uppercase fw-medium">TINDER 4</p>
+                                        <p class="color-cyan">5 revealed</p>
+                                    </div>
+                                </li>
+
+                                <!-- Item 14 -->
+                                <li class="success__list-item">
+                                    <div class="success__list-info">
+                                        <div class="success__list-icon">
+                                        </div>
+                                        <div class="success__list-avatar">
+                                            <img src="./assets/images/card-avatar.png" alt="Image">
+                                        </div>
+                                        <p class="color-cyan">Roots</p>
+                                        <div class="success__list-score">
+                                            <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                            <span class="color-yellow">0</span>
+                                        </div>
+                                    </div>
+                                    <div class="success__list-text">
+                                        <p class="text-uppercase fw-medium">BARREL 5</p>
+                                        <p class="color-cyan">5 revealed</p>
+                                    </div>
+                                </li>
+
+                                <!-- Item 15 -->
+                                <li class="success__list-item">
+                                    <div class="success__list-info">
+                                        <div class="success__list-icon">
+                                        </div>
+                                        <div class="success__list-avatar">
+                                            <img src="./assets/images/card-avatar.png" alt="Image">
+                                        </div>
+                                        <p class="color-cyan">Roots</p>
+                                        <div class="success__list-score">
+                                            <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                            <span class="color-yellow">0</span>
+                                        </div>
+                                    </div>
+                                    <div class="success__list-text">
+                                        <p class="text-uppercase fw-medium">CANADIAN 6</p>
+                                        <p class="color-cyan">5 revealed</p>
+                                    </div>
+                                </li>
+
+                                <!-- Item 16 -->
+                                <li class="success__list-item">
+                                    <div class="success__list-info">
+                                        <div class="success__list-icon">
+                                        </div>
+                                        <div class="success__list-avatar">
+                                            <img src="./assets/images/card-avatar.png" alt="Image">
+                                        </div>
+                                        <p class="color-cyan">Dec</p>
+                                        <div class="success__list-score">
+                                            <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                            <span class="color-yellow">0</span>
+                                        </div>
+                                    </div>
+                                    <div class="success__list-text">
+                                        <p class="text-uppercase fw-medium">TITANIC 5</p>
+                                        <p class="color-cyan">4 revealed</p>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ==== First Turn Clue Card ==== -->
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-header-heading">
+                                <img src="./assets/images/graph-icon.svg" alt="icon">
+                                <h6>First turn clue size frequency</h6>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div id="first-turn-chart"></div>
+                        </div>
+                    </div>
+
+                    <!-- ==== Clue Size Frequency Card ==== -->
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-header-heading">
+                                <img src="./assets/images/graph-icon.svg" alt="icon">
+                                <h6>Clue size frequency (all turns)</h6>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div id="all-turns-chart"></div>
+                        </div>
+                    </div>
+
+                    <!-- ==== Most Popular Card ==== -->
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-header-heading">
+                                <img src="./assets/images/settings-icon.svg" alt="icon">
+                                <h6>Most popular game-modes/settings</h6>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <ul class="stats__list">
+                                <!-- Item 1 -->
+                                <li class="stats__list-item">
+                                    <div class="stats__list-text">
+                                        <p>TABOO - Standard (Normal)</p>
+                                    </div>
+                                    <p>24.9%</p>
+                                </li>
+
+                                <!-- Item 2 -->
+                                <li class="stats__list-item">
+                                    <div class="stats__list-text">
+                                        <p>5x5 - Standard (turbo clock)</p>
+                                    </div>
+                                    <p>15.6%</p>
+                                </li>
+
+                                <!-- Item 3 -->
+                                <li class="stats__list-item">
+                                    <div class="stats__list-text">
+                                        <p>5x5 - Standard (fast clock)</p>
+                                    </div>
+                                    <p>12.1%</p>
+                                </li>
+
+                                <!-- Item 4 -->
+                                <li class="stats__list-item">
+                                    <div class="stats__list-text">
+                                        <p>5x5 - Standard (fast clock)</p>
+                                    </div>
+                                    <p>9.3%</p>
+                                </li>
+
+                                <!-- Item 5 -->
+                                <li class="stats__list-item">
+                                    <div class="stats__list-text">
+                                        <p>TABOO - Standard (Insane)</p>
+                                    </div>
+                                    <p>7.7%</p>
+                                </li>
+
+                                <!-- Item 6 -->
+                                <li class="stats__list-item">
+                                    <div class="stats__list-text">
+                                        <p>5x5 - Tournament settings</p>
+                                    </div>
+                                    <p>5.9%</p>
+                                </li>
+
+                                <!-- Item 7 -->
+                                <li class="stats__list-item">
+                                    <div class="stats__list-text">
+                                        <p>TABOO - Standard (Easy)</p>
+                                    </div>
+                                    <p>5.4%</p>
+                                </li>
+
+                                <!-- Item 8 -->
+                                <li class="stats__list-item">
+                                    <div class="stats__list-text">
+                                        <p>5x6 - Standard (no clock)</p>
+                                    </div>
+                                    <p>4.8%</p>
+                                </li>
+
+                                <!-- Item 9 -->
+                                <li class="stats__list-item">
+                                    <div class="stats__list-text">
+                                        <p>5x5 - Custom Settingsp</p>
+                                    </div>
+                                    <p>4.2%</p>
+                                </li>
+
+                                <!-- Item 10 -->
+                                <li class="stats__list-item">
+                                    <div class="stats__list-text">
+                                        <p>TABOO - Standard (Hard)</p>
+                                    </div>
+                                    <p>3.9%</p>
+                                </li>
+
+                                <!-- Item 11 -->
+                                <li class="stats__list-item">
+                                    <div class="stats__list-text">
+                                        <p>TABOO - Unlimited Mode</p>
+                                    </div>
+                                    <p>3.9%</p>
+                                </li>
+
+                                <!-- Item 12 -->
+                                <li class="stats__list-item">
+                                    <div class="stats__list-text">
+                                        <p>Others</p>
+                                    </div>
+                                    <p>2.3%</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="stats-cards-container">
+
+                    <!-- ==== Duo Leaderboard Card ==== -->
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-header-heading">
+                                <img src="./assets/images/users-icon.svg" alt="icon">
+                                <h6>Duo Leaderboard</h6>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <ul class="duo__list">
+                                <!-- Item 1 -->
+                                <li class="duo__list-item">
+                                    <div class="duo__list-players">
+                                        <div class="duo__list-info">
+                                            <div class="duo__list-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="duo__list-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="Image">
+                                            </div>
+                                            <p class="color-cyan">Name</p>
+                                            <div class="duo__list-score">
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                                <span class="color-yellow">0</span>
+                                            </div>
+                                        </div>
+                                        <p class="mr-8 ml-8">&</p>
+                                        <div class="duo__list-info">
+                                            <div class="duo__list-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="duo__list-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="Image">
+                                            </div>
+                                            <p class="color-cyan">Name</p>
+                                            <div class="duo__list-score">
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                                <span class="color-yellow">0</span>
+                                                <span class="duo__list-games">(0 games)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="duo__progress-value">40.99% win rate</p>
+                                    <div class="progress duo__progress">
+                                        <div style="width: 51%;" class="progress-value cyan"></div>
+                                    </div>
+                                </li>
+
+                                <!-- Item 2 -->
+                                <li class="duo__list-item">
+                                    <div class="duo__list-players">
+                                        <div class="duo__list-info">
+                                            <div class="duo__list-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="duo__list-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="Image">
+                                            </div>
+                                            <p class="color-cyan">Name</p>
+                                            <div class="duo__list-score">
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                                <span class="color-yellow">0</span>
+                                            </div>
+                                        </div>
+                                        <p class="mr-8 ml-8">&</p>
+                                        <div class="duo__list-info">
+                                            <div class="duo__list-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="duo__list-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="Image">
+                                            </div>
+                                            <p class="color-cyan">Name</p>
+                                            <div class="duo__list-score">
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                                <span class="color-yellow">0</span>
+                                                <span class="duo__list-games">(0 games)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="duo__progress-value">40.99% win rate</p>
+                                    <div class="progress duo__progress">
+                                        <div style="width: 51%;" class="progress-value cyan"></div>
+                                    </div>
+                                </li>
+
+                                <!-- Item 3 -->
+                                <li class="duo__list-item">
+                                    <div class="duo__list-players">
+                                        <div class="duo__list-info">
+                                            <div class="duo__list-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="duo__list-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="Image">
+                                            </div>
+                                            <p class="color-cyan">Name</p>
+                                            <div class="duo__list-score">
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                                <span class="color-yellow">0</span>
+                                            </div>
+                                        </div>
+                                        <p class="mr-8 ml-8">&</p>
+                                        <div class="duo__list-info">
+                                            <div class="duo__list-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="duo__list-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="Image">
+                                            </div>
+                                            <p class="color-cyan">Name</p>
+                                            <div class="duo__list-score">
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                                <span class="color-yellow">0</span>
+                                                <span class="duo__list-games">(0 games)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="duo__progress-value">40.99% win rate</p>
+                                    <div class="progress duo__progress">
+                                        <div style="width: 51%;" class="progress-value cyan"></div>
+                                    </div>
+                                </li>
+
+                                <!-- Item 4 -->
+                                <li class="duo__list-item">
+                                    <div class="duo__list-players">
+                                        <div class="duo__list-info">
+                                            <div class="duo__list-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="duo__list-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="Image">
+                                            </div>
+                                            <p class="color-cyan">Name</p>
+                                            <div class="duo__list-score">
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                                <span class="color-yellow">0</span>
+                                            </div>
+                                        </div>
+                                        <p class="mr-8 ml-8">&</p>
+                                        <div class="duo__list-info">
+                                            <div class="duo__list-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="duo__list-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="Image">
+                                            </div>
+                                            <p class="color-cyan">Name</p>
+                                            <div class="duo__list-score">
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                                <span class="color-yellow">0</span>
+                                                <span class="duo__list-games">(0 games)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="duo__progress-value">40.99% win rate</p>
+                                    <div class="progress duo__progress">
+                                        <div style="width: 51%;" class="progress-value cyan"></div>
+                                    </div>
+                                </li>
+
+                                <!-- Item 5 -->
+                                <li class="duo__list-item">
+                                    <div class="duo__list-players">
+                                        <div class="duo__list-info">
+                                            <div class="duo__list-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="duo__list-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="Image">
+                                            </div>
+                                            <p class="color-cyan">Name</p>
+                                            <div class="duo__list-score">
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                                <span class="color-yellow">0</span>
+                                            </div>
+                                        </div>
+                                        <p class="mr-8 ml-8">&</p>
+                                        <div class="duo__list-info">
+                                            <div class="duo__list-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="duo__list-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="Image">
+                                            </div>
+                                            <p class="color-cyan">Name</p>
+                                            <div class="duo__list-score">
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                                <span class="color-yellow">0</span>
+                                                <span class="duo__list-games">(0 games)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="duo__progress-value">40.99% win rate</p>
+                                    <div class="progress duo__progress">
+                                        <div style="width: 51%;" class="progress-value cyan"></div>
+                                    </div>
+                                </li>
+
+                                <!-- Item 6 -->
+                                <li class="duo__list-item">
+                                    <div class="duo__list-players">
+                                        <div class="duo__list-info">
+                                            <div class="duo__list-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="duo__list-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="Image">
+                                            </div>
+                                            <p class="color-cyan">Name</p>
+                                            <div class="duo__list-score">
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                                <span class="color-yellow">0</span>
+                                            </div>
+                                        </div>
+                                        <p class="mr-8 ml-8">&</p>
+                                        <div class="duo__list-info">
+                                            <div class="duo__list-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="duo__list-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="Image">
+                                            </div>
+                                            <p class="color-cyan">Name</p>
+                                            <div class="duo__list-score">
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                                <span class="color-yellow">0</span>
+                                                <span class="duo__list-games">(0 games)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="duo__progress-value">40.99% win rate</p>
+                                    <div class="progress duo__progress">
+                                        <div style="width: 51%;" class="progress-value cyan"></div>
+                                    </div>
+                                </li>
+
+                                <!-- Item 7 -->
+                                <li class="duo__list-item">
+                                    <div class="duo__list-players">
+                                        <div class="duo__list-info">
+                                            <div class="duo__list-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="duo__list-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="Image">
+                                            </div>
+                                            <p class="color-cyan">Name</p>
+                                            <div class="duo__list-score">
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                                <span class="color-yellow">0</span>
+                                            </div>
+                                        </div>
+                                        <p class="mr-8 ml-8">&</p>
+                                        <div class="duo__list-info">
+                                            <div class="duo__list-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="duo__list-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="Image">
+                                            </div>
+                                            <p class="color-cyan">Name</p>
+                                            <div class="duo__list-score">
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                                <span class="color-yellow">0</span>
+                                                <span class="duo__list-games">(0 games)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="duo__progress-value">40.99% win rate</p>
+                                    <div class="progress duo__progress">
+                                        <div style="width: 51%;" class="progress-value cyan"></div>
+                                    </div>
+                                </li>
+
+                                <!-- Item 8 -->
+                                <li class="duo__list-item">
+                                    <div class="duo__list-players">
+                                        <div class="duo__list-info">
+                                            <div class="duo__list-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="duo__list-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="Image">
+                                            </div>
+                                            <p class="color-cyan">Name</p>
+                                            <div class="duo__list-score">
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                                <span class="color-yellow">0</span>
+                                            </div>
+                                        </div>
+                                        <p class="mr-8 ml-8">&</p>
+                                        <div class="duo__list-info">
+                                            <div class="duo__list-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="duo__list-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="Image">
+                                            </div>
+                                            <p class="color-cyan">Name</p>
+                                            <div class="duo__list-score">
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                                <span class="color-yellow">0</span>
+                                                <span class="duo__list-games">(0 games)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="duo__progress-value">40.99% win rate</p>
+                                    <div class="progress duo__progress">
+                                        <div style="width: 51%;" class="progress-value cyan"></div>
+                                    </div>
+                                </li>
+
+                                <!-- Item 9 -->
+                                <li class="duo__list-item">
+                                    <div class="duo__list-players">
+                                        <div class="duo__list-info">
+                                            <div class="duo__list-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="duo__list-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="Image">
+                                            </div>
+                                            <p class="color-cyan">Name</p>
+                                            <div class="duo__list-score">
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                                <span class="color-yellow">0</span>
+                                            </div>
+                                        </div>
+                                        <p class="mr-8 ml-8">&</p>
+                                        <div class="duo__list-info">
+                                            <div class="duo__list-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="duo__list-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="Image">
+                                            </div>
+                                            <p class="color-cyan">Name</p>
+                                            <div class="duo__list-score">
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                                <span class="color-yellow">0</span>
+                                                <span class="duo__list-games">(0 games)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="duo__progress-value">40.99% win rate</p>
+                                    <div class="progress duo__progress">
+                                        <div style="width: 51%;" class="progress-value cyan"></div>
+                                    </div>
+                                </li>
+
+                                <!-- Item 10 -->
+                                <li class="duo__list-item">
+                                    <div class="duo__list-players">
+                                        <div class="duo__list-info">
+                                            <div class="duo__list-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="duo__list-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="Image">
+                                            </div>
+                                            <p class="color-cyan">Name</p>
+                                            <div class="duo__list-score">
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                                <span class="color-yellow">0</span>
+                                            </div>
+                                        </div>
+                                        <p class="mr-8 ml-8">&</p>
+                                        <div class="duo__list-info">
+                                            <div class="duo__list-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="duo__list-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="Image">
+                                            </div>
+                                            <p class="color-cyan">Name</p>
+                                            <div class="duo__list-score">
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                                <span class="color-yellow">0</span>
+                                                <span class="duo__list-games">(0 games)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="duo__progress-value">40.99% win rate</p>
+                                    <div class="progress duo__progress">
+                                        <div style="width: 51%;" class="progress-value cyan"></div>
+                                    </div>
+                                </li>
+
+                                <!-- Item 11 -->
+                                <li class="duo__list-item">
+                                    <div class="duo__list-players">
+                                        <div class="duo__list-info">
+                                            <div class="duo__list-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="duo__list-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="Image">
+                                            </div>
+                                            <p class="color-cyan">Name</p>
+                                            <div class="duo__list-score">
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                                <span class="color-yellow">0</span>
+                                            </div>
+                                        </div>
+                                        <p class="mr-8 ml-8">&</p>
+                                        <div class="duo__list-info">
+                                            <div class="duo__list-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="duo__list-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="Image">
+                                            </div>
+                                            <p class="color-cyan">Name</p>
+                                            <div class="duo__list-score">
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                                <span class="color-yellow">0</span>
+                                                <span class="duo__list-games">(0 games)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="duo__progress-value">40.99% win rate</p>
+                                    <div class="progress duo__progress">
+                                        <div style="width: 51%;" class="progress-value cyan"></div>
+                                    </div>
+                                </li>
+
+                                <!-- Item 12 -->
+                                <li class="duo__list-item">
+                                    <div class="duo__list-players">
+                                        <div class="duo__list-info">
+                                            <div class="duo__list-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="duo__list-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="Image">
+                                            </div>
+                                            <p class="color-cyan">Name</p>
+                                            <div class="duo__list-score">
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                                <span class="color-yellow">0</span>
+                                            </div>
+                                        </div>
+                                        <p class="mr-8 ml-8">&</p>
+                                        <div class="duo__list-info">
+                                            <div class="duo__list-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="duo__list-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="Image">
+                                            </div>
+                                            <p class="color-cyan">Name</p>
+                                            <div class="duo__list-score">
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                                <span class="color-yellow">0</span>
+                                                <span class="duo__list-games">(0 games)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="duo__progress-value">40.99% win rate</p>
+                                    <div class="progress duo__progress">
+                                        <div style="width: 51%;" class="progress-value cyan"></div>
+                                    </div>
+                                </li>
+
+                                <!-- Item 13 -->
+                                <li class="duo__list-item">
+                                    <div class="duo__list-players">
+                                        <div class="duo__list-info">
+                                            <div class="duo__list-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="duo__list-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="Image">
+                                            </div>
+                                            <p class="color-cyan">Name</p>
+                                            <div class="duo__list-score">
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                                <span class="color-yellow">0</span>
+                                            </div>
+                                        </div>
+                                        <p class="mr-8 ml-8">&</p>
+                                        <div class="duo__list-info">
+                                            <div class="duo__list-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="duo__list-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="Image">
+                                            </div>
+                                            <p class="color-cyan">Name</p>
+                                            <div class="duo__list-score">
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                                <span class="color-yellow">0</span>
+                                                <span class="duo__list-games">(0 games)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="duo__progress-value">40.99% win rate</p>
+                                    <div class="progress duo__progress">
+                                        <div style="width: 51%;" class="progress-value cyan"></div>
+                                    </div>
+                                </li>
+
+                                <!-- Item 14 -->
+                                <li class="duo__list-item">
+                                    <div class="duo__list-players">
+                                        <div class="duo__list-info">
+                                            <div class="duo__list-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="duo__list-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="Image">
+                                            </div>
+                                            <p class="color-cyan">Name</p>
+                                            <div class="duo__list-score">
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                                <span class="color-yellow">0</span>
+                                            </div>
+                                        </div>
+                                        <p class="mr-8 ml-8">&</p>
+                                        <div class="duo__list-info">
+                                            <div class="duo__list-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="duo__list-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="Image">
+                                            </div>
+                                            <p class="color-cyan">Name</p>
+                                            <div class="duo__list-score">
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                                <span class="color-yellow">0</span>
+                                                <span class="duo__list-games">(0 games)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="duo__progress-value">40.99% win rate</p>
+                                    <div class="progress duo__progress">
+                                        <div style="width: 51%;" class="progress-value cyan"></div>
+                                    </div>
+                                </li>
+
+                                <!-- Item 15 -->
+                                <li class="duo__list-item">
+                                    <div class="duo__list-players">
+                                        <div class="duo__list-info">
+                                            <div class="duo__list-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="duo__list-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="Image">
+                                            </div>
+                                            <p class="color-cyan">Name</p>
+                                            <div class="duo__list-score">
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                                <span class="color-yellow">0</span>
+                                            </div>
+                                        </div>
+                                        <p class="mr-8 ml-8">&</p>
+                                        <div class="duo__list-info">
+                                            <div class="duo__list-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="duo__list-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="Image">
+                                            </div>
+                                            <p class="color-cyan">Name</p>
+                                            <div class="duo__list-score">
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                                <span class="color-yellow">0</span>
+                                                <span class="duo__list-games">(0 games)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="duo__progress-value">40.99% win rate</p>
+                                    <div class="progress duo__progress">
+                                        <div style="width: 51%;" class="progress-value cyan"></div>
+                                    </div>
+                                </li>
+
+                                <!-- Item 16 -->
+                                <li class="duo__list-item">
+                                    <div class="duo__list-players">
+                                        <div class="duo__list-info">
+                                            <div class="duo__list-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="duo__list-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="Image">
+                                            </div>
+                                            <p class="color-cyan">Name</p>
+                                            <div class="duo__list-score">
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                                <span class="color-yellow">0</span>
+                                            </div>
+                                        </div>
+                                        <p class="mr-8 ml-8">&</p>
+                                        <div class="duo__list-info">
+                                            <div class="duo__list-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="duo__list-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="Image">
+                                            </div>
+                                            <p class="color-cyan">Name</p>
+                                            <div class="duo__list-score">
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                                <span class="color-yellow">0</span>
+                                                <span class="duo__list-games">(0 games)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="duo__progress-value">40.99% win rate</p>
+                                    <div class="progress duo__progress">
+                                        <div style="width: 51%;" class="progress-value cyan"></div>
+                                    </div>
+                                </li>
+
+                                <!-- Item 17 -->
+                                <li class="duo__list-item">
+                                    <div class="duo__list-players">
+                                        <div class="duo__list-info">
+                                            <div class="duo__list-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="duo__list-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="Image">
+                                            </div>
+                                            <p class="color-cyan">Name</p>
+                                            <div class="duo__list-score">
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                                <span class="color-yellow">0</span>
+                                            </div>
+                                        </div>
+                                        <p class="mr-8 ml-8">&</p>
+                                        <div class="duo__list-info">
+                                            <div class="duo__list-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="duo__list-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="Image">
+                                            </div>
+                                            <p class="color-cyan">Name</p>
+                                            <div class="duo__list-score">
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                                <span class="color-yellow">0</span>
+                                                <span class="duo__list-games">(0 games)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="duo__progress-value">40.99% win rate</p>
+                                    <div class="progress duo__progress">
+                                        <div style="width: 51%;" class="progress-value cyan"></div>
+                                    </div>
+                                </li>
+
+                                <!-- Item 18 -->
+                                <li class="duo__list-item">
+                                    <div class="duo__list-players">
+                                        <div class="duo__list-info">
+                                            <div class="duo__list-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="duo__list-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="Image">
+                                            </div>
+                                            <p class="color-cyan">Name</p>
+                                            <div class="duo__list-score">
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                                <span class="color-yellow">0</span>
+                                            </div>
+                                        </div>
+                                        <p class="mr-8 ml-8">&</p>
+                                        <div class="duo__list-info">
+                                            <div class="duo__list-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="duo__list-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="Image">
+                                            </div>
+                                            <p class="color-cyan">Name</p>
+                                            <div class="duo__list-score">
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                                <span class="color-yellow">0</span>
+                                                <span class="duo__list-games">(0 games)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="duo__progress-value">40.99% win rate</p>
+                                    <div class="progress duo__progress">
+                                        <div style="width: 51%;" class="progress-value cyan"></div>
+                                    </div>
+                                </li>
+
+                                <!-- Item 19 -->
+                                <li class="duo__list-item">
+                                    <div class="duo__list-players">
+                                        <div class="duo__list-info">
+                                            <div class="duo__list-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="duo__list-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="Image">
+                                            </div>
+                                            <p class="color-cyan">Name</p>
+                                            <div class="duo__list-score">
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                                <span class="color-yellow">0</span>
+                                            </div>
+                                        </div>
+                                        <p class="mr-8 ml-8">&</p>
+                                        <div class="duo__list-info">
+                                            <div class="duo__list-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="duo__list-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="Image">
+                                            </div>
+                                            <p class="color-cyan">Name</p>
+                                            <div class="duo__list-score">
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                                <span class="color-yellow">0</span>
+                                                <span class="duo__list-games">(0 games)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="duo__progress-value">40.99% win rate</p>
+                                    <div class="progress duo__progress">
+                                        <div style="width: 51%;" class="progress-value cyan"></div>
+                                    </div>
+                                </li>
+
+                                <!-- Item 20 -->
+                                <li class="duo__list-item">
+                                    <div class="duo__list-players">
+                                        <div class="duo__list-info">
+                                            <div class="duo__list-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="duo__list-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="Image">
+                                            </div>
+                                            <p class="color-cyan">Name</p>
+                                            <div class="duo__list-score">
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                                <span class="color-yellow">0</span>
+                                            </div>
+                                        </div>
+                                        <p class="mr-8 ml-8">&</p>
+                                        <div class="duo__list-info">
+                                            <div class="duo__list-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="duo__list-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="Image">
+                                            </div>
+                                            <p class="color-cyan">Name</p>
+                                            <div class="duo__list-score">
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                                <span class="color-yellow">0</span>
+                                                <span class="duo__list-games">(0 games)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="duo__progress-value">40.99% win rate</p>
+                                    <div class="progress duo__progress">
+                                        <div style="width: 51%;" class="progress-value cyan"></div>
+                                    </div>
+                                </li>
+
+                                <!-- Item 21 -->
+                                <li class="duo__list-item">
+                                    <div class="duo__list-players">
+                                        <div class="duo__list-info">
+                                            <div class="duo__list-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="duo__list-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="Image">
+                                            </div>
+                                            <p class="color-cyan">Name</p>
+                                            <div class="duo__list-score">
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                                <span class="color-yellow">0</span>
+                                            </div>
+                                        </div>
+                                        <p class="mr-8 ml-8">&</p>
+                                        <div class="duo__list-info">
+                                            <div class="duo__list-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="duo__list-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="Image">
+                                            </div>
+                                            <p class="color-cyan">Name</p>
+                                            <div class="duo__list-score">
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                                <span class="color-yellow">0</span>
+                                                <span class="duo__list-games">(0 games)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="duo__progress-value">40.99% win rate</p>
+                                    <div class="progress duo__progress">
+                                        <div style="width: 51%;" class="progress-value cyan"></div>
+                                    </div>
+                                </li>
+
+                                <!-- Item 22 -->
+                                <li class="duo__list-item">
+                                    <div class="duo__list-players">
+                                        <div class="duo__list-info">
+                                            <div class="duo__list-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="duo__list-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="Image">
+                                            </div>
+                                            <p class="color-cyan">Name</p>
+                                            <div class="duo__list-score">
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                                <span class="color-yellow">0</span>
+                                            </div>
+                                        </div>
+                                        <p class="mr-8 ml-8">&</p>
+                                        <div class="duo__list-info">
+                                            <div class="duo__list-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="duo__list-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="Image">
+                                            </div>
+                                            <p class="color-cyan">Name</p>
+                                            <div class="duo__list-score">
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                                <span class="color-yellow">0</span>
+                                                <span class="duo__list-games">(0 games)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="duo__progress-value">40.99% win rate</p>
+                                    <div class="progress duo__progress">
+                                        <div style="width: 51%;" class="progress-value cyan"></div>
+                                    </div>
+                                </li>
+
+                                <!-- Item 23 -->
+                                <li class="duo__list-item">
+                                    <div class="duo__list-players">
+                                        <div class="duo__list-info">
+                                            <div class="duo__list-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="duo__list-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="Image">
+                                            </div>
+                                            <p class="color-cyan">Name</p>
+                                            <div class="duo__list-score">
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                                <span class="color-yellow">0</span>
+                                            </div>
+                                        </div>
+                                        <p class="mr-8 ml-8">&</p>
+                                        <div class="duo__list-info">
+                                            <div class="duo__list-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="duo__list-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="Image">
+                                            </div>
+                                            <p class="color-cyan">Name</p>
+                                            <div class="duo__list-score">
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                                <span class="color-yellow">0</span>
+                                                <span class="duo__list-games">(0 games)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="duo__progress-value">40.99% win rate</p>
+                                    <div class="progress duo__progress">
+                                        <div style="width: 51%;" class="progress-value cyan"></div>
+                                    </div>
+                                </li>
+
+                                <!-- Item 24 -->
+                                <li class="duo__list-item">
+                                    <div class="duo__list-players">
+                                        <div class="duo__list-info">
+                                            <div class="duo__list-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="duo__list-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="Image">
+                                            </div>
+                                            <p class="color-cyan">Name</p>
+                                            <div class="duo__list-score">
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                                <span class="color-yellow">0</span>
+                                            </div>
+                                        </div>
+                                        <p class="mr-8 ml-8">&</p>
+                                        <div class="duo__list-info">
+                                            <div class="duo__list-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="duo__list-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="Image">
+                                            </div>
+                                            <p class="color-cyan">Name</p>
+                                            <div class="duo__list-score">
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                                <span class="color-yellow">0</span>
+                                                <span class="duo__list-games">(0 games)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="duo__progress-value">40.99% win rate</p>
+                                    <div class="progress duo__progress">
+                                        <div style="width: 51%;" class="progress-value cyan"></div>
+                                    </div>
+                                </li>
+
+                                <!-- Item 25 -->
+                                <li class="duo__list-item">
+                                    <div class="duo__list-players">
+                                        <div class="duo__list-info">
+                                            <div class="duo__list-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="duo__list-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="Image">
+                                            </div>
+                                            <p class="color-cyan">Name</p>
+                                            <div class="duo__list-score">
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                                <span class="color-yellow">0</span>
+                                            </div>
+                                        </div>
+                                        <p class="mr-8 ml-8">&</p>
+                                        <div class="duo__list-info">
+                                            <div class="duo__list-icon">
+                                                <img src="./assets/images/cup_icon.svg" alt="Cup icon">
+                                            </div>
+                                            <div class="duo__list-avatar">
+                                                <img src="./assets/images/card-avatar.png" alt="Image">
+                                            </div>
+                                            <p class="color-cyan">Name</p>
+                                            <div class="duo__list-score">
+                                                <img src="./assets/images/cup-yellow.svg" alt="Cup icon">
+                                                <span class="color-yellow">0</span>
+                                                <span class="duo__list-games">(0 games)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="duo__progress-value">40.99% win rate</p>
+                                    <div class="progress duo__progress">
+                                        <div style="width: 51%;" class="progress-value cyan"></div>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <p class="duo-description">Players must have played 25 games together. Guest accounts excluded.</p>
+                        </div>
+                    </div>
+
+                    <!-- ==== Most Frequent Clues Card ==== -->
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-header-heading">
+                                <img src="./assets/images/t-icon.svg" alt="icon">
+                                <h6>Most frequent clues (from the last 3000 matches)</h6>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <ul class="stats__list">
+                                <!-- Item 1 -->
+                                <li class="stats__list-item">
+                                    <div class="stats__list-text">
+                                        <p class="text-uppercase">GG</p>
+                                    </div>
+                                    <p>99 times</p>
+                                </li>
+
+                                <!-- Item 2 -->
+                                <li class="stats__list-item">
+                                    <div class="stats__list-text">
+                                        <p class="text-uppercase">Water</p>
+                                    </div>
+                                    <p>86 times</p>
+                                </li>
+
+                                <!-- Item 3 -->
+                                <li class="stats__list-item">
+                                    <div class="stats__list-text">
+                                        <p class="text-uppercase">Food</p>
+                                    </div>
+                                    <p>85 times</p>
+                                </li>
+
+                                <!-- Item 4 -->
+                                <li class="stats__list-item">
+                                    <div class="stats__list-text">
+                                        <p class="text-uppercase">Animal</p>
+                                    </div>
+                                    <p>63 times</p>
+                                </li>
+
+                                <!-- Item 5 -->
+                                <li class="stats__list-item">
+                                    <div class="stats__list-text">
+                                        <p class="text-uppercase">Metal</p>
+                                    </div>
+                                    <p>59 times</p>
+                                </li>
+
+                                <!-- Item 6 -->
+                                <li class="stats__list-item">
+                                    <div class="stats__list-text">
+                                        <p class="text-uppercase">Metal</p>
+                                    </div>
+                                    <p>46 times</p>
+                                </li>
+
+                                <!-- Item 7 -->
+                                <li class="stats__list-item">
+                                    <div class="stats__list-text">
+                                        <p class="text-uppercase">People</p>
+                                    </div>
+                                    <p>45 times</p>
+                                </li>
+
+                                <!-- Item 8 -->
+                                <li class="stats__list-item">
+                                    <div class="stats__list-text">
+                                        <p class="text-uppercase">Tree</p>
+                                    </div>
+                                    <p>45 times</p>
+                                </li>
+
+                                <!-- Item 9 -->
+                                <li class="stats__list-item">
+                                    <div class="stats__list-text">
+                                        <p class="text-uppercase">Round</p>
+                                    </div>
+                                    <p>44 times</p>
+                                </li>
+
+                                <!-- Item 10 -->
+                                <li class="stats__list-item">
+                                    <div class="stats__list-text">
+                                        <p class="text-uppercase">Places</p>
+                                    </div>
+                                    <p>42 times</p>
+                                </li>
+
+                                <!-- Item 11 -->
+                                <li class="stats__list-item">
+                                    <div class="stats__list-text">
+                                        <p class="text-uppercase">Building</p>
+                                    </div>
+                                    <p>38 times</p>
+                                </li>
+
+                                <!-- Item 12 -->
+                                <li class="stats__list-item">
+                                    <div class="stats__list-text">
+                                        <p class="text-uppercase">Place</p>
+                                    </div>
+                                    <p> times</p>
+                                </li>
+
+                                <!-- Item 13 -->
+                                <li class="stats__list-item">
+                                    <div class="stats__list-text">
+                                        <p class="text-uppercase">Farm</p>
+                                    </div>
+                                    <p>34 times</p>
+                                </li>
+
+                                <!-- Item 14 -->
+                                <li class="stats__list-item">
+                                    <div class="stats__list-text">
+                                        <p class="text-uppercase">Pirate</p>
+                                    </div>
+                                    <p>32 times</p>
+                                </li>
+
+                                <!-- Item  -->
+                                <li class="stats__list-item">
+                                    <div class="stats__list-text">
+                                        <p class="text-uppercase">Ocean</p>
+                                    </div>
+                                    <p>30 times</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </main>
+    </div>
+
+    <!-- ====== Uset Settings Modal ====== -->
+    <div class="backdrop" id="user-settings">
+        <div class="modal-content">
+            <div class="card user-settings-card">
+                <div class="card-header">
+                    <div class="card-header-heading">
+                        <img src="./assets/images/settings-icon.svg" alt="Gear icon">
+                        <h6 class="card-title">User Settings</h6>
+                    </div>
+                    <button type="button" class="btn btn-sm" onclick="toggleUserSettings()">
+                        <img src="./assets/images/close-icon.svg" alt="close icon">
+                    </button>
+                </div>
+                <div class="card-body">
+                    <form action="#" class="form">
+                        <!-- Row 1 -->
+                        <div class="form-row">
+                            <label for="user-name">Change Username</label>
+                            <input type="text" id="user-name" class="form-row-input">
+                            <p class="form-row-text">Username can only be changed once a week.</p>
+                        </div>
+    
+                        <!-- Row 2 -->
+                        <div class="form-row">
+                            <label for="win-rate">Hide win rate on profile page</label>
+                            <select name="" id="win-rate">
+                                <option value="no">No</option>
+                            </select>
+                            <p class="form-row-text">This covers anything related to your total wins/losses.</p>
+                        </div>
+    
+                        <!-- Row 3 -->
+                        <div class="form-row">
+                            <label for="detailed-statistics">Hide detailed statistics on profile page</label>
+                            <select name="" id="detailed-statistics">
+                                <option value="no">No</option>
+                            </select>
+                            <div class="form-row-text">This does not cover win/losses, this covers detailed numbers such as total clues given, average clue size, etc.</div>
+                        </div>
+    
+                        <!-- Row 4 -->
+                        <div class="form-row">
+                            <label for="trophy-number">Hide trophy number next to username</label>
+                            <select name="" id="trophy-number">
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+    
+                        <!-- Row 5 -->
+                        <div class="form-row">
+                            <label for="allowing-friends">Opt out of allowing friends to compare their stats with yours</label>
+                            <select name="" id="allowing-friends">
+                                <option value="no">No</option>
+                                <option value="allow">Allow</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-button">
+                            <button type="submit" class="btn form-button-btn">Save user settings</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.3.3/echarts.min.js" integrity="sha512-2L0h0GhoIHQEjti/1KwfjcbyaTHy+hPPhE1o5wTCmviYcPO/TD9oZvUxFQtWvBkCSTIpt+fjsx1CCx6ekb51gw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/scipher.js"></script>
+</body>
+</html>

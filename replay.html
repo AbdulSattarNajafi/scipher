@@ -1,0 +1,2147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/app.css">
+    <link rel="stylesheet" href="./css/scipher.css">
+    <title>Replay</title>
+</head>
+<body>
+    <div class="main-bg">
+        <!-- Lights and Background Images -->
+        <div class="main-bg__lights">
+            <div class="main-bg__light main-bg__light-1"></div>
+            <div class="main-bg__light main-bg__light-2"></div>
+            <div class="main-bg__light main-bg__light-3"></div>
+            <div class="main-bg__light main-bg__light-4"></div>
+        </div>
+        <div class="dots-top"></div>
+        <div class="dots-bottom">
+            <img src="./assets/images/bg-dots-bottom.png" alt="">
+        </div>
+
+        <!-- ====== Header ====== -->
+        <header class="header">
+            <div class="header__logo">
+                <img src="./assets/images/logo.png" alt="Logo" class="header__logo-img">
+            </div>
+            <div class="header__profile">
+                <button class="header__profile-btn" onclick="profileToggle()">
+                    <div class="header__profile-image">
+                        <img src="./assets/images/main-select.png" alt="image">
+                    </div>
+                    <div class="header__profile-info">
+                        <div class="header__profile-name">
+                            <img src="./assets/images/cup_icon.svg" alt="cup icon">
+                            <h6>Pink_bob</h6>
+                        </div>
+                        <div class="header__profile-counter">
+                            <img src="./assets/images/cup-orange.svg" alt="">
+                            <p>514</p>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="./assets/images/drop_icon.svg" alt="icon">
+                    </div>
+                </button>
+
+                <!-- Profile Dropdown -->
+                <ul class="profile__dropdown" id="profile-dropdown">
+                    <li class="profile__dropdown-item">
+                        <a href="./user-profile.html" class="profile__dropdown-link">
+                            <img src="./assets/images/profile-icon.svg" alt="profile icon">
+                            <span>Profile</span>
+                        </a>
+                    </li>
+                    <li class="profile__dropdown-item">
+                        <a href="javascript:void(0)" class="profile__dropdown-link" onclick="toggleUserSettings()">
+                            <img src="./assets/images/settings-icon.svg" alt="settings icon">
+                            <span>User settings</span>
+                        </a>
+                    </li>
+                    <li class="profile__dropdown-item">
+                        <a href="./login.html" class="profile__dropdown-link">
+                            <img src="./assets/images/logout-icon.svg" alt="logout icon">
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <main class="scipher">
+            <div class="scipher-container">
+                <!-- ==== Boards ==== -->
+                <div class="scipher__boards">
+                    <div class="scipher__boards-header">
+                        <!-- Score  -->
+                        <div class="boards__score">
+                            <div class="score__tabs">
+                                <span class="score__tabs-btn clipt">
+                                    <span class="text-transform-none">Finished 2nd</span>
+                                    <img src="./assets/images/match-icon.svg" alt="Times icon" class="mr-0 ml-6">
+                                </span>
+                            </div>
+                            <div class="boards__score-header">
+                                <button type="button" onclick="toggleScoreDropdown()">
+                                    <img src="./assets/images/bars.svg" alt="bars icon">
+                                </button>
+                                <div class="d-flex align-items-center">
+                                    <div class="boards__score-time">
+                                        <span>MILLA'S TEAM</span>
+                                    </div>
+                                    <div class="boards__score-score">
+                                        <span>4</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="boards__score-dropdown" id="score-dropdown">
+                                <div class="card">
+                                    <div class="card-header pink">
+                                        <div class="card-header-heading">
+                                            <img src="./assets/images/list-icon.svg" alt="match icon">
+                                            <h6>Team Overview</h6>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-body">
+                                        <div class="boards__score-buttons">
+                                            <p class="d-flex align-items-center color-gray">
+                                                <img src="./assets/images/timer-gray.svg" alt="timer icon" class="mr-4">
+                                                <span>120:00  Timebank: 6:59</span>
+                                            </p>
+                                        </div>
+
+                                        <ul class="boards__list">
+                                            <!-- Item 1 -->
+                                            <li class="boards__list-item">
+                                                <div class="boards__list-star">
+                                                    <img src="./assets/images/star-icon.svg" alt="star icon">
+                                                </div>
+                                                <div class="boards__list-cup">
+                                                    <img src="./assets/images/cup_icon.svg" alt="">
+                                                </div>
+                                                <div class="boards__list-avatar">
+                                                    <img src="./assets/images/card-avatar.png" alt="">
+                                                </div>
+                                                <p class="fw-medium color-cyan">
+                                                    Club_lommy
+                                                </p>
+                                                <div class="boards__list-scores">
+                                                    <img src="./assets/images/trophy.svg" alt="cup icon">
+                                                    <span>512</span>
+                                                </div>
+                                            </li>
+
+                                            <!-- Item 2 -->
+                                            <li class="boards__list-item">
+                                                <div class="boards__list-star">
+                                                </div>
+                                                <div class="boards__list-cup">
+                                                    <img src="./assets/images/cup_icon.svg" alt="">
+                                                </div>
+                                                <div class="boards__list-avatar">
+                                                    <img src="./assets/images/card-avatar.png" alt="">
+                                                </div>
+                                                <p class="fw-medium color-cyan">
+                                                    Mirzo bedil
+                                                </p>
+                                                <div class="boards__list-scores">
+                                                    <img src="./assets/images/trophy.svg" alt="cup icon">
+                                                    <span>229</span>
+                                                </div>
+                                            </li>
+
+                                            <!-- Item 3 -->
+                                            <li class="boards__list-item">
+                                                <div class="boards__list-star">
+                                                </div>
+                                                <div class="boards__list-cup">
+                                                </div>
+                                                <div class="boards__list-avatar">
+                                                    <img src="./assets/images/card-avatar.png" alt="">
+                                                </div>
+                                                <p class="fw-medium color-cyan">
+                                                    Hayyat_agency
+                                                </p>
+                                                <div class="boards__list-scores">
+                                                    <img src="./assets/images/trophy.svg" alt="cup icon">
+                                                    <span>44</span>
+                                                </div>
+                                            </li>
+
+                                            <!-- Item 4 -->
+                                            <li class="boards__list-item">
+                                                <div class="boards__list-star">
+                                                </div>
+                                                <div class="boards__list-cup">
+                                                    <img src="./assets/images/cup_icon.svg" alt="">
+                                                </div>
+                                                <div class="boards__list-avatar">
+                                                    <img src="./assets/images/card-avatar.png" alt="">
+                                                </div>
+                                                <p class="fw-medium color-cyan">
+                                                    James_bond_007
+                                                </p>
+                                                <div class="boards__list-scores">
+                                                    <img src="./assets/images/trophy.svg" alt="cup icon">
+                                                    <span>143</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Clue -->
+                        <div class="boards__clue">
+                            <div class="boards__clue-clue">
+                                <span>Pink_Bob</span>
+                                <span class="text-uppercase fw-bold">gives clue</span>
+                                <span class="text-uppercase fw-bold color-orange">Book-burner 2</span>
+                            </div>
+                        </div>
+
+                        <div class="boards__turn">
+                            <div class="turn__tabs">
+                                <span class="turn__tabs-btn clipt">
+                                    <img src="./assets/images/match-icon.svg" alt="icon">
+                                    <span class="text-transform-none">Finished 1st</span>
+                                </span>
+                            </div>
+
+                            <div class="boards__turn-header">
+                                <div class="d-flex align-items-center">
+                                    <div class="boards__score-score">
+                                        <span>4</span>
+                                    </div>
+                                    <div class="boards__score-time">
+                                        <span class="text-uppercase">MILLA'S TEAM</span>
+                                    </div>
+                                </div>
+                                <button type="button" onclick="toggleTurnDropdown()">
+                                    <img src="./assets/images/bars-right.svg" alt="bars icon">
+                                </button>
+                            </div>
+
+                            <div class="boards__score-dropdown" id="turn-dropdown">
+                                <div class="card">
+                                    <div class="card-header orange">
+                                        <div class="card-header-heading">
+                                            <img src="./assets/images/list-icon.svg" alt="match icon">
+                                            <h6>Team Overview</h6>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-body">
+                                        <div class="boards__score-buttons">
+                                            <p class="d-flex align-items-center color-gray">
+                                                <img src="./assets/images/timer-gray.svg" alt="timer icon" class="mr-4">
+                                                <span>120:00  Timebank: 6:59</span>
+                                            </p>
+                                        </div>
+
+                                        <ul class="boards__list">
+                                            <!-- Item 1 -->
+                                            <li class="boards__list-item">
+                                                <div class="boards__list-star">
+                                                    <img src="./assets/images/star-icon.svg" alt="star icon">
+                                                </div>
+                                                <div class="boards__list-cup">
+                                                    <img src="./assets/images/cup_icon.svg" alt="">
+                                                </div>
+                                                <div class="boards__list-avatar">
+                                                    <img src="./assets/images/card-avatar.png" alt="">
+                                                </div>
+                                                <p class="fw-medium color-cyan">
+                                                    Club_lommy
+                                                </p>
+                                                <div class="boards__list-scores">
+                                                    <img src="./assets/images/trophy.svg" alt="cup icon">
+                                                    <span>512</span>
+                                                </div>
+                                            </li>
+
+                                            <!-- Item 2 -->
+                                            <li class="boards__list-item">
+                                                <div class="boards__list-star">
+                                                </div>
+                                                <div class="boards__list-cup">
+                                                    <img src="./assets/images/cup_icon.svg" alt="">
+                                                </div>
+                                                <div class="boards__list-avatar">
+                                                    <img src="./assets/images/card-avatar.png" alt="">
+                                                </div>
+                                                <p class="fw-medium color-cyan">
+                                                    Mirzo bedil
+                                                </p>
+                                                <div class="boards__list-scores">
+                                                    <img src="./assets/images/trophy.svg" alt="cup icon">
+                                                    <span>229</span>
+                                                </div>
+                                            </li>
+
+                                            <!-- Item 3 -->
+                                            <li class="boards__list-item">
+                                                <div class="boards__list-star">
+                                                </div>
+                                                <div class="boards__list-cup">
+                                                </div>
+                                                <div class="boards__list-avatar">
+                                                    <img src="./assets/images/card-avatar.png" alt="">
+                                                </div>
+                                                <p class="fw-medium color-cyan">
+                                                    Hayyat_agency
+                                                </p>
+                                                <div class="boards__list-scores">
+                                                    <img src="./assets/images/trophy.svg" alt="cup icon">
+                                                    <span>44</span>
+                                                </div>
+                                            </li>
+
+                                            <!-- Item 4 -->
+                                            <li class="boards__list-item">
+                                                <div class="boards__list-star">
+                                                </div>
+                                                <div class="boards__list-cup">
+                                                    <img src="./assets/images/cup_icon.svg" alt="">
+                                                </div>
+                                                <div class="boards__list-avatar">
+                                                    <img src="./assets/images/card-avatar.png" alt="">
+                                                </div>
+                                                <p class="fw-medium color-cyan">
+                                                    James_bond_007
+                                                </p>
+                                                <div class="boards__list-scores">
+                                                    <img src="./assets/images/trophy.svg" alt="cup icon">
+                                                    <span>143</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Scipher Cards -->
+                    <div class="boards-cards-container">
+                        <!-- Card 1 -->
+                        <div class="flip-card">
+                            <div class="scipher-triangle"></div>
+                            <div class="flip-card-inner">
+                                <!-- Card Front -->
+                                <div class="schipher-card__front">
+                                    <div class="scipher-card-border">
+                                        <div class="scipher-card replay-card">
+                                            <div class="triangle">
+                                                <span class="shadow"></span>
+                                            </div>
+                                            <div class="scipher-card__inner-border">
+                                                <div class="scipher-card__inner">
+                                                    <div class="scipher-card__body">
+                                                        <div class="scipher-card__images">
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-1.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-2.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-3.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scipher-card__footer-border">
+                                                        <div class="scipher-card__footer">
+                                                            <h5 class="text-uppercase">king arthur</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <!-- Card Back -->
+                                <div class="schipher-card__back">
+                                    <div class="card__back-bg">
+                                        <div class="card__back-bg-inner">
+                                            <div class="card__back-border">
+                                                <div class="card__back-body-container">
+                                                    <div class="card__back-body">
+                                                        <img src="./assets/images/yellow_1.png" alt="image">
+                                                    </div>
+                                                    
+                                                    <div class="card-back__footer-border">
+                                                        <div class="scipher-card__footer">
+                                                            <h5 class="text-uppercase">king arthur</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="flip-card">
+                            <div class="scipher-triangle"></div>
+                            <div class="flip-card-inner">
+                                <!-- Card Front -->
+                                <div class="schipher-card__front">
+                                    <div class="scipher-card-border">
+                                        <div class="scipher-card replay-card">
+                                            <div class="triangle">
+                                                <span class="shadow"></span>
+                                            </div>
+                                            <div class="scipher-card__inner-border">
+                                                <div class="scipher-card__inner">
+                                                    <div class="scipher-card__body">
+                                                        <div class="scipher-card__images">
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-1.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-2.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-3.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scipher-card__footer-border">
+                                                        <div class="scipher-card__footer">
+                                                            <h5 class="text-uppercase">king arthur</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <!-- Card Back -->
+                                <div class="schipher-card__back">
+                                    <div class="card__back-bg">
+                                        <div class="card__back-bg-inner">
+                                            <div class="card__back-border">
+                                                <div class="card__back-body-container">
+                                                    <div class="card__back-body">
+                                                        <img src="./assets/images/yellow_1.png" alt="image">
+                                                    </div>
+                                                    
+                                                    <div class="card-back__footer-border">
+                                                        <div class="scipher-card__footer">
+                                                            <h5 class="text-uppercase">king arthur</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="flip-card">
+                            <div class="scipher-triangle"></div>
+                            <div class="flip-card-inner">
+                                <!-- Card Front -->
+                                <div class="schipher-card__front">
+                                    <div class="scipher-card-border">
+                                        <div class="scipher-card replay-card">
+                                            <div class="triangle">
+                                                <span class="shadow"></span>
+                                            </div>
+                                            <div class="scipher-card__inner-border">
+                                                <div class="scipher-card__inner">
+                                                    <div class="scipher-card__body">
+                                                        <div class="scipher-card__images">
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-1.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-2.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-3.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scipher-card__footer-border">
+                                                        <div class="scipher-card__footer">
+                                                            <h5 class="text-uppercase">king arthur</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <!-- Card Back -->
+                                <div class="schipher-card__back">
+                                    <div class="card__back-bg">
+                                        <div class="card__back-bg-inner">
+                                            <div class="card__back-border">
+                                                <div class="card__back-body-container">
+                                                    <div class="card__back-body">
+                                                        <img src="./assets/images/yellow_1.png" alt="image">
+                                                    </div>
+                                                    
+                                                    <div class="card-back__footer-border">
+                                                        <div class="scipher-card__footer">
+                                                            <h5 class="text-uppercase">king arthur</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="flip-card">
+                            <div class="scipher-triangle"></div>
+                            <div class="flip-card-inner">
+                                <!-- Card Front -->
+                                <div class="schipher-card__front">
+                                    <div class="scipher-card-border">
+                                        <div class="scipher-card replay-card">
+                                            <div class="triangle">
+                                                <span class="shadow"></span>
+                                            </div>
+                                            <div class="scipher-card__inner-border">
+                                                <div class="scipher-card__inner">
+                                                    <div class="scipher-card__body">
+                                                        <div class="scipher-card__images">
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-1.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-2.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-3.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scipher-card__footer-border">
+                                                        <div class="scipher-card__footer">
+                                                            <h5 class="text-uppercase">king arthur</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <!-- Card Back -->
+                                <div class="schipher-card__back">
+                                    <div class="card__back-bg">
+                                        <div class="card__back-bg-inner">
+                                            <div class="card__back-border">
+                                                <div class="card__back-body-container">
+                                                    <div class="card__back-body">
+                                                        <img src="./assets/images/yellow_1.png" alt="image">
+                                                    </div>
+                                                    
+                                                    <div class="card-back__footer-border">
+                                                        <div class="scipher-card__footer">
+                                                            <h5 class="text-uppercase">king arthur</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <!-- Card 5 -->
+                        <div class="flip-card">
+                            <div class="scipher-triangle"></div>
+                            <div class="flip-card-inner">
+                                <!-- Card Front -->
+                                <div class="schipher-card__front">
+                                    <div class="scipher-card-border">
+                                        <div class="scipher-card replay-card">
+                                            <div class="triangle">
+                                                <span class="shadow"></span>
+                                            </div>
+                                            <div class="scipher-card__inner-border">
+                                                <div class="scipher-card__inner">
+                                                    <div class="scipher-card__body">
+                                                        <div class="scipher-card__images">
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-1.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-2.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-3.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scipher-card__footer-border">
+                                                        <div class="scipher-card__footer">
+                                                            <h5 class="text-uppercase">king arthur</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <!-- Card Back -->
+                                <div class="schipher-card__back">
+                                    <div class="card__back-bg">
+                                        <div class="card__back-bg-inner">
+                                            <div class="card__back-border">
+                                                <div class="card__back-body-container">
+                                                    <div class="card__back-body">
+                                                        <img src="./assets/images/yellow_1.png" alt="image">
+                                                    </div>
+                                                    
+                                                    <div class="card-back__footer-border">
+                                                        <div class="scipher-card__footer">
+                                                            <h5 class="text-uppercase">king arthur</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <!-- Card 6 -->
+                        <div class="flip-card">
+                            <div class="scipher-triangle"></div>
+                            <div class="flip-card-inner">
+                                <!-- Card Front -->
+                                <div class="schipher-card__front">
+                                    <div class="scipher-card-border">
+                                        <div class="scipher-card replay-card">
+                                            <div class="triangle">
+                                                <span class="shadow"></span>
+                                            </div>
+                                            <div class="scipher-card__inner-border">
+                                                <div class="scipher-card__inner">
+                                                    <div class="scipher-card__body">
+                                                        <div class="scipher-card__images">
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-1.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-2.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-3.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scipher-card__footer-border">
+                                                        <div class="scipher-card__footer">
+                                                            <h5 class="text-uppercase">king arthur</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <!-- Card Back -->
+                                <div class="schipher-card__back">
+                                    <div class="card__back-bg">
+                                        <div class="card__back-bg-inner">
+                                            <div class="card__back-border">
+                                                <div class="card__back-body-container">
+                                                    <div class="card__back-body">
+                                                        <img src="./assets/images/yellow_1.png" alt="image">
+                                                    </div>
+                                                    
+                                                    <div class="card-back__footer-border">
+                                                        <div class="scipher-card__footer">
+                                                            <h5 class="text-uppercase">king arthur</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <!-- Card 7 -->
+                        <div class="flip-card">
+                            <div class="scipher-triangle"></div>
+                            <div class="flip-card-inner">
+                                <!-- Card Front -->
+                                <div class="schipher-card__front">
+                                    <div class="scipher-card-border">
+                                        <div class="scipher-card replay-card">
+                                            <div class="triangle">
+                                                <span class="shadow"></span>
+                                            </div>
+                                            <div class="scipher-card__inner-border">
+                                                <div class="scipher-card__inner">
+                                                    <div class="scipher-card__body">
+                                                        <div class="scipher-card__images">
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-1.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-2.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-3.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scipher-card__footer-border">
+                                                        <div class="scipher-card__footer">
+                                                            <h5 class="text-uppercase">king arthur</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <!-- Card Back -->
+                                <div class="schipher-card__back">
+                                    <div class="card__back-bg">
+                                        <div class="card__back-bg-inner">
+                                            <div class="card__back-border">
+                                                <div class="card__back-body-container">
+                                                    <div class="card__back-body">
+                                                        <img src="./assets/images/yellow_1.png" alt="image">
+                                                    </div>
+                                                    
+                                                    <div class="card-back__footer-border">
+                                                        <div class="scipher-card__footer">
+                                                            <h5 class="text-uppercase">king arthur</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <!-- Card 8 -->
+                        <div class="flip-card">
+                            <div class="scipher-triangle"></div>
+                            <div class="flip-card-inner">
+                                <!-- Card Front -->
+                                <div class="schipher-card__front">
+                                    <div class="scipher-card-border">
+                                        <div class="scipher-card replay-card">
+                                            <div class="triangle">
+                                                <span class="shadow"></span>
+                                            </div>
+                                            <div class="scipher-card__inner-border">
+                                                <div class="scipher-card__inner">
+                                                    <div class="scipher-card__body">
+                                                        <div class="scipher-card__images">
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-1.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-2.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-3.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scipher-card__footer-border">
+                                                        <div class="scipher-card__footer">
+                                                            <h5 class="text-uppercase">king arthur</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <!-- Card Back -->
+                                <div class="schipher-card__back">
+                                    <div class="card__back-bg">
+                                        <div class="card__back-bg-inner">
+                                            <div class="card__back-border">
+                                                <div class="card__back-body-container">
+                                                    <div class="card__back-body">
+                                                        <img src="./assets/images/yellow_1.png" alt="image">
+                                                    </div>
+                                                    
+                                                    <div class="card-back__footer-border">
+                                                        <div class="scipher-card__footer">
+                                                            <h5 class="text-uppercase">king arthur</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <!-- Card 9 -->
+                        <div class="flip-card">
+                            <div class="scipher-triangle"></div>
+                            <div class="flip-card-inner">
+                                <!-- Card Front -->
+                                <div class="schipher-card__front">
+                                    <div class="scipher-card-border">
+                                        <div class="scipher-card replay-card">
+                                            <div class="triangle">
+                                                <span class="shadow"></span>
+                                            </div>
+                                            <div class="scipher-card__inner-border">
+                                                <div class="scipher-card__inner">
+                                                    <div class="scipher-card__body">
+                                                        <div class="scipher-card__images">
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-1.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-2.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-3.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scipher-card__footer-border">
+                                                        <div class="scipher-card__footer">
+                                                            <h5 class="text-uppercase">king arthur</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <!-- Card Back -->
+                                <div class="schipher-card__back">
+                                    <div class="card__back-bg">
+                                        <div class="card__back-bg-inner">
+                                            <div class="card__back-border">
+                                                <div class="card__back-body-container">
+                                                    <div class="card__back-body">
+                                                        <img src="./assets/images/yellow_1.png" alt="image">
+                                                    </div>
+                                                    
+                                                    <div class="card-back__footer-border">
+                                                        <div class="scipher-card__footer">
+                                                            <h5 class="text-uppercase">king arthur</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <!-- Card 10 -->
+                        <div class="flip-card">
+                            <div class="scipher-triangle"></div>
+                            <div class="flip-card-inner">
+                                <!-- Card Front -->
+                                <div class="schipher-card__front">
+                                    <div class="scipher-card-border">
+                                        <div class="scipher-card replay-card">
+                                            <div class="triangle">
+                                                <span class="shadow"></span>
+                                            </div>
+                                            <div class="scipher-card__inner-border">
+                                                <div class="scipher-card__inner">
+                                                    <div class="scipher-card__body">
+                                                        <div class="scipher-card__images">
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-1.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-2.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-3.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scipher-card__footer-border">
+                                                        <div class="scipher-card__footer">
+                                                            <h5 class="text-uppercase">king arthur</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <!-- Card Back -->
+                                <div class="schipher-card__back">
+                                    <div class="card__back-bg">
+                                        <div class="card__back-bg-inner">
+                                            <div class="card__back-border">
+                                                <div class="card__back-body-container">
+                                                    <div class="card__back-body">
+                                                        <img src="./assets/images/yellow_1.png" alt="image">
+                                                    </div>
+                                                    
+                                                    <div class="card-back__footer-border">
+                                                        <div class="scipher-card__footer">
+                                                            <h5 class="text-uppercase">king arthur</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <!-- Card 11 -->
+                        <div class="flip-card">
+                            <div class="scipher-triangle"></div>
+                            <div class="flip-card-inner">
+                                <!-- Card Front -->
+                                <div class="schipher-card__front">
+                                    <div class="scipher-card-border">
+                                        <div class="scipher-card replay-card">
+                                            <div class="triangle">
+                                                <span class="shadow"></span>
+                                            </div>
+                                            <div class="scipher-card__inner-border">
+                                                <div class="scipher-card__inner">
+                                                    <div class="scipher-card__body">
+                                                        <div class="scipher-card__images">
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-1.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-2.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-3.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scipher-card__footer-border">
+                                                        <div class="scipher-card__footer">
+                                                            <h5 class="text-uppercase">king arthur</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <!-- Card Back -->
+                                <div class="schipher-card__back">
+                                    <div class="card__back-bg">
+                                        <div class="card__back-bg-inner">
+                                            <div class="card__back-border">
+                                                <div class="card__back-body-container">
+                                                    <div class="card__back-body">
+                                                        <img src="./assets/images/yellow_1.png" alt="image">
+                                                    </div>
+                                                    
+                                                    <div class="card-back__footer-border">
+                                                        <div class="scipher-card__footer">
+                                                            <h5 class="text-uppercase">king arthur</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <!-- Card 12 -->
+                        <div class="flip-card">
+                            <div class="scipher-triangle"></div>
+                            <div class="flip-card-inner">
+                                <!-- Card Front -->
+                                <div class="schipher-card__front">
+                                    <div class="scipher-card-border">
+                                        <div class="scipher-card replay-card">
+                                            <div class="triangle">
+                                                <span class="shadow"></span>
+                                            </div>
+                                            <div class="scipher-card__inner-border">
+                                                <div class="scipher-card__inner">
+                                                    <div class="scipher-card__body">
+                                                        <div class="scipher-card__images">
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-1.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-2.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-3.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scipher-card__footer-border">
+                                                        <div class="scipher-card__footer">
+                                                            <h5 class="text-uppercase">king arthur</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <!-- Card Back -->
+                                <div class="schipher-card__back">
+                                    <div class="card__back-bg">
+                                        <div class="card__back-bg-inner">
+                                            <div class="card__back-border">
+                                                <div class="card__back-body-container">
+                                                    <div class="card__back-body">
+                                                        <img src="./assets/images/yellow_1.png" alt="image">
+                                                    </div>
+                                                    
+                                                    <div class="card-back__footer-border">
+                                                        <div class="scipher-card__footer">
+                                                            <h5 class="text-uppercase">king arthur</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <!-- Card 13 -->
+                        <div class="flip-card">
+                            <div class="scipher-triangle"></div>
+                            <div class="flip-card-inner">
+                                <!-- Card Front -->
+                                <div class="schipher-card__front">
+                                    <div class="scipher-card-border">
+                                        <div class="scipher-card replay-card">
+                                            <div class="triangle">
+                                                <span class="shadow"></span>
+                                            </div>
+                                            <div class="scipher-card__inner-border">
+                                                <div class="scipher-card__inner">
+                                                    <div class="scipher-card__body">
+                                                        <div class="scipher-card__images">
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-1.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-2.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-3.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scipher-card__footer-border">
+                                                        <div class="scipher-card__footer">
+                                                            <h5 class="text-uppercase">king arthur</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <!-- Card Back -->
+                                <div class="schipher-card__back">
+                                    <div class="card__back-bg">
+                                        <div class="card__back-bg-inner">
+                                            <div class="card__back-border">
+                                                <div class="card__back-body-container">
+                                                    <div class="card__back-body">
+                                                        <img src="./assets/images/yellow_1.png" alt="image">
+                                                    </div>
+                                                    
+                                                    <div class="card-back__footer-border">
+                                                        <div class="scipher-card__footer">
+                                                            <h5 class="text-uppercase">king arthur</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <!-- Card 14 -->
+                        <div class="flip-card">
+                            <div class="scipher-triangle"></div>
+                            <div class="flip-card-inner">
+                                <!-- Card Front -->
+                                <div class="schipher-card__front">
+                                    <div class="scipher-card-border">
+                                        <div class="scipher-card replay-card">
+                                            <div class="triangle">
+                                                <span class="shadow"></span>
+                                            </div>
+                                            <div class="scipher-card__inner-border">
+                                                <div class="scipher-card__inner">
+                                                    <div class="scipher-card__body">
+                                                        <div class="scipher-card__images">
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-1.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-2.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-3.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scipher-card__footer-border">
+                                                        <div class="scipher-card__footer">
+                                                            <h5 class="text-uppercase">king arthur</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <!-- Card Back -->
+                                <div class="schipher-card__back">
+                                    <div class="card__back-bg">
+                                        <div class="card__back-bg-inner">
+                                            <div class="card__back-border">
+                                                <div class="card__back-body-container">
+                                                    <div class="card__back-body">
+                                                        <img src="./assets/images/yellow_1.png" alt="image">
+                                                    </div>
+                                                    
+                                                    <div class="card-back__footer-border">
+                                                        <div class="scipher-card__footer">
+                                                            <h5 class="text-uppercase">king arthur</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <!-- Card 15 -->
+                        <div class="flip-card">
+                            <div class="scipher-triangle"></div>
+                            <div class="flip-card-inner">
+                                <!-- Card Front -->
+                                <div class="schipher-card__front">
+                                    <div class="scipher-card-border">
+                                        <div class="scipher-card replay-card">
+                                            <div class="triangle">
+                                                <span class="shadow"></span>
+                                            </div>
+                                            <div class="scipher-card__inner-border">
+                                                <div class="scipher-card__inner">
+                                                    <div class="scipher-card__body">
+                                                        <div class="scipher-card__images">
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-1.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-2.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-3.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scipher-card__footer-border">
+                                                        <div class="scipher-card__footer">
+                                                            <h5 class="text-uppercase">king arthur</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <!-- Card Back -->
+                                <div class="schipher-card__back">
+                                    <div class="card__back-bg">
+                                        <div class="card__back-bg-inner">
+                                            <div class="card__back-border">
+                                                <div class="card__back-body-container">
+                                                    <div class="card__back-body">
+                                                        <img src="./assets/images/yellow_1.png" alt="image">
+                                                    </div>
+                                                    
+                                                    <div class="card-back__footer-border">
+                                                        <div class="scipher-card__footer">
+                                                            <h5 class="text-uppercase">king arthur</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <!-- Card 16 -->
+                        <div class="flip-card">
+                            <div class="scipher-triangle"></div>
+                            <div class="flip-card-inner">
+                                <!-- Card Front -->
+                                <div class="schipher-card__front">
+                                    <div class="scipher-card-border">
+                                        <div class="scipher-card replay-card">
+                                            <div class="triangle">
+                                                <span class="shadow"></span>
+                                            </div>
+                                            <div class="scipher-card__inner-border">
+                                                <div class="scipher-card__inner">
+                                                    <div class="scipher-card__body">
+                                                        <div class="scipher-card__images">
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-1.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-2.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-3.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scipher-card__footer-border">
+                                                        <div class="scipher-card__footer">
+                                                            <h5 class="text-uppercase">king arthur</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <!-- Card Back -->
+                                <div class="schipher-card__back">
+                                    <div class="card__back-bg">
+                                        <div class="card__back-bg-inner">
+                                            <div class="card__back-border">
+                                                <div class="card__back-body-container">
+                                                    <div class="card__back-body">
+                                                        <img src="./assets/images/yellow_1.png" alt="image">
+                                                    </div>
+                                                    
+                                                    <div class="card-back__footer-border">
+                                                        <div class="scipher-card__footer">
+                                                            <h5 class="text-uppercase">king arthur</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <!-- Card 17 -->
+                        <div class="flip-card">
+                            <div class="scipher-triangle"></div>
+                            <div class="flip-card-inner">
+                                <!-- Card Front -->
+                                <div class="schipher-card__front">
+                                    <div class="scipher-card-border">
+                                        <div class="scipher-card replay-card">
+                                            <div class="triangle">
+                                                <span class="shadow"></span>
+                                            </div>
+                                            <div class="scipher-card__inner-border">
+                                                <div class="scipher-card__inner">
+                                                    <div class="scipher-card__body">
+                                                        <div class="scipher-card__images">
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-1.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-2.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-3.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scipher-card__footer-border">
+                                                        <div class="scipher-card__footer">
+                                                            <h5 class="text-uppercase">king arthur</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <!-- Card Back -->
+                                <div class="schipher-card__back">
+                                    <div class="card__back-bg">
+                                        <div class="card__back-bg-inner">
+                                            <div class="card__back-border">
+                                                <div class="card__back-body-container">
+                                                    <div class="card__back-body">
+                                                        <img src="./assets/images/yellow_1.png" alt="image">
+                                                    </div>
+                                                    
+                                                    <div class="card-back__footer-border">
+                                                        <div class="scipher-card__footer">
+                                                            <h5 class="text-uppercase">king arthur</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <!-- Card 18 -->
+                        <div class="flip-card">
+                            <div class="scipher-triangle"></div>
+                            <div class="flip-card-inner">
+                                <!-- Card Front -->
+                                <div class="schipher-card__front">
+                                    <div class="scipher-card-border">
+                                        <div class="scipher-card replay-card">
+                                            <div class="triangle">
+                                                <span class="shadow"></span>
+                                            </div>
+                                            <div class="scipher-card__inner-border">
+                                                <div class="scipher-card__inner">
+                                                    <div class="scipher-card__body">
+                                                        <div class="scipher-card__images">
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-1.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-2.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-3.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scipher-card__footer-border">
+                                                        <div class="scipher-card__footer">
+                                                            <h5 class="text-uppercase">king arthur</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <!-- Card Back -->
+                                <div class="schipher-card__back">
+                                    <div class="card__back-bg">
+                                        <div class="card__back-bg-inner">
+                                            <div class="card__back-border">
+                                                <div class="card__back-body-container">
+                                                    <div class="card__back-body">
+                                                        <img src="./assets/images/yellow_1.png" alt="image">
+                                                    </div>
+                                                    
+                                                    <div class="card-back__footer-border">
+                                                        <div class="scipher-card__footer">
+                                                            <h5 class="text-uppercase">king arthur</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <!-- Card 19 -->
+                        <div class="flip-card">
+                            <div class="scipher-triangle"></div>
+                            <div class="flip-card-inner">
+                                <!-- Card Front -->
+                                <div class="schipher-card__front">
+                                    <div class="scipher-card-border">
+                                        <div class="scipher-card replay-card">
+                                            <div class="triangle">
+                                                <span class="shadow"></span>
+                                            </div>
+                                            <div class="scipher-card__inner-border">
+                                                <div class="scipher-card__inner">
+                                                    <div class="scipher-card__body">
+                                                        <div class="scipher-card__images">
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-1.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-2.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-3.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scipher-card__footer-border">
+                                                        <div class="scipher-card__footer">
+                                                            <h5 class="text-uppercase">king arthur</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <!-- Card Back -->
+                                <div class="schipher-card__back">
+                                    <div class="card__back-bg">
+                                        <div class="card__back-bg-inner">
+                                            <div class="card__back-border">
+                                                <div class="card__back-body-container">
+                                                    <div class="card__back-body">
+                                                        <img src="./assets/images/yellow_1.png" alt="image">
+                                                    </div>
+                                                    
+                                                    <div class="card-back__footer-border">
+                                                        <div class="scipher-card__footer">
+                                                            <h5 class="text-uppercase">king arthur</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <!-- Card 20 -->
+                        <div class="flip-card">
+                            <div class="scipher-triangle"></div>
+                            <div class="flip-card-inner">
+                                <!-- Card Front -->
+                                <div class="schipher-card__front">
+                                    <div class="scipher-card-border">
+                                        <div class="scipher-card replay-card">
+                                            <div class="triangle">
+                                                <span class="shadow"></span>
+                                            </div>
+                                            <div class="scipher-card__inner-border">
+                                                <div class="scipher-card__inner">
+                                                    <div class="scipher-card__body">
+                                                        <div class="scipher-card__images">
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-1.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-2.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-3.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scipher-card__footer-border">
+                                                        <div class="scipher-card__footer">
+                                                            <h5 class="text-uppercase">king arthur</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <!-- Card Back -->
+                                <div class="schipher-card__back">
+                                    <div class="card__back-bg">
+                                        <div class="card__back-bg-inner">
+                                            <div class="card__back-border">
+                                                <div class="card__back-body-container">
+                                                    <div class="card__back-body">
+                                                        <img src="./assets/images/yellow_1.png" alt="image">
+                                                    </div>
+                                                    
+                                                    <div class="card-back__footer-border">
+                                                        <div class="scipher-card__footer">
+                                                            <h5 class="text-uppercase">king arthur</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <!-- Card 21 -->
+                        <div class="flip-card">
+                            <div class="scipher-triangle"></div>
+                            <div class="flip-card-inner">
+                                <!-- Card Front -->
+                                <div class="schipher-card__front">
+                                    <div class="scipher-card-border">
+                                        <div class="scipher-card replay-card">
+                                            <div class="triangle">
+                                                <span class="shadow"></span>
+                                            </div>
+                                            <div class="scipher-card__inner-border">
+                                                <div class="scipher-card__inner">
+                                                    <div class="scipher-card__body">
+                                                        <div class="scipher-card__images">
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-1.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-2.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-3.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scipher-card__footer-border">
+                                                        <div class="scipher-card__footer">
+                                                            <h5 class="text-uppercase">king arthur</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <!-- Card Back -->
+                                <div class="schipher-card__back">
+                                    <div class="card__back-bg">
+                                        <div class="card__back-bg-inner">
+                                            <div class="card__back-border">
+                                                <div class="card__back-body-container">
+                                                    <div class="card__back-body">
+                                                        <img src="./assets/images/yellow_1.png" alt="image">
+                                                    </div>
+                                                    
+                                                    <div class="card-back__footer-border">
+                                                        <div class="scipher-card__footer">
+                                                            <h5 class="text-uppercase">king arthur</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <!-- Card 22 -->
+                        <div class="flip-card">
+                            <div class="scipher-triangle"></div>
+                            <div class="flip-card-inner">
+                                <!-- Card Front -->
+                                <div class="schipher-card__front">
+                                    <div class="scipher-card-border">
+                                        <div class="scipher-card replay-card">
+                                            <div class="triangle">
+                                                <span class="shadow"></span>
+                                            </div>
+                                            <div class="scipher-card__inner-border">
+                                                <div class="scipher-card__inner">
+                                                    <div class="scipher-card__body">
+                                                        <div class="scipher-card__images">
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-1.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-2.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-3.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scipher-card__footer-border">
+                                                        <div class="scipher-card__footer">
+                                                            <h5 class="text-uppercase">king arthur</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <!-- Card Back -->
+                                <div class="schipher-card__back">
+                                    <div class="card__back-bg">
+                                        <div class="card__back-bg-inner">
+                                            <div class="card__back-border">
+                                                <div class="card__back-body-container">
+                                                    <div class="card__back-body">
+                                                        <img src="./assets/images/yellow_1.png" alt="image">
+                                                    </div>
+                                                    
+                                                    <div class="card-back__footer-border">
+                                                        <div class="scipher-card__footer">
+                                                            <h5 class="text-uppercase">king arthur</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <!-- Card 23 -->
+                        <div class="flip-card">
+                            <div class="scipher-triangle"></div>
+                            <div class="flip-card-inner">
+                                <!-- Card Front -->
+                                <div class="schipher-card__front">
+                                    <div class="scipher-card-border">
+                                        <div class="scipher-card replay-card">
+                                            <div class="triangle">
+                                                <span class="shadow"></span>
+                                            </div>
+                                            <div class="scipher-card__inner-border">
+                                                <div class="scipher-card__inner">
+                                                    <div class="scipher-card__body">
+                                                        <div class="scipher-card__images">
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-1.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-2.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-3.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scipher-card__footer-border">
+                                                        <div class="scipher-card__footer">
+                                                            <h5 class="text-uppercase">king arthur</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <!-- Card Back -->
+                                <div class="schipher-card__back">
+                                    <div class="card__back-bg">
+                                        <div class="card__back-bg-inner">
+                                            <div class="card__back-border">
+                                                <div class="card__back-body-container">
+                                                    <div class="card__back-body">
+                                                        <img src="./assets/images/yellow_1.png" alt="image">
+                                                    </div>
+                                                    
+                                                    <div class="card-back__footer-border">
+                                                        <div class="scipher-card__footer">
+                                                            <h5 class="text-uppercase">king arthur</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <!-- Card 24 -->
+                        <div class="flip-card">
+                            <div class="scipher-triangle"></div>
+                            <div class="flip-card-inner">
+                                <!-- Card Front -->
+                                <div class="schipher-card__front">
+                                    <div class="scipher-card-border">
+                                        <div class="scipher-card replay-card">
+                                            <div class="triangle">
+                                                <span class="shadow"></span>
+                                            </div>
+                                            <div class="scipher-card__inner-border">
+                                                <div class="scipher-card__inner">
+                                                    <div class="scipher-card__body">
+                                                        <div class="scipher-card__images">
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-1.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-2.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-3.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scipher-card__footer-border">
+                                                        <div class="scipher-card__footer">
+                                                            <h5 class="text-uppercase">king arthur</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <!-- Card Back -->
+                                <div class="schipher-card__back">
+                                    <div class="card__back-bg">
+                                        <div class="card__back-bg-inner">
+                                            <div class="card__back-border">
+                                                <div class="card__back-body-container">
+                                                    <div class="card__back-body">
+                                                        <img src="./assets/images/yellow_1.png" alt="image">
+                                                    </div>
+                                                    
+                                                    <div class="card-back__footer-border">
+                                                        <div class="scipher-card__footer">
+                                                            <h5 class="text-uppercase">king arthur</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <!-- Card 25 -->
+                        <div class="flip-card">
+                            <div class="scipher-triangle"></div>
+                            <div class="flip-card-inner">
+                                <!-- Card Front -->
+                                <div class="schipher-card__front">
+                                    <div class="scipher-card-border">
+                                        <div class="scipher-card replay-card">
+                                            <div class="triangle">
+                                                <span class="shadow"></span>
+                                            </div>
+                                            <div class="scipher-card__inner-border">
+                                                <div class="scipher-card__inner">
+                                                    <div class="scipher-card__body">
+                                                        <div class="scipher-card__images">
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-1.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-2.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                            <div class="scipher-card__images-wrapper">
+                                                                <img src="./assets/images/scipher-3.png" alt="" class="scipher-card__images-img">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scipher-card__footer-border">
+                                                        <div class="scipher-card__footer">
+                                                            <h5 class="text-uppercase">king arthur</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <!-- Card Back -->
+                                <div class="schipher-card__back">
+                                    <div class="card__back-bg">
+                                        <div class="card__back-bg-inner">
+                                            <div class="card__back-border">
+                                                <div class="card__back-body-container">
+                                                    <div class="card__back-body">
+                                                        <img src="./assets/images/yellow_1.png" alt="image">
+                                                    </div>
+                                                    
+                                                    <div class="card-back__footer-border">
+                                                        <div class="scipher-card__footer">
+                                                            <h5 class="text-uppercase">king arthur</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ==== Log Cards ==== -->
+                <div class="scipher__log" id="scipher__log">
+                    <div class="log__header">
+                        <div class="log__header-buttons">
+                            
+                            <button type="button" onclick="chatLog()" class="log__header-btn log-btn">
+                                <img src="./assets/images/door-icon.svg" alt="icon">
+                            </button>
+                            
+                            <div class="log__header-btns">
+                                <button type="button" class="log__header-btn">
+                                    <img src="./assets/images/play-previous.svg" alt="icon">
+                                </button>
+                                <button type="button" class="log__header-btn">
+                                    <img src="./assets/images/previous.svg" alt="icon">
+                                </button>
+                                <button type="button" class="log__header-btn">
+                                    <img src="./assets/images/next.svg" alt="icon">
+                                </button>
+                                <button type="button" class="log__header-btn">
+                                    <img src="./assets/images/play-next.svg" alt="icon">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ==== Game Log Card ==== -->
+                    <div class="card game-log-card" id="log-card">
+                        <div class="card-header">
+                            <div class="card-header-heading">
+                                <img src="./assets/images/clock.svg" alt="Clock">
+                                <h6 class="text-uppercase">Game log</h6>
+                            </div>
+                            <button type="button" class="btn">
+                                <img src="./assets/images/settings-icon.svg" alt="icon" class="mr-4">
+                                <span>Show Rules</span>
+                            </button>
+                        </div>
+                        <div class="card-body game-log__card-body">
+                            <!-- Row 1 -->
+                            <div class="game-log__card-row">
+                                <div class="game-log__card-text">
+                                    <div class="game-log__card-avatar">
+                                        <img src="./assets/images/game-avatar-1.png" alt="image" class="game-log__card-img">
+                                    </div>
+
+                                    <img src="./assets/images/cup_icon.svg" alt="cup icon" class="game-log__card-icon">
+                                    <p>
+                                        <span class="fw-bold">Pink_Bob</span>
+                                        <span class="fw-bold text-uppercase">gives clue </span>
+                                        <span class="fw-bold text-uppercase color-orange">Book-burner 2</span>
+                                    </p>
+                                </div>
+                                <div class="game-log__card-time">
+                                    <span class="color-gray">03:16</span>
+                                </div>
+                            </div>
+
+                            <!-- Row 2 -->
+                            <div class="game-log__card-row">
+                                <div class="game-log__card-text">
+                                    <div class="game-log__card-avatar">
+                                        <img src="./assets/images/game-avatar-2.png" alt="image" class="game-log__card-img">
+                                    </div>
+
+                                    <img src="./assets/images/cup_icon.svg" alt="cup icon" class="game-log__card-icon">
+                                    <p>
+                                        <span class="fw-bold color-orange">darnold</span>
+                                        <span>revealed</span>
+                                        <span class="fw-bold text-uppercase color-orange">Fire</span>
+                                    </p>
+                                </div>
+                                <div class="game-log__card-time">
+                                    <span class="color-gray">03:16</span>
+                                </div>
+                            </div>
+
+                            <!-- Row 3 -->
+                            <div class="game-log__card-row">
+                                <div class="game-log__card-text">
+                                    <div class="game-log__card-avatar">
+                                        <img src="./assets/images/game-avatar-3.png" alt="image" class="game-log__card-img">
+                                    </div>
+
+                                    <img src="./assets/images/cup_icon.svg" alt="cup icon" class="game-log__card-icon">
+                                    <p>
+                                        <span class="fw-bold color-orange">darnold</span>
+                                        <span>revealed</span>
+                                        <span class="fw-bold text-uppercase color-orange">darnold</span>
+                                    </p>
+                                </div>
+                                <div class="game-log__card-time">
+                                    <span class="color-gray">03:16</span>
+                                </div>
+                            </div>
+
+                             <!-- Row 4 -->
+                             <div class="game-log__card-row">
+                                <div class="game-log__card-text">
+                                    <div class="game-log__card-avatar">
+                                        <img src="./assets/images/game-avatar-1.png" alt="image" class="game-log__card-img">
+                                    </div>
+
+                                    <img src="./assets/images/cup_icon.svg" alt="cup icon" class="game-log__card-icon">
+                                    <p>
+                                        <span class="fw-bold">Pink_Bob</span>
+                                        <span class="fw-bold text-uppercase">gives clue </span>
+                                        <span class="fw-bold text-uppercase color-pink">Halo 5</span>
+                                    </p>
+                                </div>
+                                <div class="game-log__card-time">
+                                    <span class="color-gray">03:16</span>
+                                </div>
+                            </div>
+
+                            <!-- Row 3 -->
+                            <div class="game-log__card-row">
+                                <div class="game-log__card-text">
+                                    <div class="game-log__card-avatar">
+                                        <img src="./assets/images/game-avatar-2.png" alt="image" class="game-log__card-img">
+                                    </div>
+
+                                    <img src="./assets/images/cup_icon.svg" alt="cup icon" class="game-log__card-icon">
+                                    <p>
+                                        <span class="fw-bold color-pink">Mirzo Bedil</span>
+                                        <span>revealed</span>
+                                        <span class="fw-bold text-uppercase color-pink">India</span>
+                                    </p>
+                                </div>
+                                <div class="game-log__card-time">
+                                    <span class="color-gray">03:16</span>
+                                </div>
+                            </div>
+
+                        </div>                        
+                    </div>
+
+                    <!-- ==== Chat Card ==== -->
+                    <div class="card chat" id="chat-card">
+                        <div class="card-header chat__header">
+                            <div class="card-header-heading">
+                                <img src="./assets/images/chat-icon.svg" alt="Chat icon">
+                                <h6 class="text-uppercase">Chats</h6>
+                            </div>
+                            <div class="chat__tabs">
+                                <button type="button" class="chat__tabs-btn team-1" data-id="tab-content-team-1">Team1</button>
+                                <button type="button" class="chat__tabs-btn team-2 active" data-id="tab-content-team-2">Team2</button>
+                                <button type="button" class="chat__tabs-btn cpt" data-id="tab-content-cpt">CPT.</button>
+                            </div>
+                        </div>
+
+                        <div class="card-body chat__body">
+                            <!-- Content Team 1 -->
+                            <div class="chat__tab-content" data-id="tab-content-team-1">
+                                <p>Team 1 content</p>
+                            </div>
+
+                            <!-- Content Team 2 -->
+                            <div class="chat__tab-content show" data-id="tab-content-team-2">
+                                <div>
+                                    <!-- Row 1 -->
+                                    <div class="chat__tab-row">
+                                        <div class="chat__tabs-text">
+                                            <div class="chat__tab-user">
+                                                <div class="chat__tab-avatar">
+                                                    <img src="./assets/images/game-avatar-1.png" alt="">
+                                                </div>
+                                                <img src="./assets/images/cup_icon.svg" alt="" class="chat__tab-icon">
+                                                <p class="fw-bold color-orange">User</p>
+                                            </div>
+                                            <p class="chat__tab-message">Message sfesfse  sfsfsf sfse fsef sef se fseef sef sef sef sef sefs</p>
+                                        </div>
+                                        <div class="chat__tab-time">
+                                            <span class="color-gray">5m ago</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Row 1 -->
+                                    <div class="chat__tab-row">
+                                        <div class="chat__tabs-text">
+                                            <div class="chat__tab-user">
+                                                <div class="chat__tab-avatar">
+                                                    <img src="./assets/images/game-avatar-2.png" alt="">
+                                                </div>
+                                                <img src="./assets/images/cup_icon.svg" alt="" class="chat__tab-icon">
+                                                <p class="fw-bold color-orange">User</p>
+                                            </div>
+                                            <p class="chat__tab-message">Message</p>
+                                        </div>
+                                        <div class="chat__tab-time">
+                                            <span class="color-gray">5m ago</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <form action="#" class="chat__form">
+                                    <div class="chat__form-row">
+                                        <input type="text" placeholder="Post message..." class="chat__form-input">
+                                        <button type="submit" class="chat__form-btn">
+                                            <img src="./assets/images/send-icon.svg" alt="Send icon">
+                                        </button>
+                                    </div>
+                                </form>
+
+                            </div>
+
+                            <!-- Content CPT -->
+                            <div class="chat__tab-content" data-id="tab-content-cpt">
+                                <p>CPT content</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- ====== Uset Settings Modal ====== -->
+    <div class="backdrop" id="user-settings">
+        <div class="modal-content">
+            <div class="card user-settings-card">
+                <div class="card-header">
+                    <div class="card-header-heading">
+                        <img src="./assets/images/settings-icon.svg" alt="Gear icon">
+                        <h6 class="card-title">User Settings</h6>
+                    </div>
+                    <button type="button" class="btn btn-sm" onclick="toggleUserSettings()">
+                        <img src="./assets/images/close-icon.svg" alt="close icon">
+                    </button>
+                </div>
+                <div class="card-body">
+                    <form action="#" class="form">
+                        <!-- Row 1 -->
+                        <div class="form-row">
+                            <label for="user-name">Change Username</label>
+                            <input type="text" id="user-name" class="form-row-input">
+                            <p class="form-row-text">Username can only be changed once a week.</p>
+                        </div>
+    
+                        <!-- Row 2 -->
+                        <div class="form-row">
+                            <label for="win-rate">Hide win rate on profile page</label>
+                            <select name="" id="win-rate">
+                                <option value="no">No</option>
+                            </select>
+                            <p class="form-row-text">This covers anything related to your total wins/losses.</p>
+                        </div>
+    
+                        <!-- Row 3 -->
+                        <div class="form-row">
+                            <label for="detailed-statistics">Hide detailed statistics on profile page</label>
+                            <select name="" id="detailed-statistics">
+                                <option value="no">No</option>
+                            </select>
+                            <div class="form-row-text">This does not cover win/losses, this covers detailed numbers such as total clues given, average clue size, etc.</div>
+                        </div>
+    
+                        <!-- Row 4 -->
+                        <div class="form-row">
+                            <label for="trophy-number">Hide trophy number next to username</label>
+                            <select name="" id="trophy-number">
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+    
+                        <!-- Row 5 -->
+                        <div class="form-row">
+                            <label for="allowing-friends">Opt out of allowing friends to compare their stats with yours</label>
+                            <select name="" id="allowing-friends">
+                                <option value="no">No</option>
+                                <option value="allow">Allow</option>
+                            </select>
+                        </div>
+    
+                        <div class="form-button">
+                            <button type="submit" class="btn form-button-btn">Save user settings</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="./js/scipher.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/app.css">
+    <title>Create Standard Account</title>
+</head>
+<body>
+    <main class="login main-bg">
+        <!-- Lights and Background Images -->
+        <div class="main-bg__lights">
+            <div class="main-bg__light main-bg__light-1"></div>
+            <div class="main-bg__light main-bg__light-2"></div>
+            <div class="main-bg__light main-bg__light-3"></div>
+            <div class="main-bg__light main-bg__light-4"></div>
+        </div>
+        <div class="dots-top"></div>
+        <div class="dots-bottom">
+            <img src="./assets/images/bg-dots-bottom.png" alt="">
+        </div>
+        <!-- ====== Logo ====== -->
+        <div class="center__logo-container login__logo">
+            <h6>
+                Welcome to
+            </h6>
+            <div class="center__logo-image">
+                <img src="./assets/images/logo.png" alt="Scripher Logo" class="center__logo-img">
+            </div>
+        </div>
+
+        <div class="login__content">
+            <p class="login__content-title">
+                Create account
+            </p>
+            <div class="login__content-text">
+                We recommend you login via discord
+            </div>
+            <div class="card login__card">
+                <div class="login__card-body">
+                    <div class="login__card-error">
+                        <p class="fw-medium">Error message.</p>
+                    </div>
+
+                    <!-- Create Account from -->
+                    <form action="#" class="login__form">
+
+                        <!-- Row 1 -->
+                        <div class="login__form-row">
+                            <label for="user-name">Username</label>
+                            <input type="text" name="user-name" id="user-name" placeholder="Username">
+                            <img src="./assets/images/user-icon.svg" alt="User icon" class="login__form-icon">
+                        </div>
+
+                        <!-- Row 2 -->
+                        <div class="login__form-row">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" placeholder="Email">
+                            <img src="./assets/images/email-symbol.svg" alt="email icon" class="login__form-icon">
+                        </div>
+
+                        <!-- Row 3 -->
+                        <div class="login__form-row">
+                            <label for="password">Password</label>
+                            <input type="password" name="password" id="password" placeholder="Password">
+                            <img src="./assets/images/lock-icon.svg" alt="passowrd icon" class="login__form-icon">
+                        </div>
+
+                        <!-- Checkbox Row 1 -->
+                        <div class="checkbox-row login__form-checkbox">
+                            <input type="checkbox" name="email-me" id="email-me" class="checkbox-input">
+                            <span class="checkbox-checkmark"></span>
+                            <label for="email-me" class="checkbox-label">Email me system notifications</label>
+                        </div>
+
+                        <!-- Checkbox Row 2 -->
+                        <div class="checkbox-row login__form-checkbox">
+                            <input type="checkbox" name="accept" id="accept" class="checkbox-input">
+                            <span class="checkbox-checkmark"></span>
+                            <span>
+                                <label for="accept" class="checkbox-label">Accept</label>
+                                <a href="#" class="color-cyan">terms of service</a>
+                            </span>
+                        </div>
+
+                        <button type="submit" class="login__form-btn btn-primary">Create account</button>
+                    </form>
+
+                    <!-- Login links -->
+                    <div class="login__card-links">
+                        <p class="login__card-via">or login via</p>
+                        <a href="#" class="login__card-btn btn-dark">
+                            <img src="./assets/images/discord-icon.svg" alt="discord">
+                            <span>Discord</span>
+                        </a>
+                        <a href="#" class="login__card-btn btn-dark">
+                            <img src="./assets/images/patreon-icon.svg" alt="patreon">
+                            <span>Patreon</span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="login__account">
+                <a href="./login.html" class="login__account-link">Or login to standard account</a>
+            </div>
+        </div>
+
+    </main>
+    
+</body>
+</html>
