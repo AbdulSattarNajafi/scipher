@@ -316,12 +316,23 @@
     stroke-linecap: round;
 }
 
-.boards__start-start svg .taboo-start-bg {
+.boards__start-start svg .taboo-start-color-bg {
     stroke-dasharray: 360;
-    stroke-dashoffset: 10;
+    stroke-dashoffset: 0;
+    animation: progress-2 126s ease-out;
+}
+
+.boards__start-start svg .taboo-start-bg {
     stroke: #4B4E61;
-    stroke-width: 6.5px;
-    animation: progress-1 126s ease-out;
+}
+
+@keyframes progress-2 {
+    from {
+        stroke-dashoffset: 0;
+    }
+    to {
+        stroke-dashoffset: -360;
+    }
 }
 
 .taboo-start-bg {
@@ -336,7 +347,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-51%, -51%);
+    transform: translate(-51%, -70%);
     font-size: 24px;
     color: var(--white);
     font-weight: 600;

@@ -175,10 +175,10 @@ function tabooStartTimer() {
         value--;
 
         valueContainer.textContent = value;
-        bg.style.background = `conic-gradient(
-            #4B4E61 ${progressValue * degreeValue}deg,
-            transparent ${progressValue * degreeValue}deg
-        )`;
+        // bg.style.background = `conic-gradient(
+        //     #4B4E61 ${progressValue * degreeValue}deg,
+        //     transparent ${progressValue * degreeValue}deg
+        // )`;
 
         if(progressValue == progressEndValue) {
             clearInterval(progress);

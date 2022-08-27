@@ -453,7 +453,7 @@ h6 {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -49%);
+    transform: translate(-50%, -70%);
     font-weight: 700;
     font-size: 9px;
     line-height: 13px;
@@ -1498,6 +1498,10 @@ button:disabled {
 .select2-container--default .select2-selection--single .select2-selection__arrow b {
     display: none;
 }
+
+.select2-container--default .select2-results>.select2-results__options {
+    overflow: visible;
+}
 /* ============ End Selects styling =========== */
 
 /* ============ Start Custom Scrollbar =========== */
@@ -1525,7 +1529,6 @@ button:disabled {
 
 .chart__texts {
     width: 161px;
-    border: 1px solid red;
 }
 
 .chart__texts-title {
@@ -1571,8 +1574,11 @@ button:disabled {
     justify-content: center;
     text-align: center;
     min-height: calc(100vh - 257px);
-    /* padding-bottom: 96px; */
     z-index: 2;
+}
+
+.login__content.create-account-content {
+    min-height: calc(100vh - 300px);
 }
 
 .login__content-title {
@@ -1760,6 +1766,10 @@ button:disabled {
         padding-bottom: 42px;
     }
 
+    .login__content.create-account-content {
+        min-height: calc(100vh - 257px);
+    }
+
     .login__card-body {
         width: 342px;
         padding: 24px;
@@ -1825,9 +1835,6 @@ button:disabled {
 }
 
 @media only screen and (max-width: 767.98px) {
-    /* .create-taboo-container {
-        padding-bottom: 36px;
-    } */
 
     .create-taboo__selects {
         flex-direction: column;

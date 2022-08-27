@@ -56,7 +56,7 @@ const toggleUserSettings = () => {
 function themeState (state) {
     if (!state.id) { return state.text; }
     let $state = $(
-      '<span><img src="./../assets/images/theme-' + state.element.value.toLowerCase() + '.svg" class="img-flag" /> ' + state.text + '</span>'
+      '<span><img src="./assets/images/theme-' + state.element.value.toLowerCase() + '.svg" class="img-flag" /> ' + state.text + '</span>'
     );
     return $state;
 };
