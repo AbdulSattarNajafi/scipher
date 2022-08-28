@@ -61,27 +61,6 @@ function themeState (state) {
     return $state;
 };
 
-// new SlimSelect({
-//     select: '#outer-space-theme',
-//     placeholder: 'Placeholder Text Here',
-//     search: false,
-
-//     data: [
-//         {text: 'Human'}, // regular option
-//         {
-//           options: [
-//             {text: 'Cat'},
-//             {text: 'Dog'},
-//             {text: 'Bird'}
-//           ]
-//         }
-//     ]
-// });
-
-// new SlimSelect({
-//     select: '#grid-size',
-// });
-
 // Selects
 $(document).ready(function() {
     $('#grid-size').select2();

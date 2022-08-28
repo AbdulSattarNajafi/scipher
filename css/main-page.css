@@ -101,7 +101,7 @@
 }
 
 .main__player-row:hover {
-    background-color: #404253;
+    background-color: var(--dark-200);
 }
 
 .main__player-row:not(:last-child) {
@@ -239,10 +239,6 @@
 .game__checkboxes-title {
     margin-bottom: 16px;
 }
-
-/* .game__checkboxes-row {
-    margin-bottom: 12px;
-} */
 
 .game__form-button {
     display: flex;

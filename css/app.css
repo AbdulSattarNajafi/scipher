@@ -3,6 +3,11 @@
 
 :root {
     --body-bg: #23232C;
+
+    --black: #000000;
+    --black-300: #1B1B22;
+    --black-400: #0E0E12;
+
     --white: #ffffff;
     --card-bg: #343643;
     --primary-dark: #2E2F3A;
@@ -13,6 +18,8 @@
     --dark-200: #404253;
     --dark-300: #3C3E4E;
     --dark-400: #35353b;
+    --dark-500: #817f7f;
+    --dark-600: #727586;
     --dark-900: #17181E90;
 
     --pink: #CC327C;
@@ -26,6 +33,7 @@
 
     --orange-dark: #C35E00;
     --orange: #FF7A00;
+    --orange-400: #884506;
 
     --gray: #ffffff40;
 
@@ -81,7 +89,6 @@ body {
 
 .main-bg__light {
     width: 25%;
-    /* filter: blur(256px); */
     filter: blur(130px);
     transform: matrix(0.98, -0.1, 0.2, 1, 0, 0);
 }
@@ -93,7 +100,7 @@ body {
 
 .main-bg__light-2 {
     height: 171px;
-    background: #FED03D;
+    background: var(--yellow);
 }
 
 .main-bg__light-3 {
@@ -105,7 +112,6 @@ body {
     width: 25%;
     height: 254px;
     background: #36E1DE;
-    /* filter: blur(256px); */
     filter: blur(130px);
     transform: matrix(0.98, -0.1, 0.2, 1, 0, 0);
 }
@@ -132,7 +138,7 @@ body {
     width: 60px;
     max-height: 965px;
     height: 100%;
-    background: #FF7A00;
+    background: var(--orange);
     filter: blur(256px);
     transform: matrix(-1, 0, 0, 1, 0, 0);
 }
@@ -331,11 +337,11 @@ h6 {
 }
 
 .bg-dark {
-    background-color: #727586;
+    background-color: var(--dark-600);
 }
 
 .color-dark {
-    color: #727586;
+    color: var(--dark-600);
 }
 
 .color-cyan {
@@ -363,11 +369,11 @@ h6 {
 }
 
 .text-success {
-    color: #00BABA;
+    color: var(--primary-blue);
 }
 
 .bg-green {
-    background-color: #00BABA;
+    background-color: var(--primary-blue);
 }
 
 .color-yellow {
@@ -444,7 +450,6 @@ h6 {
     width: 100%;
     height: 100%;
     fill: none;
-    stroke: var(--white);
     stroke-width: 2px;
     stroke-linecap: round;
 }
@@ -453,27 +458,29 @@ h6 {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -70%);
+    transform: translate(-50%, -51%);
     font-weight: 700;
     font-size: 9px;
     line-height: 13px;
 }
 
-.circle svg .circle-meter {
+.circle svg .circle-bg {
     stroke-dasharray: 360;
-    stroke-dashoffset: 100;
+    stroke-dashoffset: 0;
+    stroke: var(--white);
+    animation: progress-1 550s ease-out;
+}
+
+.circle svg .circle-meter {
     stroke: #c4c4c4;
-    animation: progress-1 400s ease-out;
 }
 
 @keyframes progress-1 {
     from {
-        stroke-dashoffset: 360;
-        /* stroke: #ffffff; */
+        stroke-dashoffset: 0;
     }
     to {
-        stroke-dashoffset: 100;
-        /* stroke: #dad9d9; */
+        stroke-dashoffset: -360;
     }
 }
 
@@ -580,7 +587,7 @@ h6 {
 }
 
 .checkbox-input:hover ~ .checkbox-checkmark {
-    background-color: #404253;
+    background-color: var(--dark-200);
 }
 
 .checkbox-input:disabled ~ .checkbox-checkmark {
@@ -617,7 +624,7 @@ h6 {
 /* ============ Start Progress Styling =========== */
 .progress {
     height: 6px;
-    background: #4B4E61;
+    background: var(--dark);
     border-radius: 6px;
 }
 
@@ -628,7 +635,7 @@ h6 {
 }
 
 .progress-value.cyan {
-    background-color: #00BABA;
+    background-color: var(--primary-blue);
 }
 
 .progress-label {
@@ -1261,7 +1268,7 @@ button:disabled {
 }
 
 .card__list-item:hover {
-    background-color: #404253;
+    background-color: var(--dark-200);
 }
 
 .card__list-item:last-child {
